@@ -52,7 +52,8 @@ get_combined_data_frame <- function(
     id_coversion_table_data_type = 'txt'
     id_coversion_table = load_data_with_http(id_coversion_table_http_link, id_coversion_table_data_type)
     message('Save id coversion table of ', species, ' to ', PHOSPHATE_LIB_MAPPING_FILE_PATH)
-    write.csv(id_coversion_table, PHOSPHATE_LIB_MAPPING_FILE_PATH, row.names = FALSE)
+    # write.csv(id_coversion_table, PHOSPHATE_LIB_MAPPING_FILE_PATH, row.names = FALSE)
+    write.table(id_coversion_table, PHOSPHATE_LIB_MAPPING_FILE_PATH, sep = '\t', row.names = FALSE)
     message('Save successfully.')
   }else{
     id_coversion_table = utils::read.table(PHOSPHATE_LIB_MAPPING_FILE_PATH, sep = '\t', header = TRUE)
