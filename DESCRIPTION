@@ -13,7 +13,7 @@ RoxygenNote: 6.0.1
 Date: 2019-05-06
 Depends: R (>= 2.10)
 Imports: graphics, grDevices, stats, utils, stringr, ggseqlogo, samr,
-        limma, e1071, ClueR, Rtsne, glmnet
+        limma, e1071, ClueR, Rtsne, glmnet, limma, impute
 Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
 NeedsCompilation: no
