@@ -48,7 +48,7 @@ extract_psites_score <- function(
   command <- "python"
   path2script <- system.file("src", "XMLParser_mascot_dat.py", package = "PhosMap") # The location of python script called
 
-  path2script <- "w:/R/R-3.3.2/library/PhosMap/src/XMLParser_mascot_dat.py"
+  # path2script <- "w:/R/R-3.3.2/library/PhosMap/src/XMLParser_mascot_dat.py"
   path2script <- normalizePath(path2script, mustWork = FALSE)
 
   # Get experiments codes by reading txt files
