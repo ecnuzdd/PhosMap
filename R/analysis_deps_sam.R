@@ -45,7 +45,7 @@ analysis_deps_sam <- function(expr_data_frame, group, log2_label = FALSE,
 
 
   # construct the samr data
-  sam_data <- list(x = expr_Valule, y = as.numeric(as.factor(group)),
+  sam_data <- list(x = as.matrix(expr_Valule), y = as.numeric(as.factor(group)),
                    geneid = expr_ID, genenames = expr_ID, logged2=TRUE)
 
   group_nlevels <- nlevels(group)
