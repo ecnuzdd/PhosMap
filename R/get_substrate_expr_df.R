@@ -79,6 +79,8 @@ get_substrate_expr_df <- function(
   ksea_regulons_with_count_greater_than_zero_count <- length(ksea_regulons_with_count_greater_than_zero)
 
   ptypes_data_ratio_e2 <- 2^ptypes_data_ratio
+  ptypes_data_ratio_e2 <- data.frame(ptypes_data_ratio_e2)
+
   RATIO_CUTOFF <- ratio_cutoff
   kinase_site_substrate_ratio_df <- c()
 
@@ -109,7 +111,8 @@ get_substrate_expr_df <- function(
       index_of_match_i <- c(index_of_match_i, index_of_match_j)
     }
     if(length(index_of_match_i)==1){
-      substrate_ratio_all_exps <- t(ptypes_data_ratio_e2[c(index_of_match_i),])
+      # substrate_ratio_all_exps <- t(ptypes_data_ratio_e2[c(index_of_match_i),])
+      substrate_ratio_all_exps <- ptypes_data_ratio_e2[index_of_match_i,]
     }else{
       substrate_ratio_all_exps <- ptypes_data_ratio_e2[index_of_match_i,] # The original value, not log2
     }
