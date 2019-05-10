@@ -41,7 +41,7 @@ get_aligned_seq_for_mea <- function(ID, Sequence, AA_in_protein, fixed_length, s
   if(fasta_type == 'refseq' | fasta_type == 'uniprot'){
     PHOSPHATE_LIB_FASTA_DIR <- normalizePath(
       system.file(
-        'extdata', 'fasta_libarary',
+        'extdata', 'fasta_library',
         fasta_type, species,
         package = "PhosMap"
       ),
