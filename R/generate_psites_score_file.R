@@ -57,8 +57,3 @@ generate_psites_score_file <- function(mascot_txt_dir, firmiana_peptide_dir, psi
   }
 
 }
-
-
-
-
-

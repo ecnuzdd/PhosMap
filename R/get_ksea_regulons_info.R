@@ -23,9 +23,6 @@
 #'
 #'
 
-
-
-
 get_ksea_regulons_info <- function(
   ksea_regulons,
   ksea_trans_list,

@@ -26,7 +26,7 @@ Differential expression analysis using limma.
 }
 \examples{
 \dontrun{
-limma_results_list = analysis_deps_limma(
+limma_results_list <- analysis_deps_limma(
   expr_data_frame, group, comparison_statement,
   log2_label = FALSE, adjust_method = 'BH'
 )

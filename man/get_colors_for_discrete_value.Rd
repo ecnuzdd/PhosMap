@@ -19,21 +19,21 @@ Generate custom colors from discrete values for heatmap.
 }
 \examples{
 \dontrun{
-value_intervals_list = list(
+value_intervals_list <- list(
 seq(-4, -2, 0.2),
 seq(-2, -1, 0.2),
 seq(-1, 1, 0.2),
 seq(1, 2, 0.2),
 seq(2, 4, 0.2)
 )
-color_intervals_list = list(
+color_intervals_list <- list(
   c('blue', '#33CCFF'),
   c('#33CCFF', 'green'),
   c('green', 'white', '#FF6600'),
   c('#FF6600', 'red'),
   c('red', 'firebrick')
 )
-colors = get_colors_for_discrete_value(
+colors <- get_colors_for_discrete_value(
   color_intervals_list,
   value_intervals_list
 )

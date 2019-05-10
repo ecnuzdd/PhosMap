@@ -37,7 +37,7 @@ extract_psites_score <- function(
     cat('\n', mascot_xml_dir, ' -> ', 'No the directory.')
     stop('')
   }
-  mascot_xml_dir_files = list.files(mascot_xml_dir)
+  mascot_xml_dir_files <- list.files(mascot_xml_dir)
 
   mascot_txt_dir <- normalizePath(mascot_txt_dir)
   if (!file.exists(mascot_txt_dir)) {
@@ -58,10 +58,10 @@ extract_psites_score <- function(
   experiment_code <- as.vector(unlist(experiment_code$Experiment_Code))
 
   # match txt files to mascot_xml_dir
-  experiment_match_index = match(experiment_code, mascot_xml_dir_files)
-  na_index = which(is.na(experiment_match_index))
+  experiment_match_index <- match(experiment_code, mascot_xml_dir_files)
+  na_index <- which(is.na(experiment_match_index))
   if(length(na_index)>0){
-    na_experiments = experiment_code[na_index]
+    na_experiments <- experiment_code[na_index]
     cat('\n', 'The following experiments do not exist in', mascot_xml_dir, '\n')
     for(na_experiment in na_experiments){
       cat('\n', na_experiment, '\n')

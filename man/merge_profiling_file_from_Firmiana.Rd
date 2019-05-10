@@ -22,7 +22,7 @@ Filter data based on US (Unique and Ionscore > 20) peptide counts then merge pro
 }
 \examples{
 \dontrun{
-merged_df = merge_profiling_file_from_Firmiana(firmiana_gene_dir, US_cutoff = 1)
+merged_df <- merge_profiling_file_from_Firmiana(firmiana_gene_dir, US_cutoff = 1)
 }
 }
 \author{

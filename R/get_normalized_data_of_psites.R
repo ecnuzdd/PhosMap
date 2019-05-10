@@ -10,7 +10,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' ptypes_df = get_normalized_data_of_psites(data_frame, experiment_code_file_path, topN = 500)
+#' ptypes_df <- get_normalized_data_of_psites(data_frame, experiment_code_file_path, topN = 500)
 #' }
 
 get_normalized_data_of_psites <- function(data_frame, experiment_code_file_path, topN = NA, mod_types = c('S', 'T', 'Y')){
@@ -56,7 +56,7 @@ get_normalized_data_of_psites <- function(data_frame, experiment_code_file_path,
       x <- as.vector(unlist(ptypes_value[,i]))
       x_order <- order(x, decreasing = T)
       x_order_top <- x_order[1:topN]
-      x[-x_order_top] = 0
+      x[-x_order_top] <- 0
       Value_FOT5[,i] <- x/sum(x)*1e5
     }
   }

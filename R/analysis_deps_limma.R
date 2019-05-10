@@ -16,7 +16,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' limma_results_list = analysis_deps_limma(
+#' limma_results_list <- analysis_deps_limma(
 #'   expr_data_frame, group, comparison_statement,
 #'   log2_label = FALSE, adjust_method = 'BH'
 #' )
@@ -25,12 +25,12 @@ analysis_deps_limma <- function(expr_data_frame, group, comparison_factor,
                                 log2_label = FALSE, adjust_method = 'BH'){
   requireNamespace('limma')
   requireNamespace('stats')
-  # experiment_design_file_path = "D:\\Phosphate-data\\Bioinfomatics\\demo_data_from_WYN\\experiment_design_noPair.txt"
-  # experiment_design_file = read.table(experiment_design_file_path, sep = '\t', header = T)
-  # group = experiment_design_file$Group[experiment_design_file$Data_Type == 'Phospho']
-  # group = paste('t', group, sep = '')
-  # group = factor(group, levels = c('t0', 't10', 't30', 't120'))
-  # expr_data_frame = data_frame_normalization_0
+  # experiment_design_file_path <- "D:\\Phosphate-data\\Bioinfomatics\\demo_data_from_WYN\\experiment_design_noPair.txt"
+  # experiment_design_file <- read.table(experiment_design_file_path, sep = '\t', header = T)
+  # group <- experiment_design_file$Group[experiment_design_file$Data_Type == 'Phospho']
+  # group <- paste('t', group, sep = '')
+  # group <- factor(group, levels = c('t0', 't10', 't30', 't120'))
+  # expr_data_frame <- data_frame_normalization_0
 
   expr_ID <- as.vector(expr_data_frame[,1])
   if(!log2_label){

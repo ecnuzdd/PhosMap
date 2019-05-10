@@ -5,7 +5,8 @@
 \title{Get peptides data frame passed phosphorylation sites quality control.}
 \usage{
 pre_process_filter_psites(firmiana_peptide_dir, psites_score_dir,
-  phospho_experiment_design_file_path, qc, min_score = 20, min_FDR = 0.01)
+  phospho_experiment_design_file_path, qc, min_score = 20,
+  min_FDR = 0.01)
 }
 \arguments{
 \item{firmiana_peptide_dir}{A folder containing peptide identification files from Firmiana as input.}

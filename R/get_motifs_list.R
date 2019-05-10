@@ -14,7 +14,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' motifs_list = get_motifs_list(foreground, background, center_vector, motifx_pvalue)
+#' motifs_list <- get_motifs_list(foreground, background, center_vector, motifx_pvalue)
 #' }
 
 get_motifs_list <- function(foreground, background, center_vector, motifx_pvalue){

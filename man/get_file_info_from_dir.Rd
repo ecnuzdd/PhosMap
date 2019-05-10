@@ -19,7 +19,7 @@ Read batch files (.txt or .csv) from specific directory.
 }
 \examples{
 \dontrun{
-result_list = get_file_info_from_dir(
+result_list <- get_file_info_from_dir(
   specific_dir,
   experiment_ID
 )

@@ -28,7 +28,7 @@ Taking S/T/Y as the center, align sequence to fasta library by specific length.
 }
 \examples{
 \dontrun{
-aligned_sequence_df_based_on_fasta_library =
+aligned_sequence_df_based_on_fasta_library <-
  get_aligned_seq_for_mea(
    ID,
    Sequence,

@@ -13,7 +13,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' summary_df_list_from_ksea = get_summary_from_ksea(
+#' summary_df_list_from_ksea <- get_summary_from_ksea(
 #'   ptypes_data,
 #'   species = 'human',
 #'   log2_label = TRUE,
@@ -34,7 +34,7 @@ get_summary_from_ksea <- function(
   # read relationship of kinase-substrate provided by PhosMap
   # KSRR: kinase substrate regulation relationship
   # A data frame contanning relationship of kinase-substrate that consists of "kinase", "substrate", "site", "sequence" and "predicted" columns.
-  KSRR_FILE_NAME = paste(species, 'ksrr.csv', sep = '_')
+  KSRR_FILE_NAME <- paste(species, 'ksrr.csv', sep = '_')
   KSRR_FILE_PATH <- normalizePath(
     system.file(
       'extdata',

@@ -22,7 +22,7 @@ Construct the data frame with unique phosphorylation site for each protein seque
 }
 \examples{
 \dontrun{
-summary_df_of_unique_proteins_with_sites = get_summary_with_unique_sites(
+summary_df_of_unique_proteins_with_sites <- get_summary_with_unique_sites(
   combinated_df_with_mapped_gene_symbol,
   species = 'human',
   fasta_type = 'refseq'

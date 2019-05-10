@@ -12,7 +12,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' motifs_list = mea_based_on_background(
+#' motifs_list <- mea_based_on_background(
 #'   foreground,
 #'   AA_in_protein,
 #'   background,
@@ -22,11 +22,11 @@
 
 
 
-# foreground = as.vector(foreground_df$aligned_seq)
-# AA_in_protein = as.vector(foreground_df$AA_in_protein)
+# foreground <- as.vector(foreground_df$aligned_seq)
+# AA_in_protein <- as.vector(foreground_df$AA_in_protein)
 mea_based_on_background <- function(foreground, AA_in_protein, background, motifx_pvalue){
-  # foreground = as.vector(foreground)
-  # background = as.vector(background$Aligned_Seq)
+  # foreground <- as.vector(foreground)
+  # background <- as.vector(background$Aligned_Seq)
   center_vector_candidate <- c('S', 'T', 'Y')
   center_vector_candidate_len <- length(center_vector_candidate)
   center_vector <- NULL
@@ -47,48 +47,3 @@ mea_based_on_background <- function(foreground, AA_in_protein, background, motif
   cat('\n')
   return(motifs_list)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -15,7 +15,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' summary_df_of_unique_proteins_with_sites = get_summary_with_unique_sites(
+#' summary_df_of_unique_proteins_with_sites <- get_summary_with_unique_sites(
 #'   combinated_df_with_mapped_gene_symbol,
 #'   species = 'human',
 #'   fasta_type = 'refseq'
@@ -33,7 +33,7 @@ get_summary_with_unique_sites <- function(
 
   ###########################################################################################################
   # Read fasta file: fasta_data
-  # fasta_type = 'refseq' # 'uniprot'
+  # fasta_type <- 'refseq' # 'uniprot'
   if(fasta_type == 'refseq' | fasta_type == 'uniprot'){
     PHOSPHATE_LIB_FASTA_DIR <- normalizePath(
       system.file(
@@ -55,11 +55,11 @@ get_summary_with_unique_sites <- function(
 
   # https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/fasta_libarary/refseq/human/human_ref_fasta.txt
   if(!file.exists(PHOSPHATE_LIB_FASTA_FILE_PATH)){
-    PHOSPHATE_LIB_FASTA_FILE_http_link = 'https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/fasta_libarary/fasta_type/species/species_fasta_type_fasta.txt'
-    PHOSPHATE_LIB_FASTA_FILE_http_link = stringr::str_replace_all(PHOSPHATE_LIB_FASTA_FILE_http_link, 'fasta_type', fasta_type)
-    PHOSPHATE_LIB_FASTA_FILE_http_link = stringr::str_replace_all(PHOSPHATE_LIB_FASTA_FILE_http_link, 'species', species)
-    PHOSPHATE_LIB_FASTA_FILE_data_type = 'txt'
-    PHOSPHATE_LIB_FASTA_DATA = load_data_with_http(PHOSPHATE_LIB_FASTA_FILE_http_link, PHOSPHATE_LIB_FASTA_FILE_data_type)
+    PHOSPHATE_LIB_FASTA_FILE_http_link <- 'https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/fasta_libarary/fasta_type/species/species_fasta_type_fasta.txt'
+    PHOSPHATE_LIB_FASTA_FILE_http_link <- stringr::str_replace_all(PHOSPHATE_LIB_FASTA_FILE_http_link, 'fasta_type', fasta_type)
+    PHOSPHATE_LIB_FASTA_FILE_http_link <- stringr::str_replace_all(PHOSPHATE_LIB_FASTA_FILE_http_link, 'species', species)
+    PHOSPHATE_LIB_FASTA_FILE_data_type <- 'txt'
+    PHOSPHATE_LIB_FASTA_DATA <- load_data_with_http(PHOSPHATE_LIB_FASTA_FILE_http_link, PHOSPHATE_LIB_FASTA_FILE_data_type)
     message('Save ', fasta_type, ' fasta file of ', species, ' to ', PHOSPHATE_LIB_FASTA_FILE_PATH)
     write.table(PHOSPHATE_LIB_FASTA_DATA, PHOSPHATE_LIB_FASTA_FILE_PATH, row.names = FALSE, col.names = TRUE, sep = '\t')
     message('Save successfully.')
@@ -137,9 +137,3 @@ get_summary_with_unique_sites <- function(
   cat('\n The 6th step: construct over.')
   return(summary_df_of_unique_proteins_with_sites)
 }
-
-
-
-
-
-

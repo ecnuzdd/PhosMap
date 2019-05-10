@@ -24,6 +24,6 @@ To normalize data and filter data only including phosphorylation sites.
 }
 \examples{
 \dontrun{
-ptypes_df = get_normalized_data_of_psites(data_frame, experiment_code_file_path, topN = 500)
+ptypes_df <- get_normalized_data_of_psites(data_frame, experiment_code_file_path, topN = 500)
 }
 }

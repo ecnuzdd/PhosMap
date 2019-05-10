@@ -10,7 +10,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' result_list = get_file_info_from_dir(
+#' result_list <- get_file_info_from_dir(
 #'   specific_dir,
 #'   experiment_ID
 #' )
@@ -62,5 +62,3 @@ get_file_info_from_dir <- function(specific_dir, experiment_ID){
     stop('The directory of ', specific_dir, ' has no files.')
   }
 }
-
-

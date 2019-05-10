@@ -4,8 +4,8 @@
 \alias{get_foreground_df_to_motifs}
 \title{Get filtered foreground data frame that its aligned sequences with specific motif.}
 \usage{
-get_foreground_df_to_motifs(foreground_sequences_mapped_to_motifs, foreground,
-  foreground_df)
+get_foreground_df_to_motifs(foreground_sequences_mapped_to_motifs,
+  foreground, foreground_df)
 }
 \arguments{
 \item{foreground_sequences_mapped_to_motifs}{A list that consists of motifs and its corresponding aligned sequences.}

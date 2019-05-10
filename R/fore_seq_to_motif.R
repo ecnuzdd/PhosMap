@@ -16,7 +16,7 @@
 fore_seq_to_motif <- function(
   foreground_sequences_mapped_to_motifs
 ){
-  foreground_sequences_mapped_to_motifs_len <-  length(foreground_sequences_mapped_to_motifs)
+  foreground_sequences_mapped_to_motifs_len <- length(foreground_sequences_mapped_to_motifs)
   motif_rep_v <- NULL
   map_seq_v <- NULL
   for(i in seq_len(foreground_sequences_mapped_to_motifs_len)){
@@ -30,8 +30,3 @@ fore_seq_to_motif <- function(
   colnames(df) <- c('Aligned_seq', 'Motif')
   return(df)
 }
-
-
-
-
-
