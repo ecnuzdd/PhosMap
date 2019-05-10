@@ -14,6 +14,7 @@
 #'
 #' @return A list containing peptides dataframe with area values and psm,
 #' IDs with mergered sequences, gi and sites, new peptides dataframe combined previous peptides dataframe and IDs.
+#'
 #' @export
 #'
 #' @examples
