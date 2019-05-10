@@ -76,11 +76,11 @@ pre_process_filter_psites <- function(firmiana_peptide_dir, psites_score_dir,
   # *file_site_score: pep_seq, pep_var_mod_conf
   cat('\n The 3rd step: filter peptides based on site quality.')
   if(qc){
-    result_list_with_filtered_sites <- get_list_with_filted_sites(peptide.id, files,
+    result_list_with_filtered_sites <- get_list_with_filtered_sites(peptide.id, files,
                                                                  files_site_score, qc,
                                                                  min_score, min_FDR)
   }else{
-    result_list_with_filtered_sites <- get_list_with_filted_sites(peptide.id, files,
+    result_list_with_filtered_sites <- get_list_with_filtered_sites(peptide.id, files,
                                                                  NULL, qc,
                                                                  min_score, min_FDR)
   }

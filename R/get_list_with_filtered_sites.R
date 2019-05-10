@@ -18,13 +18,13 @@
 #'
 #' @examples
 #' \dontrun{
-#' result_list_with_filtered_sites = get_list_with_filted_sites(
+#' result_list_with_filtered_sites = get_list_with_filtered_sites(
 #'   peptide.id,
 #'   files,
 #'   files_site_score
 #' )
 #' }
-get_list_with_filted_sites <- function(
+get_list_with_filtered_sites <- function(
   peptide_id,
   files,
   files_site_score,
