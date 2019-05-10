@@ -57,9 +57,9 @@ get_aligned_seq_for_mea <- function(ID, Sequence, AA_in_protein, fixed_length, s
     stop('')
   }
 
-  # https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/fasta_libarary/refseq/human/human_ref_fasta.txt
+  # https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/fasta_library/refseq/human/human_ref_fasta.txt
   if(!file.exists(PHOSPHATE_LIB_FASTA_FILE_PATH)){
-    PHOSPHATE_LIB_FASTA_FILE_http_link <- 'https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/fasta_libarary/fasta_type/species/species_fasta_type_fasta.txt'
+    PHOSPHATE_LIB_FASTA_FILE_http_link <- 'https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/fasta_library/fasta_type/species/species_fasta_type_fasta.txt'
     PHOSPHATE_LIB_FASTA_FILE_http_link <- stringr::str_replace_all(PHOSPHATE_LIB_FASTA_FILE_http_link, 'fasta_type', fasta_type)
     PHOSPHATE_LIB_FASTA_FILE_http_link <- stringr::str_replace_all(PHOSPHATE_LIB_FASTA_FILE_http_link, 'species', species)
     PHOSPHATE_LIB_FASTA_FILE_data_type <- 'txt'
