@@ -38,3 +38,25 @@ install_github('ecnuzdd/PhosMap')
 * [motif_library](https://github.com/ecnuzdd/PhosMap_datasets/tree/master/motif_library)
   * Refseq (Human, Mouse, Rattus)
   * Uniprot (Human, Mouse, Rattus)
+
+### Complete demo data processed by [Firmiana](www.firmiana.org)
+#### Raw data from deposited in the ProteomeXchange Consortium
+[PXD007740](http://proteomecentral.proteomexchange.org/cgi/GetDataset?ID=PXD007740)
+
+#### Processed data by Firmiana
+[PhosMap_Demo_With_BRAFi_Data.zip](https://github.com/ecnuzdd/PhosMap_datasets/blob/master/PhosMap_Demo_With_BRAFi_Data.zip)
+
+#### *reference*
+*1. Ressa, A., et al. (2018) A System-wide Approach to Monitor Responses to Syner-gistic BRAF and EGFR Inhibition in Colorectal Cancer Cells, Molecular & cellular proteomics : MCP, 17, 1892-1908.* <br>
+*2. Feng, J., et al. (2017) Firmiana: towards a one-stop proteomic cloud platform for data processing and analysis, Nature biotechnology, 35, 409-412.*
+
+
+
+
+
+
+
+
+
+
+
