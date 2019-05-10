@@ -8,7 +8,7 @@
 *1. Extracting the confidence probability of phosphorylation sites at peptide level from identification results searched by Mascot.*<br> 
 *2. Generating the quality control file of phosphorylation sites based on score of sites from Mascot.*<br> 
 *3. Pre-processing phosphoproteomic data.*<br> 
-*4. Kinase substrate enrichment analysis.*<br> 
+*4. Kinase activity prediction.*<br> 
 *5. Motif enrichment analysis.*<br> 
 *6. Data visualization*<br> 
 
