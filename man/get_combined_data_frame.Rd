@@ -4,8 +4,8 @@
 \alias{get_combined_data_frame}
 \title{Get a data frame mapped ID to Gene Symbol.}
 \usage{
-get_combined_data_frame(merge_df_with_phospho_peptides, species = "human",
-  id_type = "RefSeq_Protein_GI")
+get_combined_data_frame(merge_df_with_phospho_peptides,
+  species = "human", id_type = "RefSeq_Protein_GI")
 }
 \arguments{
 \item{merge_df_with_phospho_peptides}{A dataframe consisting of IDs (Sequence_GI_Psite) and Area values.}
@@ -24,7 +24,7 @@ a new dataframe with Sequence, GI, Modification, Gene Symbol, Area and PSMs,is c
 }
 \examples{
 \dontrun{
-combinated_df_with_mapped_gene_symbol = get_combined_data_frame(
+combinated_df_with_mapped_gene_symbol <- get_combined_data_frame(
   merge_df_with_phospho_peptides
 )
 }

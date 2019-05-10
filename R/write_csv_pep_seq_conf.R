@@ -52,6 +52,3 @@ write_csv_pep_seq_conf <- function(expName, outputName, mascotfileNames, refFile
   utils::write.csv(df1, outputName, row.names = FALSE)
 
 }
-
-
-

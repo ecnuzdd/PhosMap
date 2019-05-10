@@ -117,10 +117,3 @@ pre_process_filter_psites <- function(firmiana_peptide_dir, psites_score_dir,
   colnames(merge_df_with_phospho_peptides) <- c(merge_df_with_phospho_peptides_colnames[1], phospho_experiment_ID)
   return(merge_df_with_phospho_peptides)
 }
-
-
-
-
-
-
-

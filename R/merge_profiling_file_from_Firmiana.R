@@ -14,7 +14,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' merged_df = merge_profiling_file_from_Firmiana(firmiana_gene_dir, US_cutoff = 1)
+#' merged_df <- merge_profiling_file_from_Firmiana(firmiana_gene_dir, US_cutoff = 1)
 #' }
 merge_profiling_file_from_Firmiana <- function(firmiana_gene_dir, US_cutoff = 1, experiment_gene_file_path){
   requireNamespace('utils')
@@ -115,11 +115,3 @@ merge_profiling_file_from_Firmiana <- function(firmiana_gene_dir, US_cutoff = 1,
   merge_df_no_NA <- data.frame(Symbol, Value)
   return(merge_df_no_NA)
 }
-
-
-
-
-
-
-
-

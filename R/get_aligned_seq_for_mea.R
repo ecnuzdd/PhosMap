@@ -17,7 +17,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' aligned_sequence_df_based_on_fasta_library =
+#' aligned_sequence_df_based_on_fasta_library <-
 #'  get_aligned_seq_for_mea(
 #'    ID,
 #'    Sequence,
@@ -37,7 +37,7 @@ get_aligned_seq_for_mea <- function(ID, Sequence, AA_in_protein, fixed_length, s
   ###########################################################################################################
   # Read fasta file: fasta_data
   cat('Read fasta file of ', species, '.\n', sep = '')
-  # fasta_type = 'refseq' # 'uniprot'
+  # fasta_type <- 'refseq' # 'uniprot'
   if(fasta_type == 'refseq' | fasta_type == 'uniprot'){
     PHOSPHATE_LIB_FASTA_DIR <- normalizePath(
       system.file(
@@ -125,7 +125,3 @@ get_aligned_seq_for_mea <- function(ID, Sequence, AA_in_protein, fixed_length, s
   aligned_sequence_df_based_on_fasta_library <- data.frame(ID, Sequence, AA_in_protein, aligned_seq)
   return(aligned_sequence_df_based_on_fasta_library)
 }
-
-
-
-

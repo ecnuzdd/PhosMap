@@ -14,7 +14,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' ksea_result_list = get_ksea_result_list(
+#' ksea_result_list <- get_ksea_result_list(
 #'   ptypes_data_ratio_in_sigle_exp,
 #'   ID,
 #'   kinase_substrate,

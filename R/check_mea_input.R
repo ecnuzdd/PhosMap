@@ -24,7 +24,7 @@ check_mea_input <- function(
   background,
   center
 ){
-  AA_LIST = c('A', 'R', 'N', 'D', 'C', 'Q', 'E', 'G', 'H', 'I', 'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V')
+  AA_LIST <- c('A', 'R', 'N', 'D', 'C', 'Q', 'E', 'G', 'H', 'I', 'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V')
 
   if(length(foreground) == 0){
     stop('No foreground sequences.')
@@ -53,7 +53,7 @@ check_mea_input <- function(
   if(any(nchar(background) != width)){
     stop('All background must be the same length.')
   }
-  center_index = ceiling(width/2)
+  center_index <- ceiling(width/2)
   foreground <- foreground[substr(foreground, center_index, center_index) == center]
   background <- background[substr(background, center_index, center_index) == center]
   if(length(foreground)>0){

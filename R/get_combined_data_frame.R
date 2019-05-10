@@ -15,7 +15,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' combinated_df_with_mapped_gene_symbol = get_combined_data_frame(
+#' combinated_df_with_mapped_gene_symbol <- get_combined_data_frame(
 #'   merge_df_with_phospho_peptides
 #' )
 #' }
@@ -47,9 +47,9 @@ get_combined_data_frame <- function(
   )
 
   if(!file.exists(PHOSPHATE_LIB_MAPPING_FILE_PATH)){
-    id_coversion_table_http_link = 'https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/id_coversion_table/species_ID.txt'
-    id_coversion_table_http_link = stringr::str_replace_all(id_coversion_table_http_link, 'species', species)
-    id_coversion_table_data_type = 'txt'
+    id_coversion_table_http_link <- 'https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/id_coversion_table/species_ID.txt'
+    id_coversion_table_http_link <- stringr::str_replace_all(id_coversion_table_http_link, 'species', species)
+    id_coversion_table_data_type <- 'txt'
     id_coversion_table = load_data_with_http(id_coversion_table_http_link, id_coversion_table_data_type)
     message('Save id coversion table of ', species, ' to ', PHOSPHATE_LIB_MAPPING_FILE_PATH)
     # write.csv(id_coversion_table, PHOSPHATE_LIB_MAPPING_FILE_PATH, row.names = FALSE)
@@ -76,26 +76,26 @@ get_combined_data_frame <- function(
 
 
   ##########################################################################################################
-  # id_types = c('GeneID', 'RefSeq_Protein_GI', 'RefSeq_Protein_Accession', 'Uniprot_Protein_Accession')
+  # id_types <- c('GeneID', 'RefSeq_Protein_GI', 'RefSeq_Protein_Accession', 'Uniprot_Protein_Accession')
   # GeneSymbol
   # construct dict
-  id_type = 'RefSeq_Protein_GI'
-  MappingDf = id_coversion_table[, c('GeneSymbol', id_type)]
-  invalid_index = which(as.vector(unlist(MappingDf[,2])) == '' | as.vector(unlist(MappingDf[,2])) == '-')
+  id_type <- 'RefSeq_Protein_GI'
+  MappingDf <- id_coversion_table[, c('GeneSymbol', id_type)]
+  invalid_index <- which(as.vector(unlist(MappingDf[,2])) == '' | as.vector(unlist(MappingDf[,2])) == '-')
   if(length(invalid_index)>0){
-    MappingDf = MappingDf[-invalid_index,]
+    MappingDf <- MappingDf[-invalid_index,]
   }
-  MappingDf_row = nrow(MappingDf)
+  MappingDf_row <- nrow(MappingDf)
   cat('\n', 'Construct dictionary based on GeneSymbol and specific ID.')
-  mapping_dict = NULL
+  mapping_dict <- NULL
   cat('\n', 'The total:', MappingDf_row)
   for(i in 1:MappingDf_row){
-    x = as.vector(MappingDf[i,1])
-    y = as.vector(unlist(MappingDf[i,2]))
-    y = strsplit(y, split = '; ')[[1]]
-    x_v = rep(x, length(y))
-    names(x_v) = y
-    mapping_dict = c(mapping_dict, x_v)
+    x <- as.vector(MappingDf[i,1])
+    y <- as.vector(unlist(MappingDf[i,2]))
+    y <- strsplit(y, split = '; ')[[1]]
+    x_v <- rep(x, length(y))
+    names(x_v) <- y
+    mapping_dict <- c(mapping_dict, x_v)
     if(i%%5000==0 | i == MappingDf_row){
       cat('\n', 'Completed:', i, '/', MappingDf_row)
     }
@@ -112,8 +112,8 @@ get_combined_data_frame <- function(
       return(mapping_dict[y])
     }, mapping_dict = mapping_dict, id_type)
 
-    gi_mapping_symbol_unique = unique(gi_mapping_symbol[which(!is.na(gi_mapping_symbol))])
-    gi_mapping_symbol_unique_count = length(gi_mapping_symbol_unique)
+    gi_mapping_symbol_unique <- unique(gi_mapping_symbol[which(!is.na(gi_mapping_symbol))])
+    gi_mapping_symbol_unique_count <- length(gi_mapping_symbol_unique)
 
 
     if(gi_mapping_symbol_unique_count == 0){

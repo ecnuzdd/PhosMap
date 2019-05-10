@@ -25,8 +25,6 @@
 #'
 #'
 
-
-
 get_ka_by_mean_or_mlr <- function(
   ptypes_data,
   species = 'human',
@@ -38,7 +36,7 @@ get_ka_by_mean_or_mlr <- function(
   # read relationship of kinase-substrate provided by PhosMap
   # KSRR: kinase substrate regulation relationship
   # A data frame contanning relationship of kinase-substrate that consists of "kinase", "substrate", "site", "sequence" and "predicted" columns.
-  KSRR_FILE_NAME = paste(species, 'ksrr.csv', sep = '_')
+  KSRR_FILE_NAME <- paste(species, 'ksrr.csv', sep = '_')
   KSRR_FILE_PATH <- normalizePath(
     system.file(
       'extdata',
@@ -146,7 +144,7 @@ get_ka_by_mean_or_mlr <- function(
   }else if(method == 'mlr'){
     requireNamespace("glmnet")
     x_vector <- sort(regulons_list_names)
-    x_vector_count = length(x_vector)
+    x_vector_count <- length(x_vector)
     y_vector <- sort(unique(as.vector(unlist(regulons_list))))
     y_vector_count <- length(y_vector)
     y_vector_assign_value_count <- rep(0, y_vector_count)
@@ -201,4 +199,3 @@ get_ka_by_mean_or_mlr <- function(
 
 
 }
-

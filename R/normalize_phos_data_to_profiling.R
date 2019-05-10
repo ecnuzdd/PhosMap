@@ -127,9 +127,3 @@ normalize_phos_data_to_profiling <- function (phospho_data_normalized, profiling
   return(df_phospho_Value_vs_profiling)
 
 }
-
-
-
-
-
-

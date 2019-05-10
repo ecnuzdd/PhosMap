@@ -12,7 +12,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' phospho_data_meet_percent = keep_psites_with_max_in_topX(
+#' phospho_data_meet_percent <- keep_psites_with_max_in_topX(
 #'   phospho_data,
 #'  percent_of_kept_sites = 3/4
 #' )

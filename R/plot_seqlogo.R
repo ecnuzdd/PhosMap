@@ -10,6 +10,7 @@
 #' https://github.com/omarwagih/ggseqlogo; (2) Hadley Wickham (2018). stringr: Simple, Consistent Wrappers for Common String Operations. \
 #' R package version 1.3.0. https://CRAN.R-project.org/package=stringr
 #'
+#' @export
 #'
 #' @examples
 #' \dontrun{

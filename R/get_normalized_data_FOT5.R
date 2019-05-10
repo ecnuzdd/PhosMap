@@ -10,7 +10,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' data_frame_normalization = get_normalized_data_FOT5(
+#' data_frame_normalization <- get_normalized_data_FOT5(
 #'   data_frame,
 #'   experiment_code_file_path
 #' )

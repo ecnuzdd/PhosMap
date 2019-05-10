@@ -9,11 +9,13 @@ Description: PhosMap is a comprehensive R package for analyzing quantitative pho
 License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: FALSE
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
 Date: 2019-05-06
+biocViews: Proteomics, Phosphoproteomics, DifferentialExpression, DataRepresentation,
+        Visualization, Clustering, KinaseActivityPrediction, MotifEnrichment
 Depends: R (>= 2.10)
 Imports: graphics, grDevices, stats, utils, stringr, ggseqlogo, samr,
-        limma, e1071, ClueR, Rtsne, glmnet, limma, impute
+        limma, e1071, ClueR, Rtsne, glmnet, yaml, impute
 Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
 NeedsCompilation: no

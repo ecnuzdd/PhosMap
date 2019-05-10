@@ -19,7 +19,7 @@ Get background data frame (fasta library from Refseq).
 }
 \examples{
 \dontrun{
-background_df = get_global_background_df(species)
+background_df <- get_global_background_df(species)
 }
 }
 \author{

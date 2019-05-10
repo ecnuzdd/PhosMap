@@ -40,7 +40,7 @@ get_kses <- function(
   }
 
   stochastic_enrichment_scores <- NULL
-  substate_vector_count = length(substate_vector)
+  substate_vector_count <- length(substate_vector)
   # stochastic process
   for(i in seq_len(trial)){
     regulons_of_kinase_i <- names(substate_vector[sample(substate_vector_count, substrates_of_kinase_in_exp_count)])

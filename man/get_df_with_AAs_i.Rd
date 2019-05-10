@@ -5,7 +5,8 @@
 \title{Get data frame of amino acide sequences for a protein.}
 \usage{
 get_df_with_AAs_i(unique_proteins, i, id_data_only_peptide2gi,
-  proteins_in_id_data_only_peptide2gi, sequences_in_id_data_only_peptide2gi,
+  proteins_in_id_data_only_peptide2gi,
+  sequences_in_id_data_only_peptide2gi,
   modification_index_in_protein_seq_list)
 }
 \arguments{

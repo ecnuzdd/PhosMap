@@ -4,7 +4,8 @@
 \alias{mea_based_on_background}
 \title{Motif enrichment based on global background (fasta library from Refseq).}
 \usage{
-mea_based_on_background(foreground, AA_in_protein, background, motifx_pvalue)
+mea_based_on_background(foreground, AA_in_protein, background,
+  motifx_pvalue)
 }
 \arguments{
 \item{foreground}{A vector for aligned sequence of foreground.}
@@ -23,7 +24,7 @@ Motif enrichment based on global background (fasta library from Refseq).
 }
 \examples{
 \dontrun{
-motifs_list = mea_based_on_background(
+motifs_list <- mea_based_on_background(
   foreground,
   AA_in_protein,
   background,
