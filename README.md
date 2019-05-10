@@ -28,7 +28,7 @@ install_github('ecnuzdd/PhosMap')
 ### Source location of the built-in reference library
 [PhosMap_datasets](https://github.com/ecnuzdd/PhosMap_datasets)  [https://github.com/ecnuzdd/PhosMap_datasets](https://github.com/ecnuzdd/PhosMap_datasets)  <br> 
 * [data](https://github.com/ecnuzdd/PhosMap_datasets/tree/master/data) (Demo data: BRAFi.RData)
-* [fasta_library](https://github.com/ecnuzdd/PhosMap_datasets/tree/master/fasta_libarary)
+* [fasta_library](https://github.com/ecnuzdd/PhosMap_datasets/tree/master/fasta_library)
   * Refseq (Human, Mouse, Rattus)
   * Uniprot (Human, Mouse, Rattus)
 * [id_coversion_table](https://github.com/ecnuzdd/PhosMap_datasets/tree/master/id_coversion_table)
