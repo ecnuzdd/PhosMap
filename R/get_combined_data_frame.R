@@ -1,6 +1,6 @@
 #' Get a data frame mapped ID to Gene Symbol.
 #'
-#' This is an intermediate file and a dataframe with Gene Symbol is exported.
+#' This is an intermediate file and a dataframe with Gene Symbol exported.
 #' Based on a library file consisting of mapping relationships about Gene Symbol, GeneID, RefSeq_Protein_GI, RefSeq_Protein_Accession and Uniprot_Protein_Accession,
 #' a new dataframe with Sequence, GI, Modification, Gene Symbol, Area and PSMs,is contructed.
 #'
@@ -19,6 +19,8 @@
 #'   merge_df_with_phospho_peptides
 #' )
 #' }
+#'
+
 get_combined_data_frame <- function(
   merge_df_with_phospho_peptides,
   species = 'human',

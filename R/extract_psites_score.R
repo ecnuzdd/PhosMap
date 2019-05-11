@@ -1,13 +1,13 @@
-#' Create R code to call python for parsering mascot xml.
+#' Create R codes to call python for parsering mascot xml.
 #'
 #' Extract the confidence probability of phosphorylation sites (psites) from mascot xml.
 #' One file containing experiment codes and one folder containing mascot xml as input, the another folder is required as output.
 #' Python is required and the corresponding xml package is also required.
 #'
 #'
-#' @param phosphorylation_exp_design_info_file_path A string representing the file path of experiment code, for examples: experiment_code.txt
-#' @param mascot_xml_dir A folder containing identification xml files searched by Mascot as input, for examples: Exp020901_F1_R1.xml
-#' @param mascot_txt_dir A folder used for saving files which contains the confidence of phosphorylation sites, for examples: Exp020901_F1_R1.txt
+#' @param phosphorylation_exp_design_info_file_path A string representing the file path of experiment code, for example: experiment_code.txt
+#' @param mascot_xml_dir A folder containing identification xml files searched by Mascot as input, for example: Exp020901_F1_R1.xml
+#' @param mascot_txt_dir A folder used for saving files which contains the confidence of phosphorylation sites, for example: Exp020901_F1_R1.txt
 #'
 #' @return A series of output file saved in the mascot_txt_dir
 #' @export

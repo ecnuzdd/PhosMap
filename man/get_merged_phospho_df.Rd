@@ -10,11 +10,11 @@ get_merged_phospho_df(peptide_id, peptide_df_with_area_psm_list,
 \arguments{
 \item{peptide_id}{a vector for peptide ID.}
 
-\item{peptide_df_with_area_psm_list}{a list for peptides with area and PSM.}
+\item{peptide_df_with_area_psm_list}{a list for peptides with areas and PSMs.}
 
 \item{ID_of_seq_gi_site_list}{a list for peptides ID with sequence, gi and site.}
 
-\item{ID_DF_list}{a list for ID and value.}
+\item{ID_DF_list}{a list for ID and values.}
 }
 \value{
 a merged data frame with phospho-peptides.

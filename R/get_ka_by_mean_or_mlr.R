@@ -22,8 +22,6 @@
 #' )
 #' }
 #'
-#'
-#'
 
 get_ka_by_mean_or_mlr <- function(
   ptypes_data,

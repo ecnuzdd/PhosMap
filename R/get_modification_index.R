@@ -1,12 +1,13 @@
-#' Get index of modifications in protein sequence.
+#' Get indexes of modifications in protein sequences.
 #' @param id_data_only_peptide2gi a data frame for peptides with protein gi.
 #' @param fasta_data a fasta data for a specific species.
 #'
 #' @author Dongdong Zhan and Mengsha Tong
 #'
-#' @return A vector for index of modifications in protein sequence.
+#' @return A vector for indexes of modifications in protein sequences.
 #' @export
 #'
+
 get_modification_index <- function(id_data_only_peptide2gi, fasta_data){
   # 1
   # Get modification index in protein sequence.

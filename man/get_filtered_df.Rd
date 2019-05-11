@@ -2,20 +2,20 @@
 % Please edit documentation in R/get_filtered_df.R
 \name{get_filtered_df}
 \alias{get_filtered_df}
-\title{Get filtered data frame based on the Mascot and reference file.}
+\title{Get data frame filtered based on the Mascot and reference files.}
 \usage{
 get_filtered_df(mascotfileName, refFileName)
 }
 \arguments{
-\item{mascotfileName}{a string for mascot name as input.}
+\item{mascotfileName}{a string for mascot names as input.}
 
-\item{refFileName}{a string for reference file name.}
+\item{refFileName}{a string for reference file names.}
 }
 \value{
 A filtered data frame
 }
 \description{
-Get filtered data frame based on the Mascot and reference file.
+Get data frame filtered based on the Mascot and reference files.
 }
 \author{
 Dongdong Zhan and Mengsha Tong

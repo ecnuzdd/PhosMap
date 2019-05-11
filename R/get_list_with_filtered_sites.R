@@ -14,17 +14,17 @@
 #'
 #' @return A list containing peptides dataframe with area values and psm,
 #' IDs with mergered sequences, gi and sites, new peptides dataframe combined previous peptides dataframe and IDs.
-#'
 #' @export
 #'
 #' @examples
 #' \dontrun{
-#' result_list_with_filtered_sites = get_list_with_filtered_sites(
+#' result_list_with_filtered_sites <- get_list_with_filted_sites(
 #'   peptide.id,
 #'   files,
 #'   files_site_score
 #' )
 #' }
+
 get_list_with_filtered_sites <- function(
   peptide_id,
   files,

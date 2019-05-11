@@ -9,7 +9,7 @@
 #'
 #' @references Omar Wagih (2014). rmotifx: An iterative statistical approach to the discovery of biological sequence motifs. R package version 1.0.
 #'
-#' @return A list from results of motif enrichment.
+#' @return A list for results of motif enrichment.
 #' @export
 #'
 #' @examples

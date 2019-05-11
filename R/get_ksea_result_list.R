@@ -1,8 +1,8 @@
-#' Kinase activity analysis based on known and predicted relationship of kinase-substrate
+#' Kinase activity analysis based on known and predicted kinase-substrate relationships
 #'
-#' @param ptypes_data_ratio_in_sigle_exp A quantifcation vector from single experiment.
+#' @param ptypes_data_ratio_in_sigle_exp A quantification vector from a single experiment.
 #' @param ID A phosporylation ID vector like VIM_S56 (GeneSymbol_psite).
-#' @param kinase_substrate_regulation_relationship A data frame contanning relationship of kinase-substrate that consists of "kinase", "substrate", "site", "sequence" and "predicted" columns.
+#' @param kinase_substrate_regulation_relationship A data frame contanning kinase-substrate relationships that consists of "kinase", "substrate", "site", "sequence" and "predicted" columns.
 #' @param ksea_activity_i_pvalue A cutoff used for filtering significant activities computed from KSEA.
 #'
 #' @author Dongdong Zhan and Mengsha Tong
@@ -22,8 +22,6 @@
 #' )
 #' }
 #'
-#'
-
 
 get_ksea_result_list <- function(ptypes_data_ratio_in_sigle_exp, ID, kinase_substrate_regulation_relationship, ksea_activity_i_pvalue = 0.05){
   symbol <- apply(data.frame(ID), 1, function(x){

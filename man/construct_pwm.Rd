@@ -27,6 +27,7 @@ pwm <- construct_pwm(
   frequency_flag = TRUE
 )
 }
+
 }
 \references{
 Wagih O, Sugiyama N, Ishihama Y, et al. Uncovering phosphorylation-based specificities through functional interaction networks[J]. Molecular & Cellular Proteomics, 2016, 15(1): 236-245.

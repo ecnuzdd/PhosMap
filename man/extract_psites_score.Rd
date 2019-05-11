@@ -2,17 +2,17 @@
 % Please edit documentation in R/extract_psites_score.R
 \name{extract_psites_score}
 \alias{extract_psites_score}
-\title{Create R code to call python for parsering mascot xml.}
+\title{Create R codes to call python for parsering mascot xml.}
 \usage{
-extract_psites_score(phosphorylation_exp_design_info_file_path, mascot_xml_dir,
-  mascot_txt_dir)
+extract_psites_score(phosphorylation_exp_design_info_file_path,
+  mascot_xml_dir, mascot_txt_dir)
 }
 \arguments{
-\item{phosphorylation_exp_design_info_file_path}{A string representing the file path of experiment code, for examples: experiment_code.txt}
+\item{phosphorylation_exp_design_info_file_path}{A string representing the file path of experiment code, for example: experiment_code.txt}
 
-\item{mascot_xml_dir}{A folder containing identification xml files searched by Mascot as input, for examples: Exp020901_F1_R1.xml}
+\item{mascot_xml_dir}{A folder containing identification xml files searched by Mascot as input, for example: Exp020901_F1_R1.xml}
 
-\item{mascot_txt_dir}{A folder used for saving files which contains the confidence of phosphorylation sites, for examples: Exp020901_F1_R1.txt}
+\item{mascot_txt_dir}{A folder used for saving files which contains the confidence of phosphorylation sites, for example: Exp020901_F1_R1.txt}
 }
 \value{
 A series of output file saved in the mascot_txt_dir

@@ -21,8 +21,6 @@
 #' )
 #' }
 #'
-#'
-#'
 
 get_summary_from_ksea <- function(
   ptypes_data,

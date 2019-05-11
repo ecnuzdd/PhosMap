@@ -7,7 +7,7 @@
 get_global_background_df(species = "human", fasta_type = "refseq")
 }
 \arguments{
-\item{species}{A string for that the alignment is based on which species, the options are human, mouse and rattus.}
+\item{species}{A string for that the alignment is based on which kinds of species, the options are human, mouse and rattus.}
 
 \item{fasta_type, }{A string for fasta source, the options are refseq and uniprot, the default is refseq}
 }

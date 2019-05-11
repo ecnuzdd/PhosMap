@@ -1,12 +1,12 @@
 #' Differential expression analysis using SAM
 #'
-#' @param expr_data_frame A data frame containing ID and quantification value.
-#' @param group A factor representing groups.
+#' @param expr_data_frame A data frame containing ID and quantification values.
+#' @param group A factor representing experimental groups.
 #' @param nperms Number of permutations used to estimate false discovery rates.
-#' @param log2_label A boolean value for representing whether or not the value is logarithmic, the default is FALSE.
+#' @param log2_label A boolean value for representing whether the value is logarithmic or not, the default is FALSE.
 #' @param rand if specified, the random number generator will be put in a reproducible state.
 #' @param minFDR A numeric value for filtering significant genes, the default is 0.05.
-#' @param samr_plot A boolean value for representing whether or not samr graph is plotted.
+#' @param samr_plot A boolean value for representing whether samr graph is plotted or not.
 #'
 #' @author Dongdong Zhan and Mengsha Tong
 #'

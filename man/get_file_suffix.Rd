@@ -7,10 +7,10 @@
 get_file_suffix(file_name)
 }
 \arguments{
-\item{file_name}{A string for file name.}
+\item{file_name}{A string for file names.}
 }
 \value{
-A string for file format.
+A string for the file format.
 }
 \description{
 Get sufffix of input file.

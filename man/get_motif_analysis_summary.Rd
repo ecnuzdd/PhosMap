@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_motif_analysis_summary.R
 \name{get_motif_analysis_summary}
 \alias{get_motif_analysis_summary}
-\title{Get summary result of motif analysis for specific input}
+\title{Get summary results of motif analysis for specific input}
 \usage{
 get_motif_analysis_summary(foreground, background, center = "S",
   min_sequence_count = 1, min_pvalue = 0.01)
@@ -22,7 +22,7 @@ get_motif_analysis_summary(foreground, background, center = "S",
 A list for summary result of motif analysis
 }
 \description{
-Get summary result of motif analysis for specific input
+Get summary results of motif analysis for specific input
 }
 \examples{
 \dontrun{

@@ -19,6 +19,7 @@
 #'   frequency_flag = TRUE
 #' )
 #' }
+#'
 
 construct_pwm <- function(
   sequences,

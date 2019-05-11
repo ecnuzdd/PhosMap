@@ -2,7 +2,7 @@
 % Please edit documentation in R/formatted_output_mef_results.R
 \name{formatted_output_mef_results}
 \alias{formatted_output_mef_results}
-\title{Output formatted sequences in foreground that are mapped to specific motif.}
+\title{Output formatted sequences in foreground that are mapped to specific motifs.}
 \usage{
 formatted_output_mef_results(foreground_sequences_mapped_to_motifs)
 }
@@ -13,7 +13,7 @@ formatted_output_mef_results(foreground_sequences_mapped_to_motifs)
 A data frame that motifs and their corresponding aligned sequences from foreground.
 }
 \description{
-Output formatted sequences in foreground that are mapped to specific motif.
+Output formatted sequences in foreground that are mapped to specific motifs.
 }
 \examples{
 \dontrun{
@@ -21,6 +21,7 @@ formatted_output_df <- formatted_output_mef_results(
   foreground_sequences_mapped_to_motifs
 )
 }
+
 }
 \author{
 Dongdong Zhan and Mengsha Tong

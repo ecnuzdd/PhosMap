@@ -19,6 +19,7 @@
 #'   http_link, data_type
 #' )
 #' }
+
 load_data_with_http <- function(http_link, data_type){
   message('First loading data from Github sever, it may take a few minutes.')
   message('Downloading data from ', http_link, '.', sep = '')

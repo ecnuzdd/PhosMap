@@ -17,6 +17,7 @@
 #'  percent_of_kept_sites = 3/4
 #' )
 #' }
+
 keep_psites_with_max_in_topX <- function(phospho_data, percent_of_kept_sites = 3/4){
   percent_of_kept_sites_str <- paste('top', percent_of_kept_sites*100, '%', sep = '')
   cat('\n The 8th step: filter psites with row maximum in', percent_of_kept_sites_str, '.')

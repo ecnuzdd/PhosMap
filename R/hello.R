@@ -11,7 +11,6 @@
 #'
 #' @author Dongdong Zhan and Mengsha Tong
 #'
-#'
 
 hello <- function() {
   print("Hello, world!")

@@ -1,6 +1,6 @@
 #' Get background data frame (fasta library from Refseq).
 #'
-#' @param species A string for that the alignment is based on which species, the options are human, mouse and rattus.
+#' @param species A string for that the alignment is based on which kinds of species, the options are human, mouse and rattus.
 #' @param fasta_type, A string for fasta source, the options are refseq and uniprot, the default is refseq
 #'
 #' @author Dongdong Zhan and Mengsha Tong
@@ -12,7 +12,6 @@
 #' \dontrun{
 #' background_df <- get_global_background_df(species)
 #' }
-
 
 get_global_background_df <- function(species = 'human', fasta_type = 'refseq'){
   requireNamespace('utils')

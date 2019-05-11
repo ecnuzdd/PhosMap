@@ -1,8 +1,8 @@
-#' Get filtered data frame based on the Mascot and reference file.
+#' Get data frame filtered based on the Mascot and reference files.
 #'
 #'
-#' @param mascotfileName a string for mascot name as input.
-#' @param refFileName a string for reference file name.
+#' @param mascotfileName a string for mascot names as input.
+#' @param refFileName a string for reference file names.
 #'
 #' @author Dongdong Zhan and Mengsha Tong
 #' @return A filtered data frame

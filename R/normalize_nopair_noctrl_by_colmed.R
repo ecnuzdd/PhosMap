@@ -4,6 +4,7 @@
 #'
 #' @return A data frame after normalization.
 #' @export
+
 normalize_nopair_noctrl_by_colmed <- function(data_frame){
   requireNamespace('stats')
   data_frame_colnames <- colnames(data_frame)

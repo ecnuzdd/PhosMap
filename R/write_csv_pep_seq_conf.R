@@ -10,7 +10,6 @@
 #'
 #' @export
 
-
 write_csv_pep_seq_conf <- function(expName, outputName, mascotfileNames, refFileName){
   requireNamespace('utils')
   fileNames_len <- length(mascotfileNames)

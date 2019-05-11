@@ -6,6 +6,7 @@
 #'
 #' @return A data frame after normalization.
 #' @export
+
 normalize_nopair_ctrl_by_col <- function(data_frame, experiment_design_file, control_label){
   data_frame_colnames <- colnames(data_frame)
   ID <- as.vector(data_frame[,1])

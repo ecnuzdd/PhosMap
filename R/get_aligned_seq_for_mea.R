@@ -1,10 +1,10 @@
-#' Taking S/T/Y as the center, align sequence to fasta library by specific length.
+#' Taking S/T/Y as the center, align sequence to fasta library by the specific length.
 #'
-#' @param ID A vector for protein gi.
-#' @param Sequence A vector for sequence of peptide.
-#' @param AA_in_protein A vector for the location of S/T/Y in sequence of protein.
-#' @param fixed_length A numeric value for aligned sequence,the default is 15.
-#' @param species A string for that the alignment is based on which species, the options are human, mouse and rattus, the default is human.
+#' @param ID A vector for gi number of proteins.
+#' @param Sequence A vector for sequence of peptides.
+#' @param AA_in_protein A vector for the locations of S/T/Y in sequence of proteins.
+#' @param fixed_length Length of aligned sequence,the default is 15.
+#' @param species A string for the library of species, the options are human, mouse and rattus, the default is human.
 #' @param fasta_type, A string for fasta source, the options are refseq and uniprot, the default is refseq
 #'
 #' @author Dongdong Zhan and Mengsha Tong

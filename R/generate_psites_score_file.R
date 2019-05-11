@@ -1,11 +1,11 @@
 #' Generate peptide identification files with psites scores.
 #'
-#' Based on mascot txt files with psites and peptide identification files downloaded from Firmiana, the file including phosphorylation modifications is generated.
+#' Based on mascot txt files with psites and peptide identification files downloaded from Firmiana, the file with phosphorylation modifications is generated.
 #'
 #'
 #' @param mascot_txt_dir A folder containing identification xml files with psites scores as input.
-#' @param firmiana_peptide_dir A folder containing identification txt file downloaded from Firmiana as input.
-#' @param psites_score_dir A folder used for saving files of peptide identification file with psites scores
+#' @param firmiana_peptide_dir A folder containing identification txt files downloaded from Firmiana as input.
+#' @param psites_score_dir A folder used for saving files of peptide identification files with psites scores
 #'
 #' @author Dongdong Zhan and Mengsha Tong
 #'
@@ -16,6 +16,7 @@
 #' \dontrun{
 #' generate_psites_score_file(mascot_txt_dir, firmiana_peptide_dir, psites_score_dir)
 #' }
+#'
 
 generate_psites_score_file <- function(mascot_txt_dir, firmiana_peptide_dir, psites_score_dir){
   mascot_txt_dir_paths <- list.dirs(mascot_txt_dir)

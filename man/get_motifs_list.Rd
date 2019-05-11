@@ -16,7 +16,7 @@ get_motifs_list(foreground, background, center_vector, motifx_pvalue)
 \item{motifx_pvalue}{A numeric value for selecting motifs that meets the minimum cutoff.}
 }
 \value{
-A list from results of motif enrichment.
+A list for results of motif enrichment.
 }
 \description{
 Motif enrichment using rmotifx.

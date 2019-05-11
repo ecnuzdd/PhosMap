@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_file_info_from_dir.R
 \name{get_file_info_from_dir}
 \alias{get_file_info_from_dir}
-\title{Get data lists from and corresponding file ids.}
+\title{Get data lists from files and the corresponding file ids.}
 \usage{
 get_file_info_from_dir(specific_dir, experiment_ID)
 }
@@ -15,7 +15,7 @@ get_file_info_from_dir(specific_dir, experiment_ID)
 A list containing data from files and corresponding file ids
 }
 \description{
-Read batch files (.txt or .csv) from specific directory.
+Read batch files (.txt or .csv) from a specific directory.
 }
 \examples{
 \dontrun{
@@ -24,4 +24,5 @@ result_list <- get_file_info_from_dir(
   experiment_ID
 )
 }
+
 }

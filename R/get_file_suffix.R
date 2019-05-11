@@ -1,10 +1,11 @@
 #' Get sufffix of input file.
 #'
-#' @param file_name A string for file name.
+#' @param file_name A string for file names.
 #'
-#' @return A string for file format.
+#' @return A string for the file format.
 #' @export
 #'
+
 get_file_suffix <- function(file_name){
   # Paser file name and get file suffix.
   # txt or csv

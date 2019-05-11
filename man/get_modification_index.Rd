@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_modification_index.R
 \name{get_modification_index}
 \alias{get_modification_index}
-\title{Get index of modifications in protein sequence.}
+\title{Get indexes of modifications in protein sequences.}
 \usage{
 get_modification_index(id_data_only_peptide2gi, fasta_data)
 }
@@ -12,10 +12,10 @@ get_modification_index(id_data_only_peptide2gi, fasta_data)
 \item{fasta_data}{a fasta data for a specific species.}
 }
 \value{
-A vector for index of modifications in protein sequence.
+A vector for indexes of modifications in protein sequences.
 }
 \description{
-Get index of modifications in protein sequence.
+Get indexes of modifications in protein sequences.
 }
 \author{
 Dongdong Zhan and Mengsha Tong
