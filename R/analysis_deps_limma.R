@@ -1,10 +1,10 @@
 #' Differential expression analysis using limma.
 #'
-#' @param expr_data_frame A data frame containing ID and quantification value.
-#' @param group A factor for representing groups.
-#' @param comparison_factor A vector for comparison factor.
-#' @param log2_label A boolean value for representing whether or not the value is logarithmic, the default is FALSE.
-#' @param adjust_method method used to adjust the p-values for multiple testing. See p.adjust for the complete list of options, the default is "BH"
+#' @param expr_data_frame A data frame containing ID and quantification values.
+#' @param group A factor for representing experimental groups.
+#' @param comparison_factor A vector for comparison groups.
+#' @param log2_label A boolean value for representing whether the value is logarithmic or not, the default is FALSE.
+#' @param adjust_method Method used to adjust the p-values for multiple testing. See p.adjust for the complete list of options, the default is "BH"
 #'
 #' @author Dongdong Zhan and Mengsha Tong
 #'
@@ -21,6 +21,7 @@
 #'   log2_label = FALSE, adjust_method = 'BH'
 #' )
 #' }
+
 analysis_deps_limma <- function(expr_data_frame, group, comparison_factor,
                                 log2_label = FALSE, adjust_method = 'BH'){
   requireNamespace('limma')
@@ -107,39 +108,3 @@ analysis_deps_limma <- function(expr_data_frame, group, comparison_factor,
 
   return(result_df)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

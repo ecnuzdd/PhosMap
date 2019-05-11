@@ -2,17 +2,18 @@
 % Please edit documentation in R/get_ksea_result_list.R
 \name{get_ksea_result_list}
 \alias{get_ksea_result_list}
-\title{Kinase activity analysis based on known and predicted relationship of kinase-substrate}
+\title{Kinase activity analysis based on known and predicted kinase-substrate relationships}
 \usage{
 get_ksea_result_list(ptypes_data_ratio_in_sigle_exp, ID,
-  kinase_substrate_regulation_relationship, ksea_activity_i_pvalue = 0.05)
+  kinase_substrate_regulation_relationship,
+  ksea_activity_i_pvalue = 0.05)
 }
 \arguments{
-\item{ptypes_data_ratio_in_sigle_exp}{A quantifcation vector from single experiment.}
+\item{ptypes_data_ratio_in_sigle_exp}{A quantification vector from a single experiment.}
 
 \item{ID}{A phosporylation ID vector like VIM_S56 (GeneSymbol_psite).}
 
-\item{kinase_substrate_regulation_relationship}{A data frame contanning relationship of kinase-substrate that consists of "kinase", "substrate", "site", "sequence" and "predicted" columns.}
+\item{kinase_substrate_regulation_relationship}{A data frame contanning kinase-substrate relationships that consists of "kinase", "substrate", "site", "sequence" and "predicted" columns.}
 
 \item{ksea_activity_i_pvalue}{A cutoff used for filtering significant activities computed from KSEA.}
 }
@@ -20,7 +21,7 @@ get_ksea_result_list(ptypes_data_ratio_in_sigle_exp, ID,
 A list containing results from ksea.
 }
 \description{
-Kinase activity analysis based on known and predicted relationship of kinase-substrate
+Kinase activity analysis based on known and predicted kinase-substrate relationships
 }
 \examples{
 \dontrun{
@@ -31,7 +32,6 @@ ksea_result_list <- get_ksea_result_list(
   0.05
 )
 }
-
 
 }
 \author{

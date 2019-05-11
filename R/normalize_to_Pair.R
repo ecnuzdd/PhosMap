@@ -5,6 +5,7 @@
 #'
 #' @return A data frame after normalization.
 #' @export
+
 normalize_to_Pair <- function(data_frame, experiment_design_file){
   data_frame_colnames <- colnames(data_frame)
   ID <- as.vector(data_frame[,1])

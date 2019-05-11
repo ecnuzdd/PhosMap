@@ -1,14 +1,14 @@
 #' computing kinase-substrate enrichment significance (pvalue)
 #'
-#' @param substate_vector a vector for substrates with value indentified in current experiment.
-#' @param regulons_of_kinase a vector for substrates of a specific kinase, which identified in current experiment.
+#' @param substate_vector a vector for substrates with values identified in current experiments.
+#' @param regulons_of_kinase a vector for substrates of a specific kinase, which identified in current experiments.
 #' @param trial a numeric for the number of random samples, the default is 1000.
 #'
 #' @author Dongdong Zhan and Mengsha Tong
 #'
 #' @references Hernandez-Armenta C et al. Benchmarking substrate-based kinase activity inference using phosphoproteomic data[J]. Bioinformatics, 2017, 33(12): 1845-1851.
 #'
-#' @return A list for expected enrichment score and its significance
+#' @return A list for expected enrichment scores and its significance
 #'
 #' @export
 #'
@@ -21,7 +21,7 @@
 #' )
 #' }
 #'
-#'
+
 get_kses <- function(
   substate_vector,
   regulons_of_kinase,

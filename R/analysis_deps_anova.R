@@ -1,14 +1,14 @@
 #' Differential expression analysis using ANOVA
 #'
-#' @param expr_data_frame A data frame containing ID and quantification value.
-#' @param group A factor representing groups.
-#' @param log2_label A boolean value for representing whether or not the value is logarithmic, the default is FALSE.
-#' @param return_padjust A boolean value for representing whether or not the pvalue is adjusted, the default is TRUE.
-#' @param adjust_method Correction method, such as "holm", "hochberg", "hommel", "bonferroni", "BH", "BY", "fdr".
+#' @param expr_data_frame A data frame containing ID and quantification values.
+#' @param group A factor representing experimental groups.
+#' @param log2_label A boolean value for representing whether the value is logarithmic or not, the default is FALSE.
+#' @param return_padjust A boolean value for representing whether or not the p value is adjusted, the default is TRUE.
+#' @param adjust_method Method used to adjust the p-values for multiple testing. See p.adjust for the complete list of options, the default is "BH".
 #'
 #' @author Dongdong Zhan and Mengsha Tong
 #'
-#' @return A data frame containing ID, log2(FC) and pvalue.
+#' @return A data frame containing ID, log2(FC) and p value.
 #' @export
 #'
 #' @examples
@@ -18,8 +18,6 @@
 #'   return_padjust = TRUE, adjust_method = 'BH'
 #' )
 #' }
-
-
 
 analysis_deps_anova <- function(expr_data_frame, group, log2_label = FALSE, return_padjust = TRUE, adjust_method = 'BH'){
   requireNamespace('stats')

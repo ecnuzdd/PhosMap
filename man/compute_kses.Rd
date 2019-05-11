@@ -8,11 +8,11 @@ compute_kses(substate_vector, regulons_of_kinase,
   substrates_of_kinase_in_exp_count)
 }
 \arguments{
-\item{substate_vector}{a vector for substrates with value indentified in current experiment.}
+\item{substate_vector}{a vector for substrates with values indentified in current experiments.}
 
-\item{regulons_of_kinase}{a vector for substrates of a specific kinase, which identified in current experiment.}
+\item{regulons_of_kinase}{a vector for substrates of a specific kinase, which with substrates identified in current experiments.}
 
-\item{substrates_of_kinase_in_exp_count}{a numeric for number in regulons_of_kinase vector.}
+\item{substrates_of_kinase_in_exp_count}{a numeric for numbers in regulons_of_kinase vector.}
 }
 \value{
 A numeric or NA for enrichment_score.
@@ -28,7 +28,6 @@ enrichment_score <- compute_kses(
   substrates_of_kinase_in_exp_count
 )
 }
-
 
 }
 \references{

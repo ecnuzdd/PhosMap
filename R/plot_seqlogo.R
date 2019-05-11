@@ -11,12 +11,10 @@
 #' R package version 1.3.0. https://CRAN.R-project.org/package=stringr
 #'
 #' @export
-#'
 #' @examples
 #' \dontrun{
 #' plot_seqlogo(base_dir, foreground_sequences_mapped_to_motifs, plot_min_seqs = 50)
 #' }
-
 
 plot_seqlogo <- function(base_dir, foreground_sequences_mapped_to_motifs, plot_min_seqs = 5){
   requireNamespace('ggseqlogo')

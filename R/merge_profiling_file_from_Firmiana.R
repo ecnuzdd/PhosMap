@@ -16,6 +16,7 @@
 #' \dontrun{
 #' merged_df <- merge_profiling_file_from_Firmiana(firmiana_gene_dir, US_cutoff = 1)
 #' }
+
 merge_profiling_file_from_Firmiana <- function(firmiana_gene_dir, US_cutoff = 1, experiment_gene_file_path){
   requireNamespace('utils')
   DATA_DIR <- normalizePath(firmiana_gene_dir, mustWork = FALSE)

@@ -4,8 +4,8 @@
 \alias{get_list_with_filtered_sites}
 \title{Filter phosphorylation sites.}
 \usage{
-get_list_with_filtered_sites(peptide_id, files, files_site_score, qc, min_score,
-  min_FDR)
+get_list_with_filtered_sites(peptide_id, files, files_site_score, qc,
+  min_score, min_FDR)
 }
 \arguments{
 \item{peptide_id}{A vector containing experiment ids as input.}
@@ -30,7 +30,7 @@ Filter phosphorylation sites by extracting all peptides with ion score>=20 and F
 }
 \examples{
 \dontrun{
-result_list_with_filtered_sites = get_list_with_filtered_sites(
+result_list_with_filtered_sites <- get_list_with_filted_sites(
   peptide.id,
   files,
   files_site_score

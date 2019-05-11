@@ -16,11 +16,12 @@
 #'
 #' @examples
 #' \dontrun{
-#' merge_df_with_phospho_peptides = pre_process_filter_psites(
+#' merge_df_with_phospho_peptides <- pre_process_filter_psites(
 #'   firmiana_peptide_dir,
 #'   psites_score_dir
 #' )
 #' }
+
 pre_process_filter_psites <- function(firmiana_peptide_dir, psites_score_dir,
                                       phospho_experiment_design_file_path, qc,
                                       min_score = 20, min_FDR = 0.01) {

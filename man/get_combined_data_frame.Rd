@@ -4,8 +4,8 @@
 \alias{get_combined_data_frame}
 \title{Get a data frame mapped ID to Gene Symbol.}
 \usage{
-get_combined_data_frame(merge_df_with_phospho_peptides, species = "human",
-  id_type = "RefSeq_Protein_GI")
+get_combined_data_frame(merge_df_with_phospho_peptides,
+  species = "human", id_type = "RefSeq_Protein_GI")
 }
 \arguments{
 \item{merge_df_with_phospho_peptides}{A dataframe consisting of IDs (Sequence_GI_Psite) and Area values.}
@@ -18,7 +18,7 @@ get_combined_data_frame(merge_df_with_phospho_peptides, species = "human",
 A dataframe with Sequence, GI, Modification, Gene Symbol, Area values and PSMs
 }
 \description{
-This is an intermediate file and a dataframe with Gene Symbol is exported.
+This is an intermediate file and a dataframe with Gene Symbol exported.
 Based on a library file consisting of mapping relationships about Gene Symbol, GeneID, RefSeq_Protein_GI, RefSeq_Protein_Accession and Uniprot_Protein_Accession,
 a new dataframe with Sequence, GI, Modification, Gene Symbol, Area and PSMs,is contructed.
 }
@@ -28,6 +28,7 @@ combinated_df_with_mapped_gene_symbol <- get_combined_data_frame(
   merge_df_with_phospho_peptides
 )
 }
+
 }
 \author{
 Dongdong Zhan and Mengsha Tong

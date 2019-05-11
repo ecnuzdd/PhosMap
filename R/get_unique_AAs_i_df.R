@@ -1,4 +1,3 @@
-
 #' Get data frame without redundancy.
 
 #'

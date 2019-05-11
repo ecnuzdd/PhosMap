@@ -10,20 +10,21 @@ generate_psites_score_file(mascot_txt_dir, firmiana_peptide_dir,
 \arguments{
 \item{mascot_txt_dir}{A folder containing identification xml files with psites scores as input.}
 
-\item{firmiana_peptide_dir}{A folder containing identification txt file downloaded from Firmiana as input.}
+\item{firmiana_peptide_dir}{A folder containing identification txt files downloaded from Firmiana as input.}
 
-\item{psites_score_dir}{A folder used for saving files of peptide identification file with psites scores}
+\item{psites_score_dir}{A folder used for saving files of peptide identification files with psites scores}
 }
 \value{
 A series of output files saved in the psites_score_dir
 }
 \description{
-Based on mascot txt files with psites and peptide identification files downloaded from Firmiana, the file including phosphorylation modifications is generated.
+Based on mascot txt files with psites and peptide identification files downloaded from Firmiana, the file with phosphorylation modifications is generated.
 }
 \examples{
 \dontrun{
 generate_psites_score_file(mascot_txt_dir, firmiana_peptide_dir, psites_score_dir)
 }
+
 }
 \author{
 Dongdong Zhan and Mengsha Tong

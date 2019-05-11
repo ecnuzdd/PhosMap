@@ -1,4 +1,3 @@
-
 #' Assign psites to protein sequence.
 #'
 #' Construct the data frame with unique phosphorylation site for each protein sequence and eliminate redundancy.
@@ -21,6 +20,7 @@
 #'   fasta_type = 'refseq'
 #' )
 #' }
+
 get_summary_with_unique_sites <- function(
   combinated_df_with_mapped_gene_symbol,
   species = 'human',

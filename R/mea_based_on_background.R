@@ -20,8 +20,6 @@
 #' )
 #' }
 
-
-
 # foreground <- as.vector(foreground_df$aligned_seq)
 # AA_in_protein <- as.vector(foreground_df$AA_in_protein)
 mea_based_on_background <- function(foreground, AA_in_protein, background, motifx_pvalue){

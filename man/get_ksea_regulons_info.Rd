@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_ksea_regulons_info.R
 \name{get_ksea_regulons_info}
 \alias{get_ksea_regulons_info}
-\title{Get informational data frame by combining result from all experiments}
+\title{Get informational data frame by combining results from all experiments}
 \usage{
 get_ksea_regulons_info(ksea_regulons, ksea_trans_list, ksea_x_list,
   ptypes_data_ratio_colnames)
@@ -12,7 +12,7 @@ get_ksea_regulons_info(ksea_regulons, ksea_trans_list, ksea_x_list,
 
 \item{ksea_trans_list}{A list that consits of regulation direction of kinase from each experiment by ksea.}
 
-\item{ksea_x_list}{A list that consits of sepecific information from each experiment by ksea, like regulation direction, pvalue and activity etc..}
+\item{ksea_x_list}{A list that consits of sepecific information from each experiment by ksea, like regulation direction, p value and activity etc..}
 
 \item{ptypes_data_ratio_colnames}{A vector that consists of column names from experiments.}
 }
@@ -20,18 +20,17 @@ get_ksea_regulons_info(ksea_regulons, ksea_trans_list, ksea_x_list,
 A data frame containing sepecific information of all experiments from ksea results, like regulation direction, pvalue and activity etc..
 }
 \description{
-Get informational data frame by combining result from all experiments
+Get informational data frame by combining results from all experiments
 }
 \examples{
 \dontrun{
-information_dataframe = get_ksea_regulons_info(
+information_dataframe <- get_ksea_regulons_info(
   ksea_regulons,
   ksea_trans_list,
   ksea_x_list,
   ptypes_data_ratio_colnames
 )
 }
-
 
 }
 \author{

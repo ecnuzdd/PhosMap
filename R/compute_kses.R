@@ -1,8 +1,8 @@
 #' computing kinase-substrate enrichment score
 #'
-#' @param substate_vector a vector for substrates with value indentified in current experiment.
-#' @param regulons_of_kinase a vector for substrates of a specific kinase, which identified in current experiment.
-#' @param substrates_of_kinase_in_exp_count a numeric for number in regulons_of_kinase vector.
+#' @param substate_vector a vector for substrates with values indentified in current experiments.
+#' @param regulons_of_kinase a vector for substrates of a specific kinase, which with substrates identified in current experiments.
+#' @param substrates_of_kinase_in_exp_count a numeric for numbers in regulons_of_kinase vector.
 #'
 #' @author Dongdong Zhan and Mengsha Tong
 #'
@@ -21,7 +21,7 @@
 #' )
 #' }
 #'
-#'
+
 compute_kses <- function(
   substate_vector,
   regulons_of_kinase,

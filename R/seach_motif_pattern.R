@@ -17,7 +17,7 @@
 #' @examples
 #' \dontrun{
 #' seach_motif_pattern(
-#'     foreground_sequence,,
+#'     foreground_sequence,
 #'     background_sequence,
 #'     min_sequence_count = 1,
 #'     min_pvalue = 0.01,

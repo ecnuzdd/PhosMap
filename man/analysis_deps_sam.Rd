@@ -4,15 +4,15 @@
 \alias{analysis_deps_sam}
 \title{Differential expression analysis using SAM}
 \usage{
-analysis_deps_sam(expr_data_frame, group, log2_label = FALSE, nperms = 100,
-  rand = NULL, minFDR = 0.05, samr_plot = TRUE)
+analysis_deps_sam(expr_data_frame, group, log2_label = FALSE,
+  nperms = 100, rand = NULL, minFDR = 0.05, samr_plot = TRUE)
 }
 \arguments{
-\item{expr_data_frame}{A data frame containing ID and quantification value.}
+\item{expr_data_frame}{A data frame containing ID and quantification values.}
 
-\item{group}{A factor representing groups.}
+\item{group}{A factor representing experimental groups.}
 
-\item{log2_label}{A boolean value for representing whether or not the value is logarithmic, the default is FALSE.}
+\item{log2_label}{A boolean value for representing whether the value is logarithmic or not, the default is FALSE.}
 
 \item{nperms}{Number of permutations used to estimate false discovery rates.}
 
@@ -20,7 +20,7 @@ analysis_deps_sam(expr_data_frame, group, log2_label = FALSE, nperms = 100,
 
 \item{minFDR}{A numeric value for filtering significant genes, the default is 0.05.}
 
-\item{samr_plot}{A boolean value for representing whether or not samr graph is plotted.}
+\item{samr_plot}{A boolean value for representing whether samr graph is plotted or not.}
 }
 \value{
 A list containing results from sam analysis.

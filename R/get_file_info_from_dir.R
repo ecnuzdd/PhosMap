@@ -1,6 +1,6 @@
-#' Get data lists from and corresponding file ids.
+#' Get data lists from files and the corresponding file ids.
 #'
-#' Read batch files (.txt or .csv) from specific directory.
+#' Read batch files (.txt or .csv) from a specific directory.
 #'
 #' @param specific_dir A folder containing files as input.
 #' @param experiment_ID A vector containing experiment codes as input
@@ -15,6 +15,8 @@
 #'   experiment_ID
 #' )
 #' }
+#'
+
 get_file_info_from_dir <- function(specific_dir, experiment_ID){
   requireNamespace('utils')
   # read all files from specific director and save them into a list

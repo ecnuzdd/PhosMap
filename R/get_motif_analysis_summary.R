@@ -1,4 +1,4 @@
-#' Get summary result of motif analysis for specific input
+#' Get summary results of motif analysis for specific input
 #'
 #' @param foreground A vector for AA sequences with fixed length as foreground input.
 #' @param background A vector for AA sequences with fixed length as background input.
@@ -23,7 +23,6 @@
 #'   min_pvalue
 #' )
 #' }
-
 
 get_motif_analysis_summary <- function(
   foreground,

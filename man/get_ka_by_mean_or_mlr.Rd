@@ -4,8 +4,8 @@
 \alias{get_ka_by_mean_or_mlr}
 \title{Computing kinase activity using mean value and multiple linear regression (ridge regression) except KSEA}
 \usage{
-get_ka_by_mean_or_mlr(ptypes_data, species = "human", log2_label = FALSE,
-  method = "mean")
+get_ka_by_mean_or_mlr(ptypes_data, species = "human",
+  log2_label = FALSE, method = "mean")
 }
 \arguments{
 \item{ptypes_data}{A data frame of phosphorylation data after normalization.}
@@ -32,8 +32,6 @@ kinase_activity_df <- get_ka_by_mean_or_mlr(
   method = 'mean'
 )
 }
-
-
 
 }
 \author{

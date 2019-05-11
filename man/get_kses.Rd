@@ -7,14 +7,14 @@
 get_kses(substate_vector, regulons_of_kinase, trial = 1000)
 }
 \arguments{
-\item{substate_vector}{a vector for substrates with value indentified in current experiment.}
+\item{substate_vector}{a vector for substrates with values identified in current experiments.}
 
-\item{regulons_of_kinase}{a vector for substrates of a specific kinase, which identified in current experiment.}
+\item{regulons_of_kinase}{a vector for substrates of a specific kinase, which identified in current experiments.}
 
 \item{trial}{a numeric for the number of random samples, the default is 1000.}
 }
 \value{
-A list for expected enrichment score and its significance
+A list for expected enrichment scores and its significance
 }
 \description{
 computing kinase-substrate enrichment significance (pvalue)
@@ -27,7 +27,6 @@ pvalue <- get_kses(
   1000
 )
 }
-
 
 }
 \references{

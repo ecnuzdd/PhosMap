@@ -1,4 +1,4 @@
-#' Get data frame of amino acide sequences for a protein.
+#' Get a data frame of amino acid sequences for proteins.
 
 #'
 #' @param unique_proteins a vector for unique proteins.
@@ -10,10 +10,9 @@
 #'
 #' @author Dongdong Zhan and Mengsha Tong
 #'
-#' @return A data frame with sequences for a protein.
+#' @return A data frame with sequences for proteins.
 #' @export
 #'
-
 
 get_df_with_AAs_i <- function(unique_proteins,
                               i,

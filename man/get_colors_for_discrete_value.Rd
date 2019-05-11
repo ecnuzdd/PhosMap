@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_colors_for_discrete_value.R
 \name{get_colors_for_discrete_value}
 \alias{get_colors_for_discrete_value}
-\title{Generate custom colors from discrete values for heatmap.}
+\title{Generate custom colors from discrete values for heatmaps.}
 \usage{
 get_colors_for_discrete_value(color_intervals_list, value_intervals_list)
 }
@@ -12,10 +12,10 @@ get_colors_for_discrete_value(color_intervals_list, value_intervals_list)
 \item{value_intervals_list}{a list for building value intervals.}
 }
 \value{
-A vectors containing colors distribution.
+A vectors containing color distributions.
 }
 \description{
-Generate custom colors from discrete values for heatmap.
+Generate custom colors from discrete values for heatmaps.
 }
 \examples{
 \dontrun{
@@ -38,6 +38,7 @@ colors <- get_colors_for_discrete_value(
   value_intervals_list
 )
 }
+
 }
 \author{
 Dongdong Zhan and Mengsha Tong

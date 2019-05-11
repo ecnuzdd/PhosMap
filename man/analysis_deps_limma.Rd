@@ -8,15 +8,15 @@ analysis_deps_limma(expr_data_frame, group, comparison_factor,
   log2_label = FALSE, adjust_method = "BH")
 }
 \arguments{
-\item{expr_data_frame}{A data frame containing ID and quantification value.}
+\item{expr_data_frame}{A data frame containing ID and quantification values.}
 
-\item{group}{A factor for representing groups.}
+\item{group}{A factor for representing experimental groups.}
 
-\item{comparison_factor}{A vector for comparison factor.}
+\item{comparison_factor}{A vector for comparison groups.}
 
-\item{log2_label}{A boolean value for representing whether or not the value is logarithmic, the default is FALSE.}
+\item{log2_label}{A boolean value for representing whether the value is logarithmic or not, the default is FALSE.}
 
-\item{adjust_method}{method used to adjust the p-values for multiple testing. See p.adjust for the complete list of options, the default is "BH"}
+\item{adjust_method}{Method used to adjust the p-values for multiple testing. See p.adjust for the complete list of options, the default is "BH"}
 }
 \value{
 A list containing results from limma analysis.

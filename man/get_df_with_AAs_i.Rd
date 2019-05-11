@@ -2,10 +2,11 @@
 % Please edit documentation in R/get_df_with_AAs_i.R
 \name{get_df_with_AAs_i}
 \alias{get_df_with_AAs_i}
-\title{Get data frame of amino acide sequences for a protein.}
+\title{Get a data frame of amino acid sequences for proteins.}
 \usage{
 get_df_with_AAs_i(unique_proteins, i, id_data_only_peptide2gi,
-  proteins_in_id_data_only_peptide2gi, sequences_in_id_data_only_peptide2gi,
+  proteins_in_id_data_only_peptide2gi,
+  sequences_in_id_data_only_peptide2gi,
   modification_index_in_protein_seq_list)
 }
 \arguments{
@@ -22,10 +23,10 @@ get_df_with_AAs_i(unique_proteins, i, id_data_only_peptide2gi,
 \item{modification_index_in_protein_seq_list}{a list for the index of modifications in protein sequence.}
 }
 \value{
-A data frame with sequences for a protein.
+A data frame with sequences for proteins.
 }
 \description{
-Get data frame of amino acide sequences for a protein.
+Get a data frame of amino acid sequences for proteins.
 }
 \author{
 Dongdong Zhan and Mengsha Tong

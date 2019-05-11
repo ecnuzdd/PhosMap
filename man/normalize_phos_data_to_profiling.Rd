@@ -32,7 +32,7 @@ Normalize phospho-data to profiling
 }
 \examples{
 \dontrun{
-df_phospho_Value_vs_profiling = normalize_phos_data_to_profiling(
+df_phospho_Value_vs_profiling <- normalize_phos_data_to_profiling(
   phospho_data_normalized,
   profiling_data_normalized,
   experiment_design_file_path,
