@@ -1,2 +1,7 @@
 Changes in version 0.99.20 (2019-05-11)
 + Debugging code
+
+Changes in version 0.99.21 (2019-05-12)
++ Changes based on feedback from Bioconductor build report
++ Update DESCRIPTION and NAMESPACE file
++ Use the correct code format
