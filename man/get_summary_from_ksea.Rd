@@ -4,8 +4,8 @@
 \alias{get_summary_from_ksea}
 \title{Get a data frame only containing inforamtion of kinase inferred by KSEA}
 \usage{
-get_summary_from_ksea(ptypes_data, species = "human", log2_label = TRUE,
-  ratio_cutoff = 3)
+get_summary_from_ksea(ptypes_data, species = "human",
+  log2_label = TRUE, ratio_cutoff = 3)
 }
 \arguments{
 \item{ptypes_data}{A data frame of phosphorylation data after normalization.}
