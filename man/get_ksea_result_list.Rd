@@ -5,7 +5,8 @@
 \title{Kinase activity analysis based on known and predicted kinase-substrate relationships}
 \usage{
 get_ksea_result_list(ptypes_data_ratio_in_sigle_exp, ID,
-  kinase_substrate_regulation_relationship, ksea_activity_i_pvalue = 0.05)
+  kinase_substrate_regulation_relationship,
+  ksea_activity_i_pvalue = 0.05)
 }
 \arguments{
 \item{ptypes_data_ratio_in_sigle_exp}{A quantification vector from a single experiment.}

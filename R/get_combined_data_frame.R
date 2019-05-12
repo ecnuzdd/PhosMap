@@ -91,7 +91,7 @@ get_combined_data_frame <- function(
   cat('\n', 'Construct dictionary based on GeneSymbol and specific ID.')
   mapping_dict <- NULL
   cat('\n', 'The total:', MappingDf_row)
-  for(i in 1:MappingDf_row){
+  for(i in seq_len(MappingDf_row)){
     x <- as.vector(MappingDf[i,1])
     y <- as.vector(unlist(MappingDf[i,2]))
     y <- strsplit(y, split = '; ')[[1]]

@@ -54,8 +54,8 @@ get_normalized_data_of_psites <- function(data_frame, experiment_code_file_path,
   }else{
     for(i in seq_len(Value_FOT5_col)){
       x <- as.vector(unlist(ptypes_value[,i]))
-      x_order <- order(x, decreasing = T)
-      x_order_top <- x_order[1:topN]
+      x_order <- order(x, decreasing = TRUE)
+      x_order_top <- x_order[seq_len(topN)]
       x[-x_order_top] <- 0
       Value_FOT5[,i] <- x/sum(x)*1e5
     }
