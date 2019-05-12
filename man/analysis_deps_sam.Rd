@@ -4,8 +4,8 @@
 \alias{analysis_deps_sam}
 \title{Differential expression analysis using SAM}
 \usage{
-analysis_deps_sam(expr_data_frame, group, log2_label = FALSE, nperms = 100,
-  rand = NULL, minFDR = 0.05, samr_plot = TRUE)
+analysis_deps_sam(expr_data_frame, group, log2_label = FALSE,
+  nperms = 100, rand = NULL, minFDR = 0.05, samr_plot = TRUE)
 }
 \arguments{
 \item{expr_data_frame}{A data frame containing ID and quantification values.}
@@ -32,7 +32,7 @@ Differential expression analysis using SAM
 \dontrun{
 sam_results_list <- analysis_deps_sam(
   expr_data_frame, group, log2_label = FALSE,
-  nperms = 100, rand = NULL, minFDR = 0.05,samr_plot = T
+  nperms = 100, rand = NULL, minFDR = 0.05,samr_plot = TRUE
 )
 }
 }

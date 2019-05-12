@@ -28,7 +28,7 @@ load_data_with_http <- function(http_link, data_type){
     load_data = read.csv(http_link)
     # save
   }else{
-    load_data = read.table(http_link, header = T, sep = '\t')
+    load_data = read.table(http_link, header = TRUE, sep = '\t')
     # save
   }
   message('Completing the data load.')

@@ -26,7 +26,7 @@ get_global_background_df <- function(species = 'human', fasta_type = 'refseq'){
         'motif_library', fasta_type, species,
         package = "PhosMap"
       ),
-      mustWork = F
+      mustWork = FALSE
     )
 
   }else{
