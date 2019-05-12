@@ -20,7 +20,7 @@
 #' \dontrun{
 #' sam_results_list <- analysis_deps_sam(
 #'   expr_data_frame, group, log2_label = FALSE,
-#'   nperms = 100, rand = NULL, minFDR = 0.05,samr_plot = T
+#'   nperms = 100, rand = NULL, minFDR = 0.05,samr_plot = TRUE
 #' )
 #' }
 
@@ -82,7 +82,7 @@ analysis_deps_sam <- function(expr_data_frame, group, log2_label = FALSE,
   }
 
   # Extract significant genes at the cut-off delta
-  siggenes_table <- samr::samr.compute.siggenes.table(samr_obj, delta, sam_data, delta_table, all.genes = F)
+  siggenes_table <- samr::samr.compute.siggenes.table(samr_obj, delta, sam_data, delta_table, all.genes = FALSE)
   genes_up_n <- siggenes_table$ngenes.up
   if(genes_up_n > 0){
     genes_up_df <- data.frame(siggenes_table$genes.up)

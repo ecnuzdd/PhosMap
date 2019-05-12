@@ -11,12 +11,12 @@ Encoding: UTF-8
 LazyData: FALSE
 RoxygenNote: 6.1.1
 Date: 2019-05-06
-biocViews: Proteomics, Phosphoproteomics, DifferentialExpression, DataRepresentation,
-        Visualization, Clustering, KinaseActivityPrediction, MotifEnrichment
-Depends: R (>= 2.10)
+biocViews: Proteomics, DifferentialExpression, DataRepresentation,
+        Visualization, Clustering, Normalization, QualityControl, TimeCourse
+Depends: R (>= 3.6)
 Imports: graphics, grDevices, stats, utils, stringr, ggseqlogo, samr,
         limma, e1071, ClueR, Rtsne, glmnet, yaml, impute
-Suggests: knitr, rmarkdown
+Suggests: knitr, rmarkdown, pheatmap
 VignetteBuilder: knitr
 NeedsCompilation: no
 Packaged: 2018-12-29 14:47:53 UTC; ecnuz

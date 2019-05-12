@@ -48,7 +48,7 @@ generate_psites_score_file <- function(mascot_txt_dir, firmiana_peptide_dir, psi
 
     outputName <- normalizePath(
       file.path(psites_score_dir, paste(mascot_txt_dir_path_expName, '_psites_score.csv', sep = '')),
-      mustWork = F
+      mustWork = FALSE
     )
     expName <- mascot_txt_dir_path_expName
     write_csv_pep_seq_conf(expName, outputName, mascot_txt_dir_path_expName_path, firmiana_peptide_dir_path_expName_path)
