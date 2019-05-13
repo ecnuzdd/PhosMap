@@ -11,12 +11,14 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' phospho_data_meet_percent <- keep_psites_with_max_in_topX(
-#'   phospho_data,
-#'  percent_of_kept_sites = 3/4
-#' )
-#' }
+#' demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/phospho_data.RData')
+#' load(demo_data_url)
+#'
+#' phospho_data_topX <- keep_psites_with_max_in_topX(phospho_data,
+#'   percent_of_kept_sites = 0.9)
+#'
+#' head(phospho_data_topX)
+#'
 
 keep_psites_with_max_in_topX <- function(phospho_data, percent_of_kept_sites = 3/4){
   percent_of_kept_sites_str <- paste('top', percent_of_kept_sites*100, '%', sep = '')

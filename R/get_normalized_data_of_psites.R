@@ -9,9 +9,18 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' ptypes_df <- get_normalized_data_of_psites(data_frame, experiment_code_file_path, topN = 500)
-#' }
+#' demo_data_url1 <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/summary_df_of_unique_proteins_with_sites.RData')
+#' demo_data_url2 <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/phosphorylation_exp_design_info.txt')
+#' load(demo_data_url1)
+#' phosphorylation_exp_design_info_file_path <- demo_data_url2
+#'
+#' phospho_data_filtering_STY_and_normalization_list <- get_normalized_data_of_psites(
+#'   summary_df_of_unique_proteins_with_sites,
+#'   phosphorylation_exp_design_info_file_path,
+#'   topN = NA, mod_types = c('S', 'T', 'Y')
+#' )
+#' head(phospho_data_filtering_STY_and_normalization_list)
+#'
 
 get_normalized_data_of_psites <- function(data_frame, experiment_code_file_path, topN = NA, mod_types = c('S', 'T', 'Y')){
   requireNamespace('utils')

@@ -27,17 +27,16 @@ A data frame containing ID, Sequence, AA_in_protein, aligned_seq.
 Taking S/T/Y as the center, align sequence to fasta library by the specific length.
 }
 \examples{
-\dontrun{
-aligned_sequence_df_based_on_fasta_library <-
- get_aligned_seq_for_mea(
-   ID,
-   Sequence,
-   AA_in_protein,
-   fixed_length,
-   species,
-   fasta_type
- )
-}
+demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/ID.RData')
+load(demo_data_url)
+
+foreground_df <- get_aligned_seq_for_mea(
+  ID, Sequence, AA_in_protein,
+  fixed_length, species = 'human',
+  fasta_type = 'refseq')
+
+head(foreground_df)
+
 }
 \references{
 Hadley Wickham (2018). stringr: Simple, Consistent Wrappers for Common String Operations. R package version 1.3.0.\

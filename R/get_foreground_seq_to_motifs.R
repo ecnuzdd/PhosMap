@@ -12,13 +12,17 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' mots_match_list = get_foreground_seq_to_motifs(
+#' demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/motifs_list.RData')
+#' load(demo_data_url)
+#'
+#' foreground_sequences_mapped_to_motifs <- get_foreground_seq_to_motifs(
 #'   motifs_list,
 #'   foreground
 #' )
-#' }
-
+#' head(foreground_sequences_mapped_to_motifs)
+#' require(ggseqlogo)
+#' ggseqlogo(foreground_sequences_mapped_to_motifs[[15]])
+#'
 
 get_foreground_seq_to_motifs <- function(motifs_list, foreground){
   requireNamespace('stats')

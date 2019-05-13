@@ -15,12 +15,16 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' limma_results_list <- analysis_deps_limma(
-#'   expr_data_frame, group, comparison_statement,
-#'   log2_label = FALSE, adjust_method = 'BH'
+#' demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/expr_data_frame.RData')
+#' load(demo_data_url)
+#'
+#' limma_results_df <- analysis_deps_limma(
+#'   expr_data_frame, group, group_levels,
+#'   log2_label = FALSE, adjust_method = 'none'
 #' )
-#' }
+#'
+#' head(limma_results_df)
+#'
 
 analysis_deps_limma <- function(expr_data_frame, group, comparison_factor,
                                 log2_label = FALSE, adjust_method = 'BH'){

@@ -9,9 +9,9 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' background_df <- get_global_background_df(species)
-#' }
+#' background_df <- get_global_background_df(species = 'human', fasta_type = 'refseq')
+#' head(background_df)
+#'
 
 get_global_background_df <- function(species = 'human', fasta_type = 'refseq'){
   requireNamespace('utils')

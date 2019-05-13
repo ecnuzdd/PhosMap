@@ -15,6 +15,9 @@ write_csv_pep_seq_conf(expName, outputName, mascotfileNames, refFileName)
 
 \item{refFileName}{a string for reference file name.}
 }
+\value{
+Write data to specific direction with CSV format.
+}
 \description{
 Write data to specific direction with CSV format.
 }

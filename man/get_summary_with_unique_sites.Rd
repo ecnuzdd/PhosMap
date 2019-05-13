@@ -4,11 +4,11 @@
 \alias{get_summary_with_unique_sites}
 \title{Assign psites to protein sequence.}
 \usage{
-get_summary_with_unique_sites(combinated_df_with_mapped_gene_symbol,
+get_summary_with_unique_sites(combined_df_with_mapped_gene_symbol,
   species = "human", fasta_type = "refseq")
 }
 \arguments{
-\item{combinated_df_with_mapped_gene_symbol}{A dataframe with Sequence, ID, Modification, Gene Symbol, Area and PSMs as input.}
+\item{combined_df_with_mapped_gene_symbol}{A dataframe with Sequence, ID, Modification, Gene Symbol, Area and PSMs as input.}
 
 \item{species}{A string, the options are human, mouse and rattus, the default is human.}
 
@@ -21,13 +21,16 @@ A dataframe that all redundant psites are assigned to protein sequence.
 Construct the data frame with unique phosphorylation site for each protein sequence and eliminate redundancy.
 }
 \examples{
-\dontrun{
+demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/combined_df_with_mapped_gene_symbol.RData')
+load(demo_data_url)
+
 summary_df_of_unique_proteins_with_sites <- get_summary_with_unique_sites(
-  combinated_df_with_mapped_gene_symbol,
+  combined_df_with_mapped_gene_symbol,
   species = 'human',
-  fasta_type = 'refseq'
-)
-}
+  fasta_type = 'refseq')
+
+head(summary_df_of_unique_proteins_with_sites)
+
 }
 \author{
 Dongdong Zhan and Mengsha Tong

@@ -21,13 +21,14 @@ A data frame that its aligned sequences with specific motif.
 Get filtered foreground data frame that its aligned sequences with specific motif.
 }
 \examples{
-\dontrun{
+demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/foreground_sequences_mapped_to_motifs.RData')
+load(demo_data_url)
+
 foreground_df_mapped_to_motifs <- get_foreground_df_to_motifs(
   foreground_sequences_mapped_to_motifs,
-  foreground,
-  foreground_df
+  foreground, foreground_df
 )
-}
+head(foreground_df_mapped_to_motifs)
 }
 \author{
 Dongdong Zhan and Mengsha Tong

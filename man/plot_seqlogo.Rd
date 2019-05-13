@@ -14,13 +14,22 @@ plot_seqlogo(base_dir, foreground_sequences_mapped_to_motifs,
 
 \item{plot_min_seqs}{A numeric value for cutoff, sequences of motifs greater than the cutoff are plotted, the default is 5.}
 }
+\value{
+Plot sequence logo based on list that consist of motifs and sequences.
+The results will be saved in a folder named PhosMap_ggseqlogo in the BASE_DIR
+parameter specified directory.
+}
 \description{
 Plot sequence logo based on list that consist of motifs and sequences.
 }
 \examples{
-\dontrun{
-plot_seqlogo(base_dir, foreground_sequences_mapped_to_motifs, plot_min_seqs = 50)
-}
+demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/foreground_sequences_mapped_to_motifs.RData')
+load(demo_data_url)
+
+BASE_DIR = getwd() # current working directory
+BASE_DIR = normalizePath(BASE_DIR)
+plot_seqlogo(BASE_DIR, foreground_sequences_mapped_to_motifs, plot_min_seqs = 25)
+
 }
 \references{
 (1) Omar Wagih (2017). ggseqlogo: A 'ggplot2' Extension for Drawing Publication-Ready Sequence Logos. R package version 0.1.\

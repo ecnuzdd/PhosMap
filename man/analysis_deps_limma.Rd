@@ -25,12 +25,16 @@ A list containing results from limma analysis.
 Differential expression analysis using limma.
 }
 \examples{
-\dontrun{
-limma_results_list <- analysis_deps_limma(
-  expr_data_frame, group, comparison_statement,
-  log2_label = FALSE, adjust_method = 'BH'
+demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/expr_data_frame.RData')
+load(demo_data_url)
+
+limma_results_df <- analysis_deps_limma(
+  expr_data_frame, group, group_levels,
+  log2_label = FALSE, adjust_method = 'none'
 )
-}
+
+head(limma_results_df)
+
 }
 \references{
 Ritchie, M.E., Phipson, B., Wu, D., Hu, Y., Law, C.W., Shi, W., and Smyth, G.K. (2015). limma powers differential expression \

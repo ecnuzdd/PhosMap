@@ -16,18 +16,23 @@ visualization_with_simple_tsne(expr_data_frame, group,
 
 \item{perplexity}{A numerical value for perplexity, the default is 10.}
 }
+\value{
+A simple t-SNE plot.
+}
 \description{
 A simple t-SNE plot.
 }
 \examples{
-\dontrun{
+demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/expr_data_frame.RData')
+load(demo_data_url)
+
 visualization_with_simple_tsne(
   expr_data_frame,
   group,
   main = 'Simple t-SNE',
-  perplexity = 10
+  perplexity = 12
 )
-}
+
 }
 \author{
 Dongdong Zhan and Mengsha Tong

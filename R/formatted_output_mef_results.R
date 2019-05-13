@@ -9,11 +9,13 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/foreground_sequences_mapped_to_motifs.RData')
+#' load(demo_data_url)
+#'
 #' formatted_output_df <- formatted_output_mef_results(
 #'   foreground_sequences_mapped_to_motifs
 #' )
-#' }
+#' head(formatted_output_df)
 #'
 
 formatted_output_mef_results <- function(

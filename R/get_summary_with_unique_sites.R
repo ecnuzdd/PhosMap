@@ -3,7 +3,7 @@
 #' Construct the data frame with unique phosphorylation site for each protein sequence and eliminate redundancy.
 #'
 #'
-#' @param combinated_df_with_mapped_gene_symbol A dataframe with Sequence, ID, Modification, Gene Symbol, Area and PSMs as input.
+#' @param combined_df_with_mapped_gene_symbol A dataframe with Sequence, ID, Modification, Gene Symbol, Area and PSMs as input.
 #' @param species A string, the options are human, mouse and rattus, the default is human.
 #' @param fasta_type, A string for fasta source, the options are refseq and uniprot, the default is refseq
 #'
@@ -13,16 +13,19 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/combined_df_with_mapped_gene_symbol.RData')
+#' load(demo_data_url)
+#'
 #' summary_df_of_unique_proteins_with_sites <- get_summary_with_unique_sites(
-#'   combinated_df_with_mapped_gene_symbol,
+#'   combined_df_with_mapped_gene_symbol,
 #'   species = 'human',
-#'   fasta_type = 'refseq'
-#' )
-#' }
+#'   fasta_type = 'refseq')
+#'
+#' head(summary_df_of_unique_proteins_with_sites)
+#'
 
 get_summary_with_unique_sites <- function(
-  combinated_df_with_mapped_gene_symbol,
+  combined_df_with_mapped_gene_symbol,
   species = 'human',
   fasta_type = 'refseq'
 ){
@@ -73,7 +76,7 @@ get_summary_with_unique_sites <- function(
 
 
 
-  id_data <- combinated_df_with_mapped_gene_symbol
+  id_data <- combined_df_with_mapped_gene_symbol
 
   # Keep peptides assigned to unique protein
   id_data_only_peptide2gi <- id_data[which(!grepl(';', as.vector(id_data$ID))),]

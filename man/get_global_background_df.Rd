@@ -18,9 +18,9 @@ A data frame of background
 Get background data frame (fasta library from Refseq).
 }
 \examples{
-\dontrun{
-background_df <- get_global_background_df(species)
-}
+background_df <- get_global_background_df(species = 'human', fasta_type = 'refseq')
+head(background_df)
+
 }
 \author{
 Dongdong Zhan and Mengsha Tong

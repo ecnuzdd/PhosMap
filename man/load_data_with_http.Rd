@@ -20,11 +20,12 @@ These datasets could be ragarded as library and uploaded to https://github.com/e
 When first perfoming functions depending on these datasets, PhosMap will get them from specific URL and save them into local disk.
 }
 \examples{
-\dontrun{
+http_link <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap/master/inst/extdata/kinase_substrate_regulation_relationship_table/human/human_ksrr.csv')
+data_type = 'csv'
 load_data <- load_data_with_http(
   http_link, data_type
 )
-}
+
 }
 \author{
 Dongdong Zhan and Mengsha Tong

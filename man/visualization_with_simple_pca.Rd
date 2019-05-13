@@ -21,14 +21,19 @@ visualization_with_simple_pca(expr_data_frame, main = "Simple PCA",
 
 \item{text_cex}{a numerical value for text size.}
 }
+\value{
+A simple PCA plot.
+}
 \description{
 A simple PCA plot.
 }
 \examples{
-\dontrun{
-visualization_with_simple_pca(expr_data_frame, main = 'Simple PCA',
-point_cex = 2, point_col = 'firebrick', point_type = 20, text_cex = 1)
-}
+demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/expr_df.RData')
+load(demo_data_url)
+
+visualization_with_simple_pca(expr_df, main = 'Simple PCA',
+  point_cex = 2, point_col = 'firebrick', point_type = 20, text_cex = 1)
+
 }
 \author{
 Dongdong Zhan and Mengsha Tong
