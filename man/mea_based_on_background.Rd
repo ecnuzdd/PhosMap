@@ -23,14 +23,17 @@ A list containing motifs and the corresponding sequences
 Motif enrichment based on global background (fasta library from Refseq).
 }
 \examples{
-\dontrun{
+demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/foreground.RData')
+load(demo_data_url)
+
 motifs_list <- mea_based_on_background(
   foreground,
   AA_in_protein,
   background,
   motifx_pvalue
 )
-}
+head(motifs_list)
+
 }
 \author{
 Dongdong Zhan and Mengsha Tong

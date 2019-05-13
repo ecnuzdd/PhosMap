@@ -1,16 +1,13 @@
 #' Generate custom colors from discrete values for heatmaps.
 #'
-#'
 #' @param color_intervals_list a list for building color intervals.
 #' @param value_intervals_list a list for building value intervals.
 #' @author Dongdong Zhan and Mengsha Tong
-#'
 #'
 #' @return A vectors containing color distributions.
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' value_intervals_list <- list(
 #' seq(-4, -2, 0.2),
 #' seq(-2, -1, 0.2),
@@ -29,7 +26,6 @@
 #'   color_intervals_list,
 #'   value_intervals_list
 #' )
-#' }
 #'
 
 get_colors_for_discrete_value <- function(color_intervals_list, value_intervals_list){

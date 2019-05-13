@@ -14,11 +14,12 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' http_link <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap/master/inst/extdata/kinase_substrate_regulation_relationship_table/human/human_ksrr.csv')
+#' data_type = 'csv'
 #' load_data <- load_data_with_http(
 #'   http_link, data_type
 #' )
-#' }
+#'
 
 load_data_with_http <- function(http_link, data_type){
   message('First loading data from Github sever, it may take a few minutes.')

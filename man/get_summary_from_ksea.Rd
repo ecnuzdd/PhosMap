@@ -23,14 +23,15 @@ A data frame that consists of kinase, psite, substrate, counting byond ratio_cut
 Get a data frame only containing inforamtion of kinase inferred by KSEA
 }
 \examples{
-\dontrun{
-summary_df_list_from_ksea <- get_summary_from_ksea(
-  ptypes_data,
-  species = 'human',
-  log2_label = TRUE,
-  ratio_cutoff = 3
-)
-}
+demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/cluster_df.RData')
+load(demo_data_url)
+
+summary_df_list_from_ksea_cluster <- get_summary_from_ksea(
+  cluster_df, species = 'human',
+  log2_label = FALSE, ratio_cutoff = 3
+  )
+
+head(summary_df_list_from_ksea_cluster)
 
 }
 \author{

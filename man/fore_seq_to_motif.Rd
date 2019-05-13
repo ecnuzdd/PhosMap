@@ -16,11 +16,14 @@ A data frame that consist of aligned sequences and the corresponding motifs.
 Convert the list that consists of motifs and the corresponding sequences to data frame.
 }
 \examples{
-\dontrun{
+demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/foreground_sequences_mapped_to_motifs.RData')
+load(demo_data_url)
+
 df <- fore_seq_to_motif(
   foreground_sequences_mapped_to_motifs
 )
-}
+head(df)
+
 }
 \author{
 Dongdong Zhan and Mengsha Tong

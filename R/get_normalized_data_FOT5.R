@@ -9,12 +9,16 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' data_frame_normalization <- get_normalized_data_FOT5(
-#'   data_frame,
-#'   experiment_code_file_path
-#' )
-#' }
+#' demo_data_url1 <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/profiling_data.RData')
+#' demo_data_url2 <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/profiling_exp_design_info.txt')
+#' load(demo_data_url1)
+#' profiling_exp_design_info_file_path <- demo_data_url2
+#'
+#' profiling_data_normalized <- get_normalized_data_FOT5(profiling_data,
+#'   profiling_exp_design_info_file_path)
+#'
+#' head(profiling_data_normalized)
+#'
 
 get_normalized_data_FOT5 <- function(
   data_frame,

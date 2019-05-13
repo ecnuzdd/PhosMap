@@ -16,17 +16,17 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' aligned_sequence_df_based_on_fasta_library <-
-#'  get_aligned_seq_for_mea(
-#'    ID,
-#'    Sequence,
-#'    AA_in_protein,
-#'    fixed_length,
-#'    species,
-#'    fasta_type
-#'  )
-#' }
+#' demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/ID.RData')
+#' load(demo_data_url)
+#'
+#' foreground_df <- get_aligned_seq_for_mea(
+#'   ID, Sequence, AA_in_protein,
+#'   fixed_length, species = 'human',
+#'   fasta_type = 'refseq')
+#'
+#' head(foreground_df)
+#'
+
 
 get_aligned_seq_for_mea <- function(ID, Sequence, AA_in_protein, fixed_length, species = 'human', fasta_type = 'refseq'){
   requireNamespace('stringr')

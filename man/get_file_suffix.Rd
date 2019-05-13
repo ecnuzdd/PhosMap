@@ -10,8 +10,11 @@ get_file_suffix(file_name)
 \item{file_name}{A string for file names.}
 }
 \value{
-A string for the file format.
+Return file suffix.
 }
 \description{
 Get sufffix of input file.
+}
+\examples{
+get_file_suffix("myfile.txt")
 }

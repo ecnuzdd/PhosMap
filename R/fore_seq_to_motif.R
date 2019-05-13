@@ -7,11 +7,14 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/foreground_sequences_mapped_to_motifs.RData')
+#' load(demo_data_url)
+#'
 #' df <- fore_seq_to_motif(
 #'   foreground_sequences_mapped_to_motifs
 #' )
-#' }
+#' head(df)
+#'
 
 fore_seq_to_motif <- function(
   foreground_sequences_mapped_to_motifs

@@ -7,17 +7,18 @@
 #'
 #' @author Dongdong Zhan and Mengsha Tong
 #' @export
-#'
-#'
+#' @return A simple t-SNE plot.
 #' @examples
-#' \dontrun{
+#' demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/expr_data_frame.RData')
+#' load(demo_data_url)
+#'
 #' visualization_with_simple_tsne(
 #'   expr_data_frame,
 #'   group,
 #'   main = 'Simple t-SNE',
-#'   perplexity = 10
+#'   perplexity = 12
 #' )
-#' }
+#'
 
 visualization_with_simple_tsne <- function(expr_data_frame, group, main = 'Simple t-SNE', perplexity = 10)
 {

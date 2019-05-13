@@ -2,9 +2,10 @@
 #'
 #' @param file_name A string for file names.
 #'
-#' @return A string for the file format.
+#' @return Return file suffix.
 #' @export
-#'
+#' @examples
+#' get_file_suffix("myfile.txt")
 
 get_file_suffix <- function(file_name){
   # Paser file name and get file suffix.

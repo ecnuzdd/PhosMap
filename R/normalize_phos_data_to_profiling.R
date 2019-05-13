@@ -15,15 +15,25 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' df_phospho_Value_vs_profiling <- normalize_phos_data_to_profiling(
-#'   phospho_data_normalized,
-#'   profiling_data_normalized,
-#'   experiment_design_file_path,
-#'   control_label = NA,
-#'   pair_flag = FALSE
-#' )
-#' }
+#' demo_data_url1 <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/phospho_data_topX.RData')
+#' demo_data_url2 <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/profiling_data_normalized.RData')
+#' demo_data_url3 <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/phosphorylation_exp_design_info.txt')
+#' demo_data_url4 <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/profiling_exp_design_info.txt')
+#'
+#' load(demo_data_url1)
+#' load(demo_data_url2)
+#' phosphorylation_exp_design_info_file_path <- demo_data_url3
+#' profiling_exp_design_info_file_path <- demo_data_url4
+#'
+#' data_frame_normalization_with_control_no_pair <- normalize_phos_data_to_profiling(
+#'   phospho_data_topX, profiling_data_normalized,
+#'   phosphorylation_exp_design_info_file_path,
+#'   profiling_exp_design_info_file_path,
+#'   control_label = '0',
+#'   pair_flag = FALSE)
+#'
+#' head(data_frame_normalization_with_control_no_pair)
+#'
 
 normalize_phos_data_to_profiling <- function (phospho_data_normalized, profiling_data_normalized,
                                                  phosphorylation_exp_design_info_file_path, profiling_exp_design_info_file_path,

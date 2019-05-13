@@ -31,18 +31,17 @@ A lines chart with fuzzy degree.
 Visualize results from fuzzy clusters with line chart
 }
 \examples{
-\dontrun{
-visualization_fuzzycluster(
-  input_data,
-  group,
-  group_levels,
-  k_cluster,
-  iteration = 100,
-  mfrow = c(3,3),
-  min_mem = 0.1,
-  plot = TRUE
-)
-}
+demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/fuzzy_input_df.RData')
+load(demo_data_url)
+
+fuzzy_clustObj <- visualization_fuzzycluster(
+  fuzzy_input_df, group, group_levels,
+  k_cluster=9, iteration = 100,
+  mfrow = c(3,3), min_mem = 0.1
+ )
+
+head(fuzzy_clustObj)
+
 }
 \references{
 (1) David Meyer, Evgenia Dimitriadou, Kurt Hornik, Andreas Weingessel and Friedrich Leisch (2017). e1071: Misc Functions of the \

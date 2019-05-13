@@ -8,9 +8,10 @@
 #' Check Package:             'Ctrl + Shift + E'
 #' Test Package:              'Ctrl + Shift + T'
 #'
-#'
+#' @return  Two strings
 #' @author Dongdong Zhan and Mengsha Tong
-#'
+#' @examples
+#' hello()
 
 hello <- function() {
   print("Hello, world!")

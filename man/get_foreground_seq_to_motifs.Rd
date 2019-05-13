@@ -18,12 +18,17 @@ A list containing motifs and the corresponding sequences from foreground.
 Get motifs and their corresponding aligned sequences form from foreground.
 }
 \examples{
-\dontrun{
-mots_match_list = get_foreground_seq_to_motifs(
+demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/motifs_list.RData')
+load(demo_data_url)
+
+foreground_sequences_mapped_to_motifs <- get_foreground_seq_to_motifs(
   motifs_list,
   foreground
 )
-}
+head(foreground_sequences_mapped_to_motifs)
+require(ggseqlogo)
+ggseqlogo(foreground_sequences_mapped_to_motifs[[15]])
+
 }
 \references{
 Hadley Wickham (2018). stringr: Simple, Consistent Wrappers for Common String Operations. R package version 1.3.0.\

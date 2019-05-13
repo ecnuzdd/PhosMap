@@ -29,12 +29,15 @@ A list containing results from sam analysis.
 Differential expression analysis using SAM
 }
 \examples{
-\dontrun{
+demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/expr_data_frame.RData')
+load(demo_data_url)
+
 sam_results_list <- analysis_deps_sam(
   expr_data_frame, group, log2_label = FALSE,
   nperms = 100, rand = NULL, minFDR = 0.05,samr_plot = TRUE
 )
-}
+head(sam_results_list)
+
 }
 \references{
 R. Tibshirani, G. Chu, T. Hastie and Balasubramanian Narasimhan (2010). samr: SAM: Significance Analysis of Microarrays.\

@@ -23,11 +23,14 @@ Based on a library file consisting of mapping relationships about Gene Symbol, G
 a new dataframe with Sequence, GI, Modification, Gene Symbol, Area and PSMs,is contructed.
 }
 \examples{
-\dontrun{
-combinated_df_with_mapped_gene_symbol <- get_combined_data_frame(
-  merge_df_with_phospho_peptides
-)
-}
+demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/merge_df_with_phospho_peptides.RData')
+load(demo_data_url)
+
+combined_df_with_mapped_gene_symbol <- get_combined_data_frame(
+  merge_df_with_phospho_peptides, species = 'human',
+  id_type = 'RefSeq_Protein_GI')
+
+head(combinated_df_with_mapped_gene_symbol)
 
 }
 \author{

@@ -11,14 +11,17 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/foreground.RData')
+#' load(demo_data_url)
+#'
 #' motifs_list <- mea_based_on_background(
 #'   foreground,
 #'   AA_in_protein,
 #'   background,
 #'   motifx_pvalue
 #' )
-#' }
+#' head(motifs_list)
+#'
 
 # foreground <- as.vector(foreground_df$aligned_seq)
 # AA_in_protein <- as.vector(foreground_df$AA_in_protein)

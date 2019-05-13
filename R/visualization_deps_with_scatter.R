@@ -15,17 +15,26 @@
 #' @return A scatter plot for showing differentially expressed results.
 #'
 #' @examples
-#' \dontrun{
+#' demo_data_url1 <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/limma_results_df.RData')
+#' demo_data_url2 <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/anova_result_df.RData')
+
+#' load(demo_data_url1)
+#' load(demo_data_url2)
+#'
 #' visualization_deps_with_scatter(
-#'   deps_data,
-#'   minFC = 2,
-#'   minPvalue = 0.05,
-#'   main = 'Differentially expressed proteins',
-#'   show_text = FALSE,
-#'   min_up_text = 15,
-#'   min_down_text = 15
-#' )
-#' }
+#'   limma_results_df,
+#'   minFC = 2, minPvalue = 0.05,
+#'   main = 'Differentially expressed proteins  \n with limma',
+#'   show_text = T, min_up_text = 70,
+#'   min_down_text = 70)
+#'
+#' visualization_deps_with_scatter(
+#'   anova_result_df,
+#'   minFC = 2, minPvalue = 0.05,
+#'   main = 'Differentially expressed proteins \n with anova',
+#'   show_text = F, min_up_text = 15,
+#'   min_down_text = 15)
+#'
 
 visualization_deps_with_scatter <- function(
   deps_data,

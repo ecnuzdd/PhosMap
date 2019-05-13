@@ -12,12 +12,16 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/expr_data_frame.RData')
+#' load(demo_data_url)
+#'
 #' anova_result <- analysis_deps_anova(
 #'   expr_data_frame, group, log2_label = FALSE,
 #'   return_padjust = TRUE, adjust_method = 'BH'
 #' )
-#' }
+#'
+#' head(anova_result)
+#'
 
 analysis_deps_anova <- function(expr_data_frame, group, log2_label = FALSE, return_padjust = TRUE, adjust_method = 'BH'){
   requireNamespace('stats')
