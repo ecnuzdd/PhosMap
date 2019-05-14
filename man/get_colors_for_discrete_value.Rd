@@ -36,6 +36,7 @@ colors <- get_colors_for_discrete_value(
   color_intervals_list,
   value_intervals_list
 )
+head(colors)
 
 }
 \author{

@@ -21,7 +21,7 @@
 #'   merge_df_with_phospho_peptides, species = 'human',
 #'   id_type = 'RefSeq_Protein_GI')
 #'
-#' head(combinated_df_with_mapped_gene_symbol)
+#' head(combined_df_with_mapped_gene_symbol)
 #'
 
 get_combined_data_frame <- function(
