@@ -22,26 +22,35 @@
 #'
 
 load_data_with_ftp <- function(ftp_link, data_type){
-  message('First loading data from Github sever, it may take a few minutes.')
-  message('Downloading data from ', http_link, '.', sep = '')
-  # message('Suggesting you save the data for next use.')
+  # ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/BRAFi.RData"
+  # load_data <- load_data_with_ftp_test(ftp_url, 'RData')
+  # writeBin(load_data, "BRAFi.RData")
+  # load("BRAFi.RData")
 
+  # ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/motif_library/refseq/mouse/STY_background_of_refseq_mouse_for_motif_enrichment.txt"
+  # bg <- load_data_with_ftp_test(ftp_url, 'txt')
+
+  # ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/kinase_substrate_regulation_relationship_table/human/human_ksrr.csv"
+  # ks <- load_data_with_ftp_test(ftp_url, 'csv')
+
+  message('First loading data from FTP sever, it may take a few minutes.')
+  message('Downloading data from ', ftp_link, '.', sep = '')
+  # message('Suggesting you save the data for next use.')
   require('RCurl')
   userpwd <- "user1:qazwsx123!"
   if(data_type == 'csv'){
     csv_data <- getURL(ftp_url, userpwd = userpwd, ftp.use.epsv = FALSE, crlf = TRUE)
-    load_data = read.csv(csv_data)
+    load_data = read.csv(text = csv_data)
     message('Completing the csv data load.')
     return(load_data)
-  }else if(txt){
+  }else if(data_type == 'txt'){
     text_data <- getURL(ftp_url, userpwd = userpwd, ftp.use.epsv = FALSE, crlf = TRUE)
-    load_data = read.table(text_data, header = TRUE, sep = '\t')
+    load_data = read.table(text = text_data, header = TRUE, sep = '\t')
     message('Completing the text data load.')
-    return(load_data)
+
   }else{
-    out <- getBinaryURL(ftp_url, userpwd = userpwd, ftp.use.epsv = FALSE,crlf = TRUE)
-    writeBin(out, "temp.RData")
-    load("temp.RData")
+    load_data <- getBinaryURL(ftp_url, userpwd = userpwd, ftp.use.epsv = FALSE, crlf = TRUE)
     message('Completing the RData load.')
   }
+  return(load_data)
 }
