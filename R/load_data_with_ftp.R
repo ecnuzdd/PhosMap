@@ -23,15 +23,15 @@
 
 load_data_with_ftp <- function(ftp_link, data_type){
   # ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/BRAFi.RData"
-  # load_data <- load_data_with_ftp_test(ftp_url, 'RData')
+  # load_data <- load_data_with_ftp(ftp_url, 'RData')
   # writeBin(load_data, "BRAFi.RData")
   # load("BRAFi.RData")
 
   # ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/motif_library/refseq/mouse/STY_background_of_refseq_mouse_for_motif_enrichment.txt"
-  # bg <- load_data_with_ftp_test(ftp_url, 'txt')
+  # bg <- load_data_with_ftp(ftp_url, 'txt')
 
   # ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/kinase_substrate_regulation_relationship_table/human/human_ksrr.csv"
-  # ks <- load_data_with_ftp_test(ftp_url, 'csv')
+  # ks <- load_data_with_ftp(ftp_url, 'csv')
 
   message('First loading data from FTP sever, it may take a few minutes.')
   message('Downloading data from ', ftp_link, '.', sep = '')
