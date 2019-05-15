@@ -20,11 +20,9 @@ These datasets could be ragarded as library and uploaded to ftp://111.198.139.72
 When first perfoming functions depending on these datasets, PhosMap will get them from specific URL and save them into local disk.
 }
 \examples{
-http_link <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap/master/inst/extdata/kinase_substrate_regulation_relationship_table/human/human_ksrr.csv')
-data_type = 'csv'
-load_data <- load_data_with_http(
-  http_link, data_type
-)
+ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/profiling_exp_design_info.txt"
+load_data <- load_data_with_ftp(ftp_url, 'txt')
+head(load_data)
 
 }
 \author{

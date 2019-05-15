@@ -7,8 +7,10 @@
 #' @export
 #'
 #' @examples
-#' demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/foreground_sequences_mapped_to_motifs.RData')
-#' load(demo_data_url)
+#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/foreground_sequences_mapped_to_motifs.RData"
+#' load_data <- load_data_with_ftp(ftp_url, 'RData')
+#' writeBin(load_data, "foreground_sequences_mapped_to_motifs.RData")
+#' load("foreground_sequences_mapped_to_motifs.RData")
 #'
 #' df <- fore_seq_to_motif(
 #'   foreground_sequences_mapped_to_motifs

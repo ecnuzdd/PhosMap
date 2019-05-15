@@ -30,10 +30,15 @@ A scatter plot for showing differentially expressed results.
 Visualize differentially expressed results with scatter
 }
 \examples{
-demo_data_url1 <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/limma_results_df.RData')
-demo_data_url2 <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/anova_result_df.RData')
-load(demo_data_url1)
-load(demo_data_url2)
+ftp_url1 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/limma_results_df.RData"
+ftp_url2 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/anova_result_df.RData"
+load_data1 <- load_data_with_ftp(ftp_url1, 'RData')
+writeBin(load_data1, "limma_results_df.RData")
+load("limma_results_df.RData")
+
+load_data2 <- load_data_with_ftp(ftp_url2, 'RData')
+writeBin(load_data2, "anova_result_df.RData")
+load("anova_result_df.RData")
 
 visualization_deps_with_scatter(
   limma_results_df,

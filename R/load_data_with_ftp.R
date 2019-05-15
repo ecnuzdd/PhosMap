@@ -14,11 +14,9 @@
 #' @export
 #'
 #' @examples
-#' http_link <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap/master/inst/extdata/kinase_substrate_regulation_relationship_table/human/human_ksrr.csv')
-#' data_type = 'csv'
-#' load_data <- load_data_with_http(
-#'   http_link, data_type
-#' )
+#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/profiling_exp_design_info.txt"
+#' load_data <- load_data_with_ftp(ftp_url, 'txt')
+#' head(load_data)
 #'
 
 load_data_with_ftp <- function(ftp_link, data_type){
@@ -32,7 +30,7 @@ load_data_with_ftp <- function(ftp_link, data_type){
 
   # ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/kinase_substrate_regulation_relationship_table/human/human_ksrr.csv"
   # ks <- load_data_with_ftp(ftp_url, 'csv')
-
+  ftp_url <- ftp_link
   message('First loading data from FTP sever, it may take a few minutes.')
   message('Downloading data from ', ftp_link, '.', sep = '')
   # message('Suggesting you save the data for next use.')
@@ -45,7 +43,7 @@ load_data_with_ftp <- function(ftp_link, data_type){
     return(load_data)
   }else if(data_type == 'txt'){
     text_data <- getURL(ftp_url, userpwd = userpwd, ftp.use.epsv = FALSE, crlf = TRUE)
-    load_data = read.table(text = text_data, header = TRUE, sep = '\t')
+    load_data <- read.table(text = text_data, header = TRUE, sep = '\t')
     message('Completing the text data load.')
 
   }else{

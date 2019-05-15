@@ -15,23 +15,34 @@
 #' @export
 #'
 #' @examples
-#' demo_data_url1 <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/phospho_data_topX.RData')
-#' demo_data_url2 <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/profiling_data_normalized.RData')
-#' demo_data_url3 <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/phosphorylation_exp_design_info.txt')
-#' demo_data_url4 <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/profiling_exp_design_info.txt')
+#' ftp_url1 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/phospho_data_topX.RData"
+#' ftp_url2 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/profiling_data_normalized.RData"
+#' ftp_url3 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/phosphorylation_exp_design_info.txt"
+#' ftp_url4 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/profiling_exp_design_info.txt"
 #'
-#' load(demo_data_url1)
-#' load(demo_data_url2)
-#' phosphorylation_exp_design_info_file_path <- demo_data_url3
-#' profiling_exp_design_info_file_path <- demo_data_url4
+#' load_data1 <- load_data_with_ftp(ftp_url1, 'Rdata')
+#' writeBin(load_data1, "phospho_data_topX.RData")
+#' load("phospho_data_topX.RData")
+#'
+#' load_data2 <- load_data_with_ftp(ftp_url2, 'Rdata')
+#' writeBin(load_data2, "profiling_data_normalized.RData")
+#' load("profiling_data_normalized.RData")
+#'
+#' load_data3 <- load_data_with_ftp(ftp_url3, 'downloadtxt')
+#' writeBin(load_data3, "phosphorylation_exp_design_info.txt")
+#' phosphorylation_exp_design_info_file_path <- "./phosphorylation_exp_design_info.txt"
+#'
+#' load_data4 <- load_data_with_ftp(ftp_url4, 'downloadtxt')
+#' writeBin(load_data4, "profiling_exp_design_info.txt")
+#' profiling_exp_design_info_file_path <- "./profiling_exp_design_info.txt"
 #'
 #' data_frame_normalization_with_control_no_pair <- normalize_phos_data_to_profiling(
 #'   phospho_data_topX, profiling_data_normalized,
 #'   phosphorylation_exp_design_info_file_path,
 #'   profiling_exp_design_info_file_path,
 #'   control_label = '0',
-#'   pair_flag = FALSE)
-#'
+#'   pair_flag = FALSE
+#' )
 #' head(data_frame_normalization_with_control_no_pair)
 #'
 

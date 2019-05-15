@@ -14,8 +14,10 @@
 #' @export
 #'
 #' @examples
-#' demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/merge_df_with_phospho_peptides.RData')
-#' load(demo_data_url)
+#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/merge_df_with_phospho_peptides.RData"
+#' load_data <- load_data_with_ftp(ftp_url, 'RData')
+#' writeBin(load_data, "merge_df_with_phospho_peptides.RData")
+#' load("merge_df_with_phospho_peptides.RData")
 #'
 #' combined_df_with_mapped_gene_symbol <- get_combined_data_frame(
 #'   merge_df_with_phospho_peptides, species = 'human',
@@ -52,10 +54,10 @@ get_combined_data_frame <- function(
   )
 
   if(!file.exists(PHOSPHATE_LIB_MAPPING_FILE_PATH)){
-    id_coversion_table_http_link <- 'https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/id_coversion_table/species_ID.txt'
-    id_coversion_table_http_link <- stringr::str_replace_all(id_coversion_table_http_link, 'species', species)
+    id_coversion_table_ftp_link <- 'ftp://111.198.139.72:4000/pub/PhosMap_datasets/id_coversion_table/species_ID.txt'
+    id_coversion_table_ftp_link <- stringr::str_replace_all(id_coversion_table_ftp_link, 'species', species)
     id_coversion_table_data_type <- 'txt'
-    id_coversion_table = load_data_with_http(id_coversion_table_http_link, id_coversion_table_data_type)
+    id_coversion_table <- load_data_with_ftp(id_coversion_table_ftp_link, id_coversion_table_data_type)
     message('Save id coversion table of ', species, ' to ', PHOSPHATE_LIB_MAPPING_FILE_PATH)
     # write.csv(id_coversion_table, PHOSPHATE_LIB_MAPPING_FILE_PATH, row.names = FALSE)
     write.table(id_coversion_table, PHOSPHATE_LIB_MAPPING_FILE_PATH, sep = '\t', row.names = FALSE)

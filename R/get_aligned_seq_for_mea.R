@@ -16,8 +16,10 @@
 #' @export
 #'
 #' @examples
-#' demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/ID.RData')
-#' load(demo_data_url)
+#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/ID.RData"
+#' load_data <- load_data_with_ftp(ftp_url, 'RData')
+#' writeBin(load_data, "ID.RData")
+#' load("ID.RData")
 #'
 #' foreground_df <- get_aligned_seq_for_mea(
 #'   ID, Sequence, AA_in_protein,
@@ -57,13 +59,13 @@ get_aligned_seq_for_mea <- function(ID, Sequence, AA_in_protein, fixed_length, s
     stop('')
   }
 
-  # https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/fasta_library/refseq/human/human_ref_fasta.txt
+  # 'ftp://111.198.139.72:4000/pub/PhosMap_datasets/fasta_library/refseq/human/human_ref_fasta.txt
   if(!file.exists(PHOSPHATE_LIB_FASTA_FILE_PATH)){
-    PHOSPHATE_LIB_FASTA_FILE_http_link <- 'https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/fasta_library/fasta_type/species/species_fasta_type_fasta.txt'
-    PHOSPHATE_LIB_FASTA_FILE_http_link <- stringr::str_replace_all(PHOSPHATE_LIB_FASTA_FILE_http_link, 'fasta_type', fasta_type)
-    PHOSPHATE_LIB_FASTA_FILE_http_link <- stringr::str_replace_all(PHOSPHATE_LIB_FASTA_FILE_http_link, 'species', species)
+    PHOSPHATE_LIB_FASTA_FILE_ftp_link <- 'ftp://111.198.139.72:4000/pub/PhosMap_datasets/fasta_library/fasta_type/species/species_fasta_type_fasta.txt'
+    PHOSPHATE_LIB_FASTA_FILE_ftp_link <- stringr::str_replace_all(PHOSPHATE_LIB_FASTA_FILE_ftp_link, 'fasta_type', fasta_type)
+    PHOSPHATE_LIB_FASTA_FILE_ftp_link <- stringr::str_replace_all(PHOSPHATE_LIB_FASTA_FILE_ftp_link, 'species', species)
     PHOSPHATE_LIB_FASTA_FILE_data_type <- 'txt'
-    PHOSPHATE_LIB_FASTA_DATA <- load_data_with_http(PHOSPHATE_LIB_FASTA_FILE_http_link, PHOSPHATE_LIB_FASTA_FILE_data_type)
+    PHOSPHATE_LIB_FASTA_DATA <- load_data_with_ftp(PHOSPHATE_LIB_FASTA_FILE_ftp_link, PHOSPHATE_LIB_FASTA_FILE_data_type)
     message('Save ', fasta_type, ' fasta file of ', species, ' to ', PHOSPHATE_LIB_FASTA_FILE_PATH)
     write.table(PHOSPHATE_LIB_FASTA_DATA, PHOSPHATE_LIB_FASTA_FILE_PATH, row.names = FALSE, col.names = TRUE, sep = '\t')
     message('Save successfully.')
