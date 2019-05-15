@@ -5,8 +5,7 @@
 \title{A simple PCA plot.}
 \usage{
 visualization_with_simple_pca(expr_data_frame, main = "Simple PCA",
-  point_cex = 2, point_col = "firebrick", point_type = 20,
-  text_cex = 1)
+  point_cex = 2, point_col = "firebrick", point_type = 20, text_cex = 1)
 }
 \arguments{
 \item{expr_data_frame}{A data frame containing ID and quantification value.}
