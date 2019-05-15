@@ -13,7 +13,7 @@
 #'
 #' @examples
 #' demo_data_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/motifs_list.RData"
-#' load_data <- load_data_with_ftp(ftp_url, 'RData')
+#' load_data <- load_data_with_ftp(demo_data_url, 'RData')
 #' writeBin(load_data, "motifs_list.RData")
 #' load("motifs_list.RData")
 #'

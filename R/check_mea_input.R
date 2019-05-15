@@ -68,4 +68,5 @@ check_mea_input <- function(
     background = background,
     width = width
   )
+  return(check_result_list)
 }
