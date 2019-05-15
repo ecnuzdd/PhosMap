@@ -9,8 +9,10 @@
 #' @export
 #' @return A simple t-SNE plot.
 #' @examples
-#' demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/expr_data_frame.RData')
-#' load(demo_data_url)
+#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/expr_data_frame.RData"
+#' load_data <- load_data_with_ftp(ftp_url, 'RData')
+#' writeBin(load_data, "expr_data_frame.RData")
+#' load("expr_data_frame.RData")
 #'
 #' visualization_with_simple_tsne(
 #'   expr_data_frame,

@@ -14,11 +14,12 @@
 #' @export
 #'
 #' @examples
-#' http_link <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap/master/inst/extdata/kinase_substrate_regulation_relationship_table/human/human_ksrr.csv')
-#' data_type = 'csv'
+#' http_link <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/profiling_exp_design_info.txt')
+#' data_type <- 'txt'
 #' load_data <- load_data_with_http(
 #'   http_link, data_type
 #' )
+#' head(load_data)
 #'
 
 load_data_with_http <- function(http_link, data_type){
@@ -35,3 +36,4 @@ load_data_with_http <- function(http_link, data_type){
   message('Completing the data load.')
   return(load_data)
 }
+

@@ -11,8 +11,10 @@
 #' @export
 #'
 #' @examples
-#' demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/foreground.RData')
-#' load(demo_data_url)
+#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/foreground.RData"
+#' load_data <- load_data_with_ftp(ftp_url, 'RData')
+#' writeBin(load_data, "foreground.RData")
+#' load("foreground.RData")
 #'
 #' motifs_list <- mea_based_on_background(
 #'   foreground,

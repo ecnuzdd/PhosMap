@@ -28,11 +28,15 @@ A simple PCA plot.
 A simple PCA plot.
 }
 \examples{
-demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/expr_df.RData')
-load(demo_data_url)
+ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/expr_df.RData"
+load_data <- load_data_with_ftp(ftp_url, 'RData')
+writeBin(load_data, "expr_df.RData")
+load("expr_df.RData")
 
 visualization_with_simple_pca(expr_df, main = 'Simple PCA',
-  point_cex = 2, point_col = 'firebrick', point_type = 20, text_cex = 1)
+  point_cex = 2, point_col = 'firebrick',
+  point_type = 20, text_cex = 1
+)
 
 }
 \author{

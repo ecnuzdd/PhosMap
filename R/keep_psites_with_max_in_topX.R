@@ -11,8 +11,10 @@
 #' @export
 #'
 #' @examples
-#' demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/phospho_data.RData')
-#' load(demo_data_url)
+#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/phospho_data.RData"
+#' load_data <- load_data_with_ftp(ftp_url, 'RData')
+#' writeBin(load_data, "phospho_data.RData")
+#' load("phospho_data.RData")
 #'
 #' phospho_data_topX <- keep_psites_with_max_in_topX(phospho_data,
 #'   percent_of_kept_sites = 0.9)
