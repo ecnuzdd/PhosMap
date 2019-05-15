@@ -30,11 +30,11 @@ load_data_with_ftp <- function(ftp_link, data_type){
 
   # ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/kinase_substrate_regulation_relationship_table/human/human_ksrr.csv"
   # ks <- load_data_with_ftp(ftp_url, 'csv')
+  requireNamespace('RCurl')
   ftp_url <- ftp_link
   message('First loading data from FTP sever, it may take a few minutes.')
   message('Downloading data from ', ftp_link, '.', sep = '')
   # message('Suggesting you save the data for next use.')
-  require('RCurl')
   userpwd <- "user1:qazwsx123!"
   if(data_type == 'csv'){
     csv_data <- getURL(ftp_url, userpwd = userpwd, ftp.use.epsv = FALSE, crlf = TRUE)
