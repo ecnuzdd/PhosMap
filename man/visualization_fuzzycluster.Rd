@@ -31,16 +31,16 @@ A lines chart with fuzzy degree.
 Visualize results from fuzzy clusters with line chart
 }
 \examples{
-demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/fuzzy_input_df.RData')
-load(demo_data_url)
+ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/fuzzy_input_df.RData"
+load_data <- load_data_with_ftp(ftp_url, 'RData')
+writeBin(load_data, "fuzzy_input_df.RData")
+load("fuzzy_input_df.RData")
 
 fuzzy_clustObj <- visualization_fuzzycluster(
   fuzzy_input_df, group, group_levels,
   k_cluster=9, iteration = 100,
   mfrow = c(3,3), min_mem = 0.1
  )
-
-head(fuzzy_clustObj)
 
 }
 \references{

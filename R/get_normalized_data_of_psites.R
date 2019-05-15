@@ -9,10 +9,16 @@
 #' @export
 #'
 #' @examples
-#' demo_data_url1 <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/summary_df_of_unique_proteins_with_sites.RData')
-#' demo_data_url2 <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/phosphorylation_exp_design_info.txt')
-#' load(demo_data_url1)
-#' phosphorylation_exp_design_info_file_path <- demo_data_url2
+#' ftp_url1 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/summary_df_of_unique_proteins_with_sites.RData"
+#' ftp_url2 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/phosphorylation_exp_design_info.txt"
+
+#' load_data1 <- load_data_with_ftp(ftp_url1, 'Rdata')
+#' writeBin(load_data1, "summary_df_of_unique_proteins_with_sites.RData")
+#' load("summary_df_of_unique_proteins_with_sites.RData")
+#'
+#' load_data2 <- load_data_with_ftp(ftp_url2, 'downloadtxt')
+#' writeBin(load_data2, "phosphorylation_exp_design_info.txt")
+#' phosphorylation_exp_design_info_file_path <- "./phosphorylation_exp_design_info.txt"
 #'
 #' phospho_data_filtering_STY_and_normalization_list <- get_normalized_data_of_psites(
 #'   summary_df_of_unique_proteins_with_sites,

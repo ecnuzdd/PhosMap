@@ -4,8 +4,8 @@
 \alias{get_combined_data_frame}
 \title{Get a data frame mapped ID to Gene Symbol.}
 \usage{
-get_combined_data_frame(merge_df_with_phospho_peptides, species = "human",
-  id_type = "RefSeq_Protein_GI")
+get_combined_data_frame(merge_df_with_phospho_peptides,
+  species = "human", id_type = "RefSeq_Protein_GI")
 }
 \arguments{
 \item{merge_df_with_phospho_peptides}{A dataframe consisting of IDs (Sequence_GI_Psite) and Area values.}
@@ -23,8 +23,10 @@ Based on a library file consisting of mapping relationships about Gene Symbol, G
 a new dataframe with Sequence, GI, Modification, Gene Symbol, Area and PSMs,is contructed.
 }
 \examples{
-demo_data_url <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/merge_df_with_phospho_peptides.RData')
-load(demo_data_url)
+ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/merge_df_with_phospho_peptides.RData"
+load_data <- load_data_with_ftp(ftp_url, 'RData')
+writeBin(load_data, "merge_df_with_phospho_peptides.RData")
+load("merge_df_with_phospho_peptides.RData")
 
 combined_df_with_mapped_gene_symbol <- get_combined_data_frame(
   merge_df_with_phospho_peptides, species = 'human',
