@@ -65,7 +65,7 @@ get_global_background_df <- function(species = 'human', fasta_type = 'refseq'){
       # }
     )
 
-    if(is.list((PHOSPHATE_LIB_MOTIF_BG_DATA))){
+    if(!is.list((PHOSPHATE_LIB_MOTIF_BG_DATA))){
       cat('\n')
       message('The current network is unstable when downloading background data from ', PHOSPHATE_LIB_MOTIF_BG_FILE_ftp_link)
       cat('\n')

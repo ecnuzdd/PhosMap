@@ -26,12 +26,8 @@ We have embeded intermediate results from demo into PhosMap for help users get s
 # load PhosMap
 library('PhosMap')
 # load intermediate results from https://github.com/ecnuzdd/PhosMap_datasets
-# BRAFi_DATA_URL = url("https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/data/BRAFi.RData")
-# load(BRAFi_DATA_URL)
-require('RCurl')
-userpwd <- "user1:qazwsx123!"
 ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/BRAFi.RData"
-load_data <- getBinaryURL(ftp_url, userpwd = userpwd, ftp.use.epsv = FALSE,crlf = TRUE)
+load_data <- load_data_with_ftp(ftp_url, 'Rdata')
 writeBin(load_data, "BRAFi.RData")
 load("BRAFi.RData")
 
