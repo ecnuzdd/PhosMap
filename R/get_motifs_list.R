@@ -13,9 +13,13 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' motifs_list <- get_motifs_list(foreground, background, center_vector, motifx_pvalue)
-#' }
+#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_motifs_list.RData"
+#' load_data <- load_data_with_ftp(ftp_url, 'RData')
+#' writeBin(load_data, "get_motifs_list.RData")
+#' load("get_motifs_list.RData")
+#'
+#' motifs_list <- get_motifs_list(foreground[1:100], background[1:100], center_vector, motifx_pvalue)
+#' head(motifs_list)
 
 get_motifs_list <- function(foreground, background, center_vector, motifx_pvalue){
   motifs_list <- list()

@@ -14,15 +14,19 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' summry_list <- get_motif_analysis_summary(
-#'   foreground,
-#'   background,
-#'   center,
-#'   min_sequence_count,
-#'   min_pvalue
+#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_motif_analysis_summary.RData"
+#' load_data <- load_data_with_ftp(ftp_url, 'RData')
+#' writeBin(load_data, "get_motif_analysis_summary.RData")
+#' load("get_motif_analysis_summary.RData")
+#'
+#' motifs <- get_motif_analysis_summary(
+#'   foreground[1:100], background[1:100],
+#'   center = center,
+#'   min_sequence_count = 1,
+#'   min_pvalue = motifx_pvalue
 #' )
-#' }
+#' head(motifs)
+#'
 
 get_motif_analysis_summary <- function(
   foreground,

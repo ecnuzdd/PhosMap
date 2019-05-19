@@ -28,7 +28,11 @@ counting byond ratio_cutoff and corresponding original value.
 Get a data frame only containing kinase inferred by KSEA
 }
 \examples{
-\dontrun{
+ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_substrate_expr_df.RData"
+load_data <- load_data_with_ftp(ftp_url, 'RData')
+writeBin(load_data, "get_substrate_expr_df.RData")
+load("get_substrate_expr_df.RData")
+
 kinase_site_substrate_original_ratio_df <- get_substrate_expr_df(
   ID,
   kinase_substrate_regulation_relationship,
@@ -36,7 +40,8 @@ kinase_site_substrate_original_ratio_df <- get_substrate_expr_df(
   ptypes_data_ratio,
   ratio_cutoff = 3
 )
-}
+head(kinase_site_substrate_original_ratio_df)
+
 }
 \author{
 Dongdong Zhan and Mengsha Tong

@@ -4,8 +4,8 @@
 \alias{get_ka_by_mean_or_mlr}
 \title{Computing kinase activity using mean value and multiple linear regression (ridge regression) except KSEA}
 \usage{
-get_ka_by_mean_or_mlr(ptypes_data, species = "human", log2_label = FALSE,
-  method = "mean")
+get_ka_by_mean_or_mlr(ptypes_data, species = "human",
+  log2_label = FALSE, method = "mean")
 }
 \arguments{
 \item{ptypes_data}{A data frame of phosphorylation data after normalization.}
@@ -24,14 +24,18 @@ A data frame that consists of kinase, psite, substrate, counting byond ratio_cut
 Computing kinase activity using mean value and multiple linear regression (ridge regression) except KSEA
 }
 \examples{
-\dontrun{
+ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_ka_by_mean_or_mlr.RData"
+load_data <- load_data_with_ftp(ftp_url, 'RData')
+writeBin(load_data, "get_ka_by_mean_or_mlr.RData")
+load("get_ka_by_mean_or_mlr.RData")
+
 kinase_activity_df <- get_ka_by_mean_or_mlr(
-  ptypes_data,
+  cluster_df,
   species = 'human',
   log2_label = TRUE,
   method = 'mean'
 )
-}
+head(kinase_activity_df)
 
 }
 \author{

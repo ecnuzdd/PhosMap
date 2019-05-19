@@ -21,16 +21,16 @@ A dataframe that all redundant psites are assigned to protein sequence.
 Construct the data frame with unique phosphorylation site for each protein sequence and eliminate redundancy.
 }
 \examples{
-ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/combined_df_with_mapped_gene_symbol.RData"
+ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_summary_with_unique_sites.RData"
 load_data <- load_data_with_ftp(ftp_url, 'RData')
-writeBin(load_data, "combined_df_with_mapped_gene_symbol.RData")
-load("combined_df_with_mapped_gene_symbol.RData")
+writeBin(load_data, "get_summary_with_unique_sites.RData")
+load("get_summary_with_unique_sites.RData")
 
 summary_df_of_unique_proteins_with_sites <- get_summary_with_unique_sites(
-  combined_df_with_mapped_gene_symbol,
+  combined_df_with_mapped_gene_symbol[1:100, ],
   species = 'human',
-  fasta_type = 'refseq')
-
+  fasta_type = 'refseq'
+)
 head(summary_df_of_unique_proteins_with_sites)
 
 }

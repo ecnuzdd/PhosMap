@@ -18,14 +18,14 @@ A data frame meeting specific cutoff.
 Compute row maximum each psites, sort row maximum in decreasing order and keep top N (percentage).
 }
 \examples{
-ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/phospho_data.RData"
+ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/keep_psites_with_max_in_topX.RData"
 load_data <- load_data_with_ftp(ftp_url, 'RData')
-writeBin(load_data, "phospho_data.RData")
-load("phospho_data.RData")
+writeBin(load_data, "keep_psites_with_max_in_topX.RData")
+load("keep_psites_with_max_in_topX.RData")
 
 phospho_data_topX <- keep_psites_with_max_in_topX(phospho_data,
-  percent_of_kept_sites = 0.9)
-
+  percent_of_kept_sites = 0.9
+)
 head(phospho_data_topX)
 
 }

@@ -23,14 +23,14 @@ parameter specified directory.
 Plot sequence logo based on list that consist of motifs and sequences.
 }
 \examples{
-ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/foreground_sequences_mapped_to_motifs.RData"
+ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/plot_seqlogo.RData"
 load_data <- load_data_with_ftp(ftp_url, 'RData')
-writeBin(load_data, "foreground_sequences_mapped_to_motifs.RData")
-load("foreground_sequences_mapped_to_motifs.RData")
+writeBin(load_data, "plot_seqlogo.RData")
+load("plot_seqlogo.RData")
 
 BASE_DIR = getwd() # current working directory
 BASE_DIR = normalizePath(BASE_DIR)
-plot_seqlogo(BASE_DIR, foreground_sequences_mapped_to_motifs, plot_min_seqs = 25)
+plot_seqlogo(BASE_DIR, foreground_sequences_mapped_to_motifs[1:50], plot_min_seqs = 25)
 
 }
 \references{

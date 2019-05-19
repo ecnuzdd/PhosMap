@@ -15,16 +15,15 @@
 #' @export
 #'
 #' @examples
-#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/expr_data_frame.RData"
+#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/analysis_deps_limma.RData"
 #' load_data <- load_data_with_ftp(ftp_url, 'RData')
-#' writeBin(load_data, "expr_data_frame.RData")
-#' load("expr_data_frame.RData")
+#' writeBin(load_data, "analysis_deps_limma.RData")
+#' load("analysis_deps_limma.RData")
 #'
 #' limma_results_df <- analysis_deps_limma(
 #'   expr_data_frame, group, group_levels,
 #'   log2_label = FALSE, adjust_method = 'none'
 #' )
-#'
 #' head(limma_results_df)
 #'
 

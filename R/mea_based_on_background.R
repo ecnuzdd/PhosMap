@@ -11,18 +11,17 @@
 #' @export
 #'
 #' @examples
-#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/foreground.RData"
+#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/mea_based_on_background.RData"
 #' load_data <- load_data_with_ftp(ftp_url, 'RData')
-#' writeBin(load_data, "foreground.RData")
-#' load("foreground.RData")
+#' writeBin(load_data, "mea_based_on_background.RData")
+#' load("mea_based_on_background.RData")
 #'
 #' motifs_list <- mea_based_on_background(
-#'   foreground,
-#'   AA_in_protein,
-#'   background,
+#'   foreground[1:100],
+#'   AA_in_protein[1:100],
+#'   background[1:1000],
 #'   motifx_pvalue
 #' )
-#' head(motifs_list)
 #'
 
 # foreground <- as.vector(foreground_df$aligned_seq)

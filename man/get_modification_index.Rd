@@ -17,6 +17,19 @@ A vector for indexes of modifications in protein sequences.
 \description{
 Get indexes of modifications in protein sequences.
 }
+\examples{
+ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_modification_index.RData"
+load_data <- load_data_with_ftp(ftp_url, 'RData')
+writeBin(load_data, "get_modification_index.RData")
+load("get_modification_index.RData")
+
+modification_index_in_protein_seq_list <- get_modification_index(
+  id_data_only_peptide2gi[1:100, ],
+  fasta_data
+)
+head(modification_index_in_protein_seq_list)
+
+}
 \author{
 Dongdong Zhan and Mengsha Tong
 }

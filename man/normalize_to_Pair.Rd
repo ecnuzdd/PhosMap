@@ -17,3 +17,16 @@ A data frame after normalization.
 \description{
 For data with pairs, normalize them to the sample with flag eaqul to -1.
 }
+\examples{
+ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/normalize_to_Pair.RData"
+load_data <- load_data_with_ftp(ftp_url, 'Rdata')
+writeBin(load_data, "normalize_to_Pair.RData")
+load("normalize_to_Pair.RData")
+
+phospho_data_normalize_by_column <- normalize_to_Pair(
+  phospho_data_normalized,
+  pairing_phosphorylation_experiment_design_file
+)
+head(phospho_data_normalize_by_column)
+
+}

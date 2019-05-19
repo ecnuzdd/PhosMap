@@ -12,16 +12,15 @@
 #' @export
 #'
 #' @examples
-#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/cluster_df.RData"
+#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_summary_from_ksea.RData"
 #' load_data <- load_data_with_ftp(ftp_url, 'RData')
-#' writeBin(load_data, "cluster_df.RData")
-#' load("cluster_df.RData")
+#' writeBin(load_data, "get_summary_from_ksea.RData")
+#' load("get_summary_from_ksea.RData")
 #'
 #' summary_df_list_from_ksea_cluster <- get_summary_from_ksea(
 #'   cluster_df, species = 'human',
 #'   log2_label = FALSE, ratio_cutoff = 3
 #' )
-#'
 #' head(summary_df_list_from_ksea_cluster)
 #'
 
@@ -69,10 +68,9 @@ get_summary_from_ksea <- function(
   cat('\n Starting KSEA')
   for(i in seq_len(ptypes_data_exp_count)){
     cat('\n completing: ', i, '/', ptypes_data_exp_count)
-    ptypes_data_ratio_in_sigle_exp <- as.numeric(unlist(ptypes_data_ratio[,i]))
+    ptypes_data_ratio_in_single_exp <- as.numeric(unlist(ptypes_data_ratio[,i]))
     ksea_result_list_i <- get_ksea_result_list(
-      ptypes_data_ratio_in_sigle_exp,
-      ID,
+      ptypes_data_ratio_in_single_exp, ID,
       kinase_substrate_regulation_relationship,
       ksea_activity_i_pvalue = 0.05
     )

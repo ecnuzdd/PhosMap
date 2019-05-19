@@ -16,10 +16,10 @@ A data frame that consist of aligned sequences and the corresponding motifs.
 Convert the list that consists of motifs and the corresponding sequences to data frame.
 }
 \examples{
-ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/foreground_sequences_mapped_to_motifs.RData"
+ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/fore_seq_to_motif.RData"
 load_data <- load_data_with_ftp(ftp_url, 'RData')
-writeBin(load_data, "foreground_sequences_mapped_to_motifs.RData")
-load("foreground_sequences_mapped_to_motifs.RData")
+writeBin(load_data, "fore_seq_to_motif.RData")
+load("fore_seq_to_motif.RData")
 
 df <- fore_seq_to_motif(
   foreground_sequences_mapped_to_motifs

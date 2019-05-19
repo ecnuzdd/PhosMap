@@ -9,12 +9,12 @@
 #' @export
 #'
 #' @examples
-#' ftp_url1 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/summary_df_of_unique_proteins_with_sites.RData"
+#' ftp_url1 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_normalized_data_of_psites.RData"
 #' ftp_url2 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/phosphorylation_exp_design_info.txt"
 
 #' load_data1 <- load_data_with_ftp(ftp_url1, 'Rdata')
-#' writeBin(load_data1, "summary_df_of_unique_proteins_with_sites.RData")
-#' load("summary_df_of_unique_proteins_with_sites.RData")
+#' writeBin(load_data1, "get_normalized_data_of_psites.RData")
+#' load("get_normalized_data_of_psites.RData")
 #'
 #' load_data2 <- load_data_with_ftp(ftp_url2, 'downloadtxt')
 #' writeBin(load_data2, "phosphorylation_exp_design_info.txt")

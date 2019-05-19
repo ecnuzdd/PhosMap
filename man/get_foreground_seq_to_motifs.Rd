@@ -18,10 +18,10 @@ A list containing motifs and the corresponding sequences from foreground.
 Get motifs and their corresponding aligned sequences form from foreground.
 }
 \examples{
-demo_data_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/motifs_list.RData"
-load_data <- load_data_with_ftp(demo_data_url, 'RData')
-writeBin(load_data, "motifs_list.RData")
-load("motifs_list.RData")
+ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_foreground_seq_to_motifs.RData"
+load_data <- load_data_with_ftp(ftp_url, 'RData')
+writeBin(load_data, "get_foreground_seq_to_motifs.RData")
+load("get_foreground_seq_to_motifs.RData")
 
 foreground_sequences_mapped_to_motifs <- get_foreground_seq_to_motifs(
   motifs_list,

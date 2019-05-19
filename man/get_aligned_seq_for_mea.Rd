@@ -27,16 +27,16 @@ A data frame containing ID, Sequence, AA_in_protein, aligned_seq.
 Taking S/T/Y as the center, align sequence to fasta library by the specific length.
 }
 \examples{
-ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/ID.RData"
+ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_aligned_seq_for_mea.RData"
 load_data <- load_data_with_ftp(ftp_url, 'RData')
-writeBin(load_data, "ID.RData")
-load("ID.RData")
+writeBin(load_data, "get_aligned_seq_for_mea.RData")
+load("get_aligned_seq_for_mea.RData")
 
 foreground_df <- get_aligned_seq_for_mea(
-  ID, Sequence, AA_in_protein,
+  ID[1:100], Sequence[1:100], AA_in_protein[1:100],
   fixed_length, species = 'human',
-  fasta_type = 'refseq')
-
+  fasta_type = 'refseq'
+)
 head(foreground_df)
 
 }

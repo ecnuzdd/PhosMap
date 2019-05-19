@@ -20,13 +20,17 @@ A string for motif pattern
 Convert data frame of motif to the sequence pattern
 }
 \examples{
-\dontrun{
+ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/motif_data_frame_to_sequence.RData"
+load_data <- load_data_with_ftp(ftp_url, 'RData')
+writeBin(load_data, "motif_data_frame_to_sequence.RData")
+load("motif_data_frame_to_sequence.RData")
+
 motif_pattern <- motif_data_frame_to_sequence(
-  motif_data_frame,
-  center,
-  width
+  motif_coordinate_data_frame,
+  center, width
 )
-}
+head(motif_pattern)
+
 }
 \author{
 Dongdong Zhan and Mengsha Tong

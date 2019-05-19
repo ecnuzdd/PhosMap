@@ -5,7 +5,8 @@
 \title{Get a data frame of amino acid sequences for proteins.}
 \usage{
 get_df_with_AAs_i(unique_proteins, i, id_data_only_peptide2gi,
-  proteins_in_id_data_only_peptide2gi, sequences_in_id_data_only_peptide2gi,
+  proteins_in_id_data_only_peptide2gi,
+  sequences_in_id_data_only_peptide2gi,
   modification_index_in_protein_seq_list)
 }
 \arguments{
@@ -26,6 +27,20 @@ A data frame with sequences for proteins.
 }
 \description{
 Get a data frame of amino acid sequences for proteins.
+}
+\examples{
+ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_df_with_AAs_i.RData"
+load_data <- load_data_with_ftp(ftp_url, 'RData')
+writeBin(load_data, "get_df_with_AAs_i.RData")
+load("get_df_with_AAs_i.RData")
+
+df_with_AAs_i <- get_df_with_AAs_i(unique_proteins, i,
+  id_data_only_peptide2gi,
+  proteins_in_id_data_only_peptide2gi,
+  sequences_in_id_data_only_peptide2gi,
+  modification_index_in_protein_seq_list
+)
+head(df_with_AAs_i)
 }
 \author{
 Dongdong Zhan and Mengsha Tong

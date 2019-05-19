@@ -20,13 +20,18 @@ A list passing check steps
 Check input for motif enrichment analysis (mea)
 }
 \examples{
-\dontrun{
+ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/check_mea_input.RData"
+load_data <- load_data_with_ftp(ftp_url, 'RData')
+writeBin(load_data, "check_mea_input.RData")
+load("check_mea_input.RData")
+
 check_result_list <- check_mea_input(
-  foreground,
-  background,
+  foreground[1:100],
+  background[1:100],
   center
 )
-}
+head(check_result_list)
+
 }
 \author{
 Dongdong Zhan and Mengsha Tong
