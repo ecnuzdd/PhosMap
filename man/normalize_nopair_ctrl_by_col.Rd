@@ -4,8 +4,7 @@
 \alias{normalize_nopair_ctrl_by_col}
 \title{For data without pairs but with control, normalize them to the control.}
 \usage{
-normalize_nopair_ctrl_by_col(data_frame, experiment_design_file,
-  control_label)
+normalize_nopair_ctrl_by_col(data_frame, experiment_design_file, control_label)
 }
 \arguments{
 \item{data_frame}{a data frame as input.}
