@@ -13,7 +13,7 @@ RoxygenNote: 6.1.1
 Date: 2019-05-06
 biocViews: Proteomics, DifferentialExpression, DataRepresentation,
         Visualization, Clustering, Normalization, QualityControl, TimeCourse
-Depends: R (>= 3.6)
+Depends: R (>= 3.0)
 Imports: graphics, grDevices, stats, utils, stringr, ggseqlogo, samr,
         limma, e1071, ClueR, Rtsne, glmnet, yaml, impute, RCurl
 Suggests: knitr, rmarkdown, pheatmap
