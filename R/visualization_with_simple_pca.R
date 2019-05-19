@@ -11,10 +11,10 @@
 #' @author Dongdong Zhan and Mengsha Tong
 #'
 #' @examples
-#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/expr_df.RData"
+#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/visualization_with_simple_pca.RData"
 #' load_data <- load_data_with_ftp(ftp_url, 'RData')
-#' writeBin(load_data, "expr_df.RData")
-#' load("expr_df.RData")
+#' writeBin(load_data, "visualization_with_simple_pca.RData")
+#' load("visualization_with_simple_pca.RData")
 #'
 #' visualization_with_simple_pca(expr_df, main = 'Simple PCA',
 #'   point_cex = 2, point_col = 'firebrick',

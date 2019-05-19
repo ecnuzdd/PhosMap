@@ -13,16 +13,16 @@
 #' @export
 #'
 #' @examples
-#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/combined_df_with_mapped_gene_symbol.RData"
+#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_summary_with_unique_sites.RData"
 #' load_data <- load_data_with_ftp(ftp_url, 'RData')
-#' writeBin(load_data, "combined_df_with_mapped_gene_symbol.RData")
-#' load("combined_df_with_mapped_gene_symbol.RData")
+#' writeBin(load_data, "get_summary_with_unique_sites.RData")
+#' load("get_summary_with_unique_sites.RData")
 #'
 #' summary_df_of_unique_proteins_with_sites <- get_summary_with_unique_sites(
-#'   combined_df_with_mapped_gene_symbol,
+#'   combined_df_with_mapped_gene_symbol[1:100, ],
 #'   species = 'human',
-#'   fasta_type = 'refseq')
-#'
+#'   fasta_type = 'refseq'
+#' )
 #' head(summary_df_of_unique_proteins_with_sites)
 #'
 
@@ -75,9 +75,6 @@ get_summary_with_unique_sites <- function(
   # colnames(fasta_data) <- c('ID', 'Sequence')
   ###########################################################################################################
 
-
-
-
   id_data <- combined_df_with_mapped_gene_symbol
 
   # Keep peptides assigned to unique protein
@@ -107,9 +104,7 @@ get_summary_with_unique_sites <- function(
                                          sequences_in_id_data_only_peptide2gi,
                                          modification_index_in_protein_seq_list)
 
-
       summary_df_of_unique_protein_with_sites <- get_unique_AAs_i_df(df_with_AAs_i)
-
 
       summary_df_of_unique_proteins_with_sites <- rbind(
         summary_df_of_unique_proteins_with_sites,

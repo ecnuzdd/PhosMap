@@ -15,3 +15,14 @@ A data frame after normalization.
 \description{
 For data without pairs and control, normalize them to the median.
 }
+\examples{
+ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/normalize_nopair_noctrl_by_colmed.RData"
+load_data <- load_data_with_ftp(ftp_url, 'RData')
+writeBin(load_data, "normalize_nopair_noctrl_by_colmed.RData")
+load("normalize_nopair_noctrl_by_colmed.RData")
+
+phospho_data_normalize_by_column <- normalize_nopair_noctrl_by_colmed(
+  phospho_data_normalized
+)
+head(phospho_data_normalize_by_column)
+}

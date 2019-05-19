@@ -8,7 +8,12 @@
 #' @author Dongdong Zhan and Mengsha Tong
 #' @return Write data to specific direction with CSV format.
 #' @export
-#'
+#' @examples
+#' \dontrun{
+#' write_csv_pep_seq_conf(expName,
+#'   outputName, mascot_txt_dir_path_expName_path,
+#'   firmiana_peptide_dir_path_expName_path)
+#' }
 
 write_csv_pep_seq_conf <- function(expName, outputName, mascotfileNames, refFileName){
   requireNamespace('utils')

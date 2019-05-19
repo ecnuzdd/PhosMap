@@ -4,8 +4,8 @@
 \alias{analysis_deps_sam}
 \title{Differential expression analysis using SAM}
 \usage{
-analysis_deps_sam(expr_data_frame, group, log2_label = FALSE, nperms = 100,
-  rand = NULL, minFDR = 0.05, samr_plot = TRUE)
+analysis_deps_sam(expr_data_frame, group, log2_label = FALSE,
+  nperms = 100, rand = NULL, minFDR = 0.05, samr_plot = TRUE)
 }
 \arguments{
 \item{expr_data_frame}{A data frame containing ID and quantification values.}
@@ -29,10 +29,10 @@ A list containing results from sam analysis.
 Differential expression analysis using SAM
 }
 \examples{
-ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/expr_data_frame.RData"
+ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/analysis_deps_sam.RData"
 load_data <- load_data_with_ftp(ftp_url, 'RData')
-writeBin(load_data, "expr_data_frame.RData")
-load("expr_data_frame.RData")
+writeBin(load_data, "analysis_deps_sam.RData")
+load("analysis_deps_sam.RData")
 
 sam_results_list <- analysis_deps_sam(
   expr_data_frame, group, log2_label = FALSE,

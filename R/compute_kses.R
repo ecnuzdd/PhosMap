@@ -13,14 +13,17 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' enrichment_score <- compute_kses(
+#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/compute_kses.RData"
+#' load_data <- load_data_with_ftp(ftp_url, 'RData')
+#' writeBin(load_data, "compute_kses.RData")
+#' load("compute_kses.RData")
+#'
+#' stochastic_enrichment_score_i <- compute_kses(
 #'   substate_vector,
-#'   regulons_of_kinase,
+#'   regulons_of_kinase_i,
 #'   substrates_of_kinase_in_exp_count
 #' )
-#' }
-#'
+#' head(stochastic_enrichment_score_i)
 
 compute_kses <- function(
   substate_vector,

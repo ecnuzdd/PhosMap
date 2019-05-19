@@ -4,7 +4,8 @@
 \alias{normalize_nopair_ctrl_by_col}
 \title{For data without pairs but with control, normalize them to the control.}
 \usage{
-normalize_nopair_ctrl_by_col(data_frame, experiment_design_file, control_label)
+normalize_nopair_ctrl_by_col(data_frame, experiment_design_file,
+  control_label)
 }
 \arguments{
 \item{data_frame}{a data frame as input.}
@@ -18,4 +19,17 @@ A data frame after normalization.
 }
 \description{
 For data without pairs but with control, normalize them to the control.
+}
+\examples{
+ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/normalize_nopair_ctrl_by_col.RData"
+load_data <- load_data_with_ftp(ftp_url, 'Rdata')
+writeBin(load_data, "normalize_nopair_ctrl_by_col.RData")
+load("normalize_nopair_ctrl_by_col.RData")
+
+phospho_data_normalize_by_column <- normalize_nopair_ctrl_by_col(
+  phospho_data_normalized,
+  phosphorylation_experiment_design_file,
+  control_label
+)
+head(phospho_data_normalize_by_column)
 }

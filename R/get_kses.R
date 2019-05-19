@@ -13,13 +13,17 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' pvalue <- get_kses(
-#'   substate_vector,
-#'   regulons_of_kinase,
+#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_kses.RData"
+#' load_data <- load_data_with_ftp(ftp_url, 'RData')
+#' writeBin(load_data, "get_kses.RData")
+#' load("get_kses.RData")
+#'
+#' ksea_result_i_l <- get_kses(
+#'   ptypes_data_ratio_in_single_exp_desc,
+#'   regulons_i_l,
 #'   1000
 #' )
-#' }
+#' head(ksea_result_i_l)
 #'
 
 get_kses <- function(

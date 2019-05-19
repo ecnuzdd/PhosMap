@@ -25,10 +25,10 @@ A data frame containing ID, log2(FC) and p value.
 Differential expression analysis using ANOVA
 }
 \examples{
-ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/expr_data_frame.RData"
+ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/analysis_deps_anova.RData"
 load_data <- load_data_with_ftp(ftp_url, 'RData')
-writeBin(load_data, "expr_data_frame.RData")
-load("expr_data_frame.RData")
+writeBin(load_data, "analysis_deps_anova.RData")
+load("analysis_deps_anova.RData")
 
 anova_result <- analysis_deps_anova(
   expr_data_frame, group, log2_label = FALSE,

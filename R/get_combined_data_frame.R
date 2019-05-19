@@ -14,15 +14,15 @@
 #' @export
 #'
 #' @examples
-#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/merge_df_with_phospho_peptides.RData"
+#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_combined_data_frame.RData"
 #' load_data <- load_data_with_ftp(ftp_url, 'RData')
-#' writeBin(load_data, "merge_df_with_phospho_peptides.RData")
-#' load("merge_df_with_phospho_peptides.RData")
+#' writeBin(load_data, "get_combined_data_frame.RData")
+#' load("get_combined_data_frame.RData")
 #'
 #' combined_df_with_mapped_gene_symbol <- get_combined_data_frame(
-#'   merge_df_with_phospho_peptides, species = 'human',
-#'   id_type = 'RefSeq_Protein_GI')
-#'
+#'   merge_df_with_phospho_peptides[1:11,], species = 'human',
+#'   id_type = 'RefSeq_Protein_GI'
+#' )
 #' head(combined_df_with_mapped_gene_symbol)
 #'
 

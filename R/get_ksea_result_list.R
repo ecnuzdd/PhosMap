@@ -1,6 +1,6 @@
 #' Kinase activity analysis based on known and predicted kinase-substrate relationships
 #'
-#' @param ptypes_data_ratio_in_sigle_exp A quantification vector from a single experiment.
+#' @param ptypes_data_ratio_in_single_exp A quantification vector from a single experiment.
 #' @param ID A phosporylation ID vector like VIM_S56 (GeneSymbol_psite).
 #' @param kinase_substrate_regulation_relationship A data frame contanning kinase-substrate relationships that consists of "kinase", "substrate", "site", "sequence" and "predicted" columns.
 #' @param ksea_activity_i_pvalue A cutoff used for filtering significant activities computed from KSEA.
@@ -13,17 +13,19 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' ksea_result_list <- get_ksea_result_list(
-#'   ptypes_data_ratio_in_sigle_exp,
-#'   ID,
-#'   kinase_substrate,
-#'   0.05
-#' )
-#' }
+#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_ksea_result_list.RData"
+#' load_data <- load_data_with_ftp(ftp_url, 'RData')
+#' writeBin(load_data, "get_ksea_result_list.RData")
+#' load("get_ksea_result_list.RData")
 #'
+#' ksea_result_list_i <- get_ksea_result_list(
+#'  ptypes_data_ratio_in_single_exp, ID,
+#'  kinase_substrate_regulation_relationship,
+#'  ksea_activity_i_pvalue = 0.05
+#' )
+#' head(ksea_result_list_i)
 
-get_ksea_result_list <- function(ptypes_data_ratio_in_sigle_exp, ID, kinase_substrate_regulation_relationship, ksea_activity_i_pvalue = 0.05){
+get_ksea_result_list <- function(ptypes_data_ratio_in_single_exp, ID, kinase_substrate_regulation_relationship, ksea_activity_i_pvalue = 0.05){
   symbol <- apply(data.frame(ID), 1, function(x){
     x <- strsplit(x, split = '_')[[1]]
     x[1]
@@ -35,12 +37,12 @@ get_ksea_result_list <- function(ptypes_data_ratio_in_sigle_exp, ID, kinase_subs
   ptypes_data_ID <- data.frame(site, symbol)
 
   sites_id <- paste(site, symbol, sep = '|')
-  names(ptypes_data_ratio_in_sigle_exp) <- sites_id
+  names(ptypes_data_ratio_in_single_exp) <- sites_id
   sites_id_count <- length(sites_id)
 
-  index_of_ptypes_data_ratio_in_sigle_exp_desc <- order(ptypes_data_ratio_in_sigle_exp, decreasing=TRUE)
-  ptypes_data_ratio_in_sigle_exp_desc <- ptypes_data_ratio_in_sigle_exp[index_of_ptypes_data_ratio_in_sigle_exp_desc]
-  ptypes_data_ratio_in_sigle_exp_desc_names <- names(ptypes_data_ratio_in_sigle_exp_desc)
+  index_of_ptypes_data_ratio_in_single_exp_desc <- order(ptypes_data_ratio_in_single_exp, decreasing=TRUE)
+  ptypes_data_ratio_in_single_exp_desc <- ptypes_data_ratio_in_single_exp[index_of_ptypes_data_ratio_in_single_exp_desc]
+  ptypes_data_ratio_in_single_exp_desc_names <- names(ptypes_data_ratio_in_single_exp_desc)
 
   kinases_i <- NULL
   kinases_site_substrate_i <- NULL
@@ -58,7 +60,7 @@ get_ksea_result_list <- function(ptypes_data_ratio_in_sigle_exp, ID, kinase_subs
     kinases_i_j <- as.vector(kinase_substrate_i_j_df[,1])
     kinases_site_substrate_i_j <- paste(kinase_substrate_i_j_df[,1], kinase_substrate_i_j_df[,2], kinase_substrate_i_j_df[,3], sep = '|')
     site_substate_i_j <- paste(kinase_substrate_i_j_df[,2], kinase_substrate_i_j_df[,3], sep = '|')
-    site_quant_ratio_i_j <- rep(ptypes_data_ratio_in_sigle_exp[j], nrow(kinase_substrate_i_j_df))
+    site_quant_ratio_i_j <- rep(ptypes_data_ratio_in_single_exp[j], nrow(kinase_substrate_i_j_df))
 
     kinases_i <- c(kinases_i, kinases_i_j)
     kinases_site_substrate_i <- c(kinases_site_substrate_i, kinases_site_substrate_i_j)
@@ -101,7 +103,7 @@ get_ksea_result_list <- function(ptypes_data_ratio_in_sigle_exp, ID, kinase_subs
     regulons_i_l <- regulons_i[[l]]
     if(TRUE){
       ksea_result_i_l <- get_kses(
-        ptypes_data_ratio_in_sigle_exp_desc,
+        ptypes_data_ratio_in_single_exp_desc,
         regulons_i_l,
         1000
       )

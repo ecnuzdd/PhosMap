@@ -4,8 +4,8 @@
 \alias{visualization_with_simple_tsne}
 \title{A simple t-SNE plot.}
 \usage{
-visualization_with_simple_tsne(expr_data_frame, group, main = "Simple t-SNE",
-  perplexity = 10)
+visualization_with_simple_tsne(expr_data_frame, group,
+  main = "Simple t-SNE", perplexity = 10)
 }
 \arguments{
 \item{expr_data_frame}{A data frame containing ID and quantification value.}
@@ -23,10 +23,10 @@ A simple t-SNE plot.
 A simple t-SNE plot.
 }
 \examples{
-ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/expr_data_frame.RData"
+ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/visualization_with_simple_tsne.RData"
 load_data <- load_data_with_ftp(ftp_url, 'RData')
-writeBin(load_data, "expr_data_frame.RData")
-load("expr_data_frame.RData")
+writeBin(load_data, "visualization_with_simple_tsne.RData")
+load("visualization_with_simple_tsne.RData")
 
 visualization_with_simple_tsne(
   expr_data_frame,

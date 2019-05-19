@@ -8,6 +8,11 @@
 #' @return A filtered data frame
 #'
 #' @export
+#' @examples
+#' \dontrun{
+#' df <- get_filtered_df(mascotfileName, refFileName)
+#' }
+
 
 get_filtered_df <- function(mascotfileName, refFileName){
   requireNamespace('utils')

@@ -31,25 +31,20 @@ A data frame which comes from results that phospho-data is normalizated base on 
 Normalize phospho-data to profiling
 }
 \examples{
-ftp_url1 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/phospho_data_topX.RData"
-ftp_url2 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/profiling_data_normalized.RData"
-ftp_url3 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/phosphorylation_exp_design_info.txt"
-ftp_url4 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/profiling_exp_design_info.txt"
+ftp_url1 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/normalize_phos_data_to_profiling.RData"
+ftp_url2 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/phosphorylation_exp_design_info.txt"
+ftp_url3 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/profiling_exp_design_info.txt"
 
 load_data1 <- load_data_with_ftp(ftp_url1, 'Rdata')
-writeBin(load_data1, "phospho_data_topX.RData")
-load("phospho_data_topX.RData")
+writeBin(load_data1, "normalize_phos_data_to_profiling.RData")
+load("normalize_phos_data_to_profiling.RData")
 
-load_data2 <- load_data_with_ftp(ftp_url2, 'Rdata')
-writeBin(load_data2, "profiling_data_normalized.RData")
-load("profiling_data_normalized.RData")
-
-load_data3 <- load_data_with_ftp(ftp_url3, 'downloadtxt')
-writeBin(load_data3, "phosphorylation_exp_design_info.txt")
+load_data2 <- load_data_with_ftp(ftp_url2, 'downloadtxt')
+writeBin(load_data2, "phosphorylation_exp_design_info.txt")
 phosphorylation_exp_design_info_file_path <- "./phosphorylation_exp_design_info.txt"
 
-load_data4 <- load_data_with_ftp(ftp_url4, 'downloadtxt')
-writeBin(load_data4, "profiling_exp_design_info.txt")
+load_data3 <- load_data_with_ftp(ftp_url3, 'downloadtxt')
+writeBin(load_data3, "profiling_exp_design_info.txt")
 profiling_exp_design_info_file_path <- "./profiling_exp_design_info.txt"
 
 data_frame_normalization_with_control_no_pair <- normalize_phos_data_to_profiling(

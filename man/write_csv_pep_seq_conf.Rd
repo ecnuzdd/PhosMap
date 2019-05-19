@@ -21,6 +21,13 @@ Write data to specific direction with CSV format.
 \description{
 Write data to specific direction with CSV format.
 }
+\examples{
+\dontrun{
+write_csv_pep_seq_conf(expName,
+  outputName, mascot_txt_dir_path_expName_path,
+  firmiana_peptide_dir_path_expName_path)
+}
+}
 \author{
 Dongdong Zhan and Mengsha Tong
 }

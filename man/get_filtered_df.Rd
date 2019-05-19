@@ -17,6 +17,11 @@ A filtered data frame
 \description{
 Get data frame filtered based on the Mascot and reference files.
 }
+\examples{
+\dontrun{
+df <- get_filtered_df(mascotfileName, refFileName)
+}
+}
 \author{
 Dongdong Zhan and Mengsha Tong
 }

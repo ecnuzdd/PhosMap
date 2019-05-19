@@ -9,20 +9,20 @@
 #' @export
 #'
 #' @examples
-#' ftp_url1 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/profiling_data.RData"
+#' ftp_url1 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_normalized_data_FOT5.RData"
 #' ftp_url2 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/profiling_exp_design_info.txt"
 
 #' load_data1 <- load_data_with_ftp(ftp_url1, 'Rdata')
-#' writeBin(load_data1, "profiling_data.RData")
-#' load("profiling_data.RData")
+#' writeBin(load_data1, "get_normalized_data_FOT5.RData")
+#' load("get_normalized_data_FOT5.RData")
 #'
 #' load_data2 <- load_data_with_ftp(ftp_url2, 'downloadtxt')
 #' writeBin(load_data2, "profiling_exp_design_info.txt")
 #' profiling_exp_design_info_file_path <- "./profiling_exp_design_info.txt"
 #'
 #' profiling_data_normalized <- get_normalized_data_FOT5(profiling_data,
-#'   profiling_exp_design_info_file_path)
-#'
+#'   profiling_exp_design_info_file_path
+#' )
 #' head(profiling_data_normalized)
 #'
 

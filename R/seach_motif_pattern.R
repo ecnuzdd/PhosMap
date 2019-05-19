@@ -15,16 +15,21 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' seach_motif_pattern(
-#'     foreground_sequence,
-#'     background_sequence,
-#'     min_sequence_count = 1,
-#'     min_pvalue = 0.01,
-#'     center = 'S',
-#'     width = 15
+#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/seach_motif_pattern.RData"
+#' load_data <- load_data_with_ftp(ftp_url, 'RData')
+#' writeBin(load_data, "seach_motif_pattern.RData")
+#' load("seach_motif_pattern.RData")
+#'
+#' motif_result_loop_i <- seach_motif_pattern(
+#'   loop_foreground[1:100],
+#'   loop_background[1:1000],
+#'   min_sequence_count = min_sequence_count,
+#'   min_pvalue = min_pvalue,
+#'   center = center,
+#'   width = check_result_list$width
 #' )
-#' }
+#' head(motif_result_loop_i)
+#'
 
 seach_motif_pattern <- function(
   foreground_sequence,
@@ -34,7 +39,6 @@ seach_motif_pattern <- function(
   center = 'S',
   width
 ){
-
   requireNamespace('stats')
   AA_LIST <- c('A', 'R', 'N', 'D', 'C', 'Q', 'E', 'G', 'H', 'I', 'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V')
 
@@ -108,7 +112,6 @@ seach_motif_pattern <- function(
   # Motif data: data frame with amino acid and positions for the motif
   motif_coordinate_data_frame <- as.data.frame(motif_coordinate)
   colnames(motif_coordinate_data_frame) <- c('aa', 'index')
-
 
   motif_coordinate_data_frame$aa <- AA_LIST[motif_coordinate_data_frame$aa]
 
