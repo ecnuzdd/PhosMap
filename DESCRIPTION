@@ -2,7 +2,7 @@ Package: PhosMap
 Type: Package
 Title: A Comprehensive R Package For Analyzing Quantitative
         Phosphoproteomics Data
-Version: 0.99.23
+Version: 0.99.24
 Author: Dongdong Zhan [aut, cre], Mengsha Tong [aut, cre]
 Maintainer: Dongdong Zhan <ecnuzdd@163.com>
 Description: PhosMap is a comprehensive R package for analyzing quantitative phosphoproteomics data. Modules in PhosMap were classified into two major categories: (1) data pre-processing and (2) data analysis and presentation. An intact data pre-processing procedure of phosphoproteomics data covered three main steps: merging input files after quality control, mapping phosphorylation sites (p-sites) to the corresponding protein sequence and data normalization. PhosMap incorporated four analysis modules, including clustering and differential expression analysis, time course analysis, kinase activity prediction to find activated/deactivated kinases and motif enrichment analysis.
