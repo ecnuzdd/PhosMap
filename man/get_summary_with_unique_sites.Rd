@@ -21,6 +21,9 @@ A dataframe that all redundant psites are assigned to protein sequence.
 Construct the data frame with unique phosphorylation site for each protein sequence and eliminate redundancy.
 }
 \examples{
+## The process needs to load data from PhosMap datasets stored into FTP server and perform large computation.
+## It may take a few minutes.
+if(FALSE){
 ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_summary_with_unique_sites.RData"
 load_data <- load_data_with_ftp(ftp_url, 'RData')
 writeBin(load_data, "get_summary_with_unique_sites.RData")
@@ -33,6 +36,7 @@ summary_df_of_unique_proteins_with_sites <- get_summary_with_unique_sites(
 )
 head(summary_df_of_unique_proteins_with_sites)
 
+}
 }
 \author{
 Dongdong Zhan and Mengsha Tong

@@ -20,6 +20,9 @@
 #' @export
 #'
 #' @examples
+#' ## The process needs to load data from PhosMap datasets stored into FTP server and perform large computation.
+#' ## It may take a few minutes.
+#' if(FALSE){
 #' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/visualization_fuzzycluster.RData"
 #' load_data <- load_data_with_ftp(ftp_url, 'RData')
 #' writeBin(load_data, "visualization_fuzzycluster.RData")
@@ -31,6 +34,8 @@
 #'   mfrow = c(3,3), min_mem = 0.1
 #'  )
 #'
+#' }
+
 
 visualization_fuzzycluster <- function(input_data, group, group_levels,
                                                        k_cluster, iteration = 100, mfrow = c(3,3),

@@ -23,6 +23,9 @@ parameter specified directory.
 Plot sequence logo based on list that consist of motifs and sequences.
 }
 \examples{
+## The process needs to load data from PhosMap datasets stored into FTP server and perform large computation.
+## It may take a few minutes.
+if(FALSE){
 ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/plot_seqlogo.RData"
 load_data <- load_data_with_ftp(ftp_url, 'RData')
 writeBin(load_data, "plot_seqlogo.RData")
@@ -32,6 +35,7 @@ BASE_DIR = getwd() # current working directory
 BASE_DIR = normalizePath(BASE_DIR)
 plot_seqlogo(BASE_DIR, foreground_sequences_mapped_to_motifs[1:50], plot_min_seqs = 25)
 
+}
 }
 \references{
 (1) Omar Wagih (2017). ggseqlogo: A 'ggplot2' Extension for Drawing Publication-Ready Sequence Logos. R package version 0.1.\

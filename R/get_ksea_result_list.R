@@ -13,6 +13,9 @@
 #' @export
 #'
 #' @examples
+#' ## The process needs to load data from PhosMap datasets stored into FTP server and perform large computation.
+#' ## It may take a few minutes.
+#' if(FALSE){
 #' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_ksea_result_list.RData"
 #' load_data <- load_data_with_ftp(ftp_url, 'RData')
 #' writeBin(load_data, "get_ksea_result_list.RData")
@@ -24,6 +27,8 @@
 #'  ksea_activity_i_pvalue = 0.05
 #' )
 #' head(ksea_result_list_i)
+#' }
+
 
 get_ksea_result_list <- function(ptypes_data_ratio_in_single_exp, ID, kinase_substrate_regulation_relationship, ksea_activity_i_pvalue = 0.05){
   symbol <- apply(data.frame(ID), 1, function(x){

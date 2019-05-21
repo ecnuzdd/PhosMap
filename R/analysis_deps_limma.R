@@ -15,6 +15,9 @@
 #' @export
 #'
 #' @examples
+#' ## The process needs to load data from PhosMap datasets stored into FTP server and perform large computation.
+#' ## It may take a few minutes.
+#' if(FALSE){
 #' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/analysis_deps_limma.RData"
 #' load_data <- load_data_with_ftp(ftp_url, 'RData')
 #' writeBin(load_data, "analysis_deps_limma.RData")
@@ -26,6 +29,8 @@
 #' )
 #' head(limma_results_df)
 #'
+#' }
+
 
 analysis_deps_limma <- function(expr_data_frame, group, comparison_factor,
                                 log2_label = FALSE, adjust_method = 'BH'){

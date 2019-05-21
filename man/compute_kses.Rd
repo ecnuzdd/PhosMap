@@ -21,6 +21,9 @@ A numeric or NA for enrichment_score.
 computing kinase-substrate enrichment score
 }
 \examples{
+## The process needs to load data from PhosMap datasets stored into FTP server and perform large computation.
+## It may take a few minutes.
+if(FALSE){
 ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/compute_kses.RData"
 load_data <- load_data_with_ftp(ftp_url, 'RData')
 writeBin(load_data, "compute_kses.RData")
@@ -32,6 +35,7 @@ stochastic_enrichment_score_i <- compute_kses(
   substrates_of_kinase_in_exp_count
 )
 head(stochastic_enrichment_score_i)
+}
 }
 \references{
 Hernandez-Armenta C et al. Benchmarking substrate-based kinase activity inference using phosphoproteomic data[J]. Bioinformatics, 2017, 33(12): 1845-1851.

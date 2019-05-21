@@ -9,6 +9,9 @@
 #' @export
 #' @return A simple t-SNE plot.
 #' @examples
+#' ## The process needs to load data from PhosMap datasets stored into FTP server and perform large computation.
+#' ## It may take a few minutes.
+#' if(FALSE){
 #' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/visualization_with_simple_tsne.RData"
 #' load_data <- load_data_with_ftp(ftp_url, 'RData')
 #' writeBin(load_data, "visualization_with_simple_tsne.RData")
@@ -21,6 +24,8 @@
 #'   perplexity = 12
 #' )
 #'
+#' }
+
 
 visualization_with_simple_tsne <- function(expr_data_frame, group, main = 'Simple t-SNE', perplexity = 10)
 {

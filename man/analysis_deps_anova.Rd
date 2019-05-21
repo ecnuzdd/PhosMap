@@ -25,6 +25,9 @@ A data frame containing ID, log2(FC) and p value.
 Differential expression analysis using ANOVA
 }
 \examples{
+## The process needs to load data from PhosMap datasets stored into FTP server and perform large computation.
+## It may take a few minutes.
+if(FALSE){
 ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/analysis_deps_anova.RData"
 load_data <- load_data_with_ftp(ftp_url, 'RData')
 writeBin(load_data, "analysis_deps_anova.RData")
@@ -36,6 +39,7 @@ anova_result <- analysis_deps_anova(
 )
 head(anova_result)
 
+}
 }
 \author{
 Dongdong Zhan and Mengsha Tong
