@@ -157,7 +157,7 @@ get_ka_by_mean_or_mlr <- function(
     for(i in seq_len(x_vector_count)){
       regulons <- regulons_list_names[i]
       i_substrates <- regulons_list[[i]]
-      xy_mat1_match_index <- which(y_vector == ij_substrate)
+      xy_mat1_match_index <- which(y_vector == i_substrates)
       xy_mat1[xy_mat1_match_index, regulons] <- 1
       i_substrates_count <- length(i_substrates)
       for(j in seq_len(i_substrates_count)){
