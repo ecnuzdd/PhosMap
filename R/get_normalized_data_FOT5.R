@@ -9,6 +9,9 @@
 #' @export
 #'
 #' @examples
+#' ## The process needs to load data from PhosMap datasets stored into FTP server and perform large computation.
+#' ## It may take a few minutes.
+#' if(FALSE){
 #' ftp_url1 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_normalized_data_FOT5.RData"
 #' ftp_url2 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/profiling_exp_design_info.txt"
 
@@ -25,6 +28,8 @@
 #' )
 #' head(profiling_data_normalized)
 #'
+#' }
+
 
 get_normalized_data_FOT5 <- function(
   data_frame,

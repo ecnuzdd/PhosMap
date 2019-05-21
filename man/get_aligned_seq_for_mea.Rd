@@ -27,6 +27,9 @@ A data frame containing ID, Sequence, AA_in_protein, aligned_seq.
 Taking S/T/Y as the center, align sequence to fasta library by the specific length.
 }
 \examples{
+## The process needs to load data from PhosMap datasets stored into FTP server and perform large computation.
+## It may take a few minutes.
+if(FALSE){
 ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_aligned_seq_for_mea.RData"
 load_data <- load_data_with_ftp(ftp_url, 'RData')
 writeBin(load_data, "get_aligned_seq_for_mea.RData")
@@ -39,6 +42,7 @@ foreground_df <- get_aligned_seq_for_mea(
 )
 head(foreground_df)
 
+}
 }
 \references{
 Hadley Wickham (2018). stringr: Simple, Consistent Wrappers for Common String Operations. R package version 1.3.0.\

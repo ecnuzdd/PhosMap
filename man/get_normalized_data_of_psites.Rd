@@ -23,6 +23,9 @@ A list including data frame after filtering or normalization (x 1e5).
 To normalize data and filter data only including phosphorylation sites.
 }
 \examples{
+## The process needs to load data from PhosMap datasets stored into FTP server and perform large computation.
+## It may take a few minutes.
+if(FALSE){
 ftp_url1 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_normalized_data_of_psites.RData"
 ftp_url2 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/phosphorylation_exp_design_info.txt"
 load_data1 <- load_data_with_ftp(ftp_url1, 'Rdata')
@@ -40,4 +43,5 @@ phospho_data_filtering_STY_and_normalization_list <- get_normalized_data_of_psit
 )
 head(phospho_data_filtering_STY_and_normalization_list)
 
+}
 }
