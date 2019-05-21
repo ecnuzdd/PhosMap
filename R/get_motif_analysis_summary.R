@@ -14,18 +14,22 @@
 #' @export
 #'
 #' @examples
-#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_motif_analysis_summary.RData"
-#' load_data <- load_data_with_ftp(ftp_url, 'RData')
-#' writeBin(load_data, "get_motif_analysis_summary.RData")
-#' load("get_motif_analysis_summary.RData")
+#' ## The process needs to load data from PhosMap datasets stored into FTP server and perform large computation.
+#' ## It may take a few minutes.
+#' if(FALSE){
+#'     ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_motif_analysis_summary.RData"
+#'     load_data <- load_data_with_ftp(ftp_url, 'RData')
+#'     writeBin(load_data, "get_motif_analysis_summary.RData")
+#'     load("get_motif_analysis_summary.RData")
 #'
-#' motifs <- get_motif_analysis_summary(
-#'   foreground[1:100], background[1:100],
-#'   center = center,
-#'   min_sequence_count = 1,
-#'   min_pvalue = motifx_pvalue
-#' )
-#' head(motifs)
+#'     motifs <- get_motif_analysis_summary(
+#'       foreground[1:100], background[1:100],
+#'       center = center,
+#'       min_sequence_count = 1,
+#'       min_pvalue = motifx_pvalue
+#'     )
+#'     head(motifs)
+#' }
 #'
 
 get_motif_analysis_summary <- function(

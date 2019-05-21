@@ -18,11 +18,11 @@ A data frame of background
 Get background data frame (fasta library from Refseq).
 }
 \examples{
-## The process need to load data from PhosMap datasets stored into FTP server.
+## The process needs to load data from PhosMap datasets stored into FTP server.
 ## It may take a few minutes.
 if(FALSE){
-background_df <- get_global_background_df(species = 'human', fasta_type = 'refseq')
-head(background_df)
+    background_df <- get_global_background_df(species = 'human', fasta_type = 'refseq')
+    head(background_df)
 }
 
 

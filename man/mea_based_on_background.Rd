@@ -22,17 +22,21 @@ A list containing motifs and the corresponding sequences
 Motif enrichment based on global background (fasta library from Refseq).
 }
 \examples{
-ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/mea_based_on_background.RData"
-load_data <- load_data_with_ftp(ftp_url, 'RData')
-writeBin(load_data, "mea_based_on_background.RData")
-load("mea_based_on_background.RData")
+## The process needs to load data from PhosMap datasets stored into FTP server and perform large computation.
+## It may take a few minutes.
+if(FALSE){
+    ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/mea_based_on_background.RData"
+    load_data <- load_data_with_ftp(ftp_url, 'RData')
+    writeBin(load_data, "mea_based_on_background.RData")
+    load("mea_based_on_background.RData")
 
-motifs_list <- mea_based_on_background(
-  foreground[1:100],
-  AA_in_protein[1:100],
-  background[1:1000],
-  motifx_pvalue
-)
+    motifs_list <- mea_based_on_background(
+      foreground[1:100],
+      AA_in_protein[1:100],
+      background[1:1000],
+      motifx_pvalue
+    )
+}
 
 }
 \author{

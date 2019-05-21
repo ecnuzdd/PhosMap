@@ -23,16 +23,20 @@ Based on a library file consisting of mapping relationships about Gene Symbol, G
 a new dataframe with Sequence, GI, Modification, Gene Symbol, Area and PSMs,is contructed.
 }
 \examples{
-ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_combined_data_frame.RData"
-load_data <- load_data_with_ftp(ftp_url, 'RData')
-writeBin(load_data, "get_combined_data_frame.RData")
-load("get_combined_data_frame.RData")
+## The process needs to load data from PhosMap datasets stored into FTP server and perform large computation.
+## It may take a few minutes.
+if(FALSE){
+    ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_combined_data_frame.RData"
+    load_data <- load_data_with_ftp(ftp_url, 'RData')
+    writeBin(load_data, "get_combined_data_frame.RData")
+    load("get_combined_data_frame.RData")
 
-combined_df_with_mapped_gene_symbol <- get_combined_data_frame(
-  merge_df_with_phospho_peptides[1:11,], species = 'human',
-  id_type = 'RefSeq_Protein_GI'
-)
-head(combined_df_with_mapped_gene_symbol)
+    combined_df_with_mapped_gene_symbol <- get_combined_data_frame(
+      merge_df_with_phospho_peptides[1:11,], species = 'human',
+      id_type = 'RefSeq_Protein_GI'
+    )
+    head(combined_df_with_mapped_gene_symbol)
+}
 
 }
 \author{

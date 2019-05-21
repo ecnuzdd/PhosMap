@@ -15,30 +15,34 @@
 #' @export
 #'
 #' @examples
-#' ftp_url1 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/normalize_phos_data_to_profiling.RData"
-#' ftp_url2 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/phosphorylation_exp_design_info.txt"
-#' ftp_url3 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/profiling_exp_design_info.txt"
+#' ## The process needs to load data from PhosMap datasets stored into FTP server and perform large computation.
+#' ## It may take a few minutes.
+#' if(FALSE){
+#'     ftp_url1 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/normalize_phos_data_to_profiling.RData"
+#'     ftp_url2 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/phosphorylation_exp_design_info.txt"
+#'     ftp_url3 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/profiling_exp_design_info.txt"
 #'
-#' load_data1 <- load_data_with_ftp(ftp_url1, 'Rdata')
-#' writeBin(load_data1, "normalize_phos_data_to_profiling.RData")
-#' load("normalize_phos_data_to_profiling.RData")
+#'     load_data1 <- load_data_with_ftp(ftp_url1, 'Rdata')
+#'     writeBin(load_data1, "normalize_phos_data_to_profiling.RData")
+#'     load("normalize_phos_data_to_profiling.RData")
 #'
-#' load_data2 <- load_data_with_ftp(ftp_url2, 'downloadtxt')
-#' writeBin(load_data2, "phosphorylation_exp_design_info.txt")
-#' phosphorylation_exp_design_info_file_path <- "./phosphorylation_exp_design_info.txt"
+#'     load_data2 <- load_data_with_ftp(ftp_url2, 'downloadtxt')
+#'     writeBin(load_data2, "phosphorylation_exp_design_info.txt")
+#'     phosphorylation_exp_design_info_file_path <- "./phosphorylation_exp_design_info.txt"
 #'
-#' load_data3 <- load_data_with_ftp(ftp_url3, 'downloadtxt')
-#' writeBin(load_data3, "profiling_exp_design_info.txt")
-#' profiling_exp_design_info_file_path <- "./profiling_exp_design_info.txt"
+#'     load_data3 <- load_data_with_ftp(ftp_url3, 'downloadtxt')
+#'     writeBin(load_data3, "profiling_exp_design_info.txt")
+#'     profiling_exp_design_info_file_path <- "./profiling_exp_design_info.txt"
 #'
-#' data_frame_normalization_with_control_no_pair <- normalize_phos_data_to_profiling(
-#'   phospho_data_topX, profiling_data_normalized,
-#'   phosphorylation_exp_design_info_file_path,
-#'   profiling_exp_design_info_file_path,
-#'   control_label = '0',
-#'   pair_flag = FALSE
-#' )
-#' head(data_frame_normalization_with_control_no_pair)
+#'     data_frame_normalization_with_control_no_pair <- normalize_phos_data_to_profiling(
+#'       phospho_data_topX, profiling_data_normalized,
+#'       phosphorylation_exp_design_info_file_path,
+#'       profiling_exp_design_info_file_path,
+#'       control_label = '0',
+#'       pair_flag = FALSE
+#'     )
+#'     head(data_frame_normalization_with_control_no_pair)
+#' }
 #'
 
 normalize_phos_data_to_profiling <- function (phospho_data_normalized, profiling_data_normalized,
