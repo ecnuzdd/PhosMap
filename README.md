@@ -17,13 +17,30 @@
 `graphics`, `grDevices`, `stats`, `utils`, `stringr`, `ggseqlogo`, `samr`, `limma`, `e1071`, `ClueR`, `Rtsne`, `glmnet`, `yaml`, `impute`
 <br> 
 
+### External dependencies
+* `ksea`(https://github.com/evocellnet/ksea)
+```R
+install.packages('devtools')
+require(devtools)
+install_github('evocellnet/ksea')
+```
+* `rmotifx`(https://github.com/omarwagih/rmotifx)
+```R
+install.packages('devtools')
+require(devtools)
+install_github('omarwagih/rmotifx')
+```
 
-### Installation
+### Installation of PhosMap
 ```R
 install.packages('devtools')
 require(devtools)
 install_github('ecnuzdd/PhosMap')
 ```
+
+### Tutorial of PhosMap
+* [Tutorial of PhosMap](https://github.com/ecnuzdd/PhosMap_datasets/blob/master/Tutorial_of_PhosMap.html)(Tutorial_of_PhosMap.html)
+* [Functions manual of PhosMap](https://github.com/ecnuzdd/PhosMap_datasets/blob/master/Manual_of_PhosMap.pdf)(Manual_of_PhosMap.pdf)
 
 ### Source location of the built-in reference library
 [PhosMap_datasets](https://github.com/ecnuzdd/PhosMap_datasets)  [https://github.com/ecnuzdd/PhosMap_datasets](https://github.com/ecnuzdd/PhosMap_datasets)  <br> 
