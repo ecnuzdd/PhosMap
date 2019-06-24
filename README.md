@@ -39,7 +39,7 @@ install_github('ecnuzdd/PhosMap')
 ```
 
 ### Tutorial of PhosMap
-* [Tutorial of PhosMap](https://github.com/ecnuzdd/PhosMap_datasets/blob/master/Tutorial_of_PhosMap.html)(Tutorial_of_PhosMap.html)
+* [Tutorial of PhosMap](https://github.com/ecnuzdd/PhosMap_datasets/blob/master/Tutorial_of_PhosMap.pdf)(Tutorial_of_PhosMap.pdf)
 * [Functions manual of PhosMap](https://github.com/ecnuzdd/PhosMap_datasets/blob/master/Manual_of_PhosMap.pdf)(Manual_of_PhosMap.pdf)
 
 ### Source location of the built-in reference library
