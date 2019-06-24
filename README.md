@@ -46,9 +46,9 @@ install_github('ecnuzdd/PhosMap')
 ### Case study
 ``` ftp://111.198.139.72:4000/PhosMap/data/ ```
 #### Compete workflow
-PhosMap_Demo_With_BRAFi_Data.zip
+``` PhosMap_Demo_With_BRAFi_Data.zip ```
 #### Partial data
-BRAFi.RData
+``` BRAFi.RData ```
 
 ### Source location of the built-in reference library
 [PhosMap_datasets](https://github.com/ecnuzdd/PhosMap_datasets)  [https://github.com/ecnuzdd/PhosMap_datasets](https://github.com/ecnuzdd/PhosMap_datasets)  <br> 
