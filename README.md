@@ -45,7 +45,7 @@ install_github('ecnuzdd/PhosMap')
 
 ### Case study
 ``` ftp://111.198.139.72:4000/PhosMap/data/ ```
-#### Compete workflow
+#### Complete workflow
 ``` ftp://111.198.139.72:4000/PhosMap/data/PhosMap_Demo_With_BRAFi_Data.zip ```
 #### Partial data
 ``` ftp://111.198.139.72:4000/PhosMap/data/BRAFi.RData ```
@@ -64,7 +64,7 @@ install_github('ecnuzdd/PhosMap')
   * Refseq (Human, Mouse, Rattus)
   * Uniprot (Human, Mouse, Rattus)
 
-### Complete demo data processed by [Firmiana](www.firmiana.org)
+### Complete demo data processed by [Firmiana](http://www.firmiana.org)
 #### Raw data from deposited in the ProteomeXchange Consortium
 [PXD007740](http://proteomecentral.proteomexchange.org/cgi/GetDataset?ID=PXD007740)
 
