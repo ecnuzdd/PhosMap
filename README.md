@@ -44,11 +44,27 @@ install_github('ecnuzdd/PhosMap')
 * [The help for installation](https://github.com/ecnuzdd/PhosMap_datasets/blob/master/lnstallation_help.pdf) (lnstallation_help.pdf)
 
 ### Case study
+You can go to this directory to find the files needed for the case study.
+
 ``` ftp://111.198.139.72:4000/PhosMap/data/ ```
+
+Or download them directly through the following links.
+
 #### Complete workflow
+This .zip contains PhosMap's demo code and raw datasets. After unzip, start the R program with setting the new folder as your working directory, and run the R script in it.
+
 ``` ftp://111.198.139.72:4000/PhosMap/data/PhosMap_Demo_With_BRAFi_Data.zip ```
+
 #### Partial data
+The .RData file stores the input objects required to invoke functions in the PhosMap script demo, which can be downloaded from the following link.
+
 ``` ftp://111.198.139.72:4000/PhosMap/data/BRAFi.RData ```
+
+After downloading, put it into your working directory. Use the following command to introduce these objects into the global environment,  then you can smoothly execute the statements in the script.
+
+```R
+load(BRAFi.RData)
+```
 
 ### Source location of the built-in reference library
 [PhosMap_datasets](https://github.com/ecnuzdd/PhosMap_datasets)  [https://github.com/ecnuzdd/PhosMap_datasets](https://github.com/ecnuzdd/PhosMap_datasets)  <br> 
