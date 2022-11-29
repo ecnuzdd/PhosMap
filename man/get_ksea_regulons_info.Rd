@@ -4,8 +4,12 @@
 \alias{get_ksea_regulons_info}
 \title{Get informational data frame by combining results from all experiments}
 \usage{
-get_ksea_regulons_info(ksea_regulons, ksea_trans_list, ksea_x_list,
-  ptypes_data_ratio_colnames)
+get_ksea_regulons_info(
+  ksea_regulons,
+  ksea_trans_list,
+  ksea_x_list,
+  ptypes_data_ratio_colnames
+)
 }
 \arguments{
 \item{ksea_regulons}{A kinase vector from all experiments.}
@@ -23,6 +27,7 @@ A data frame containing sepecific information of all experiments from ksea resul
 Get informational data frame by combining results from all experiments
 }
 \examples{
+\dontrun{
 ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_ksea_regulons_info.RData"
 load_data <- load_data_with_ftp(ftp_url, 'RData')
 writeBin(load_data, "get_ksea_regulons_info.RData")
@@ -35,7 +40,7 @@ ksea_regulons_activity_df <- get_ksea_regulons_info(
   ptypes_data_ratio_colnames
 )
 ksea_regulons_activity_df
-
+}
 }
 \author{
 Dongdong Zhan and Mengsha Tong

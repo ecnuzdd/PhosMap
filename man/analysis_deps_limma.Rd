@@ -4,8 +4,13 @@
 \alias{analysis_deps_limma}
 \title{Differential expression analysis using limma.}
 \usage{
-analysis_deps_limma(expr_data_frame, group, comparison_factor,
-  log2_label = FALSE, adjust_method = "BH")
+analysis_deps_limma(
+  expr_data_frame,
+  group,
+  comparison_factor,
+  log2_label = FALSE,
+  adjust_method = "BH"
+)
 }
 \arguments{
 \item{expr_data_frame}{A data frame containing ID and quantification values.}

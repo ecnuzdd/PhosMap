@@ -4,8 +4,12 @@
 \alias{get_normalized_data_of_psites}
 \title{To normalize data and filter data only including phosphorylation sites.}
 \usage{
-get_normalized_data_of_psites(data_frame, experiment_code_file_path,
-  topN = NA, mod_types = c("S", "T", "Y"))
+get_normalized_data_of_psites(
+  data_frame,
+  experiment_code_file_path,
+  topN = NA,
+  mod_types = c("S", "T", "Y")
+)
 }
 \arguments{
 \item{data_frame}{A data frame containing IDs and quantification values merged from multi-experiments as input.}

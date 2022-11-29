@@ -4,8 +4,13 @@
 \alias{get_motif_analysis_summary}
 \title{Get summary results of motif analysis for specific input}
 \usage{
-get_motif_analysis_summary(foreground, background, center = "S",
-  min_sequence_count = 1, min_pvalue = 0.01)
+get_motif_analysis_summary(
+  foreground,
+  background,
+  center = "S",
+  min_sequence_count = 1,
+  min_pvalue = 0.01
+)
 }
 \arguments{
 \item{foreground}{A vector for AA sequences with fixed length as foreground input.}

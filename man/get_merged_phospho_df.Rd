@@ -4,8 +4,12 @@
 \alias{get_merged_phospho_df}
 \title{Get merged data frame with phospho-peptides.}
 \usage{
-get_merged_phospho_df(peptide_id, peptide_df_with_area_psm_list,
-  ID_of_seq_gi_site_list, ID_DF_list)
+get_merged_phospho_df(
+  peptide_id,
+  peptide_df_with_area_psm_list,
+  ID_of_seq_gi_site_list,
+  ID_DF_list
+)
 }
 \arguments{
 \item{peptide_id}{a vector for peptide ID.}

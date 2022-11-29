@@ -4,8 +4,12 @@
 \alias{visualization_with_simple_tsne}
 \title{A simple t-SNE plot.}
 \usage{
-visualization_with_simple_tsne(expr_data_frame, group, main = "Simple t-SNE",
-  perplexity = 10)
+visualization_with_simple_tsne(
+  expr_data_frame,
+  group,
+  main = "Simple t-SNE",
+  perplexity = 10
+)
 }
 \arguments{
 \item{expr_data_frame}{A data frame containing ID and quantification value.}

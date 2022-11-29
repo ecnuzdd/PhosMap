@@ -11,7 +11,7 @@
 #'
 #' @return A dataframe that all redundant psites are assigned to protein sequence.
 #' @export
-#'
+#' @import utils
 #' @examples
 #' ## The process needs to load data from PhosMap datasets stored into FTP server and perform large computation.
 #' ## It may take a few minutes.

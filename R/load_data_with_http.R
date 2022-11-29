@@ -7,20 +7,21 @@
 #'
 #' @param http_link A string for URL of datasets.
 #' @param data_type A string for type of datasets (txt of csv).
-#'
+#' @import RCurl utils
 #' @author Dongdong Zhan and Mengsha Tong
 #'
 #' @return A dataframe
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' http_link <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/profiling_exp_design_info.txt')
 #' data_type <- 'txt'
 #' load_data <- load_data_with_http(
 #'   http_link, data_type
 #' )
 #' head(load_data)
-#'
+#' }
 
 load_data_with_http <- function(http_link, data_type){
   message('First loading data from Github sever, it may take a few minutes.')

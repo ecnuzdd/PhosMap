@@ -11,7 +11,7 @@
 #'
 #' @references Hadley Wickham (2018). stringr: Simple, Consistent Wrappers for Common String Operations. R package version 1.3.0.\
 #' https://CRAN.R-project.org/package=stringr.
-#'
+#' @import utils
 #' @return A data frame containing ID, Sequence, AA_in_protein, aligned_seq.
 #' @export
 #'

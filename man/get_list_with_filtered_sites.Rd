@@ -4,8 +4,14 @@
 \alias{get_list_with_filtered_sites}
 \title{Filter phosphorylation sites.}
 \usage{
-get_list_with_filtered_sites(peptide_id, files, files_site_score, qc, min_score,
-  min_FDR)
+get_list_with_filtered_sites(
+  peptide_id,
+  files,
+  files_site_score,
+  qc,
+  min_score,
+  min_FDR
+)
 }
 \arguments{
 \item{peptide_id}{A vector containing experiment ids as input.}

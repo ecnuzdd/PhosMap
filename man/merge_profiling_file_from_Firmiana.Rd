@@ -4,8 +4,11 @@
 \alias{merge_profiling_file_from_Firmiana}
 \title{Merge profiling files downloaded from Firmiana.}
 \usage{
-merge_profiling_file_from_Firmiana(firmiana_gene_dir, US_cutoff = 1,
-  experiment_gene_file_path)
+merge_profiling_file_from_Firmiana(
+  firmiana_gene_dir,
+  US_cutoff = 1,
+  experiment_gene_file_path
+)
 }
 \arguments{
 \item{firmiana_gene_dir}{a folder containing gene identification results as input.}

@@ -20,6 +20,7 @@ A list for expected enrichment scores and its significance
 computing kinase-substrate enrichment significance (pvalue)
 }
 \examples{
+\dontrun{
 ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_kses.RData"
 load_data <- load_data_with_ftp(ftp_url, 'RData')
 writeBin(load_data, "get_kses.RData")
@@ -31,7 +32,7 @@ ksea_result_i_l <- get_kses(
   1000
 )
 head(ksea_result_i_l)
-
+}
 }
 \references{
 Hernandez-Armenta C et al. Benchmarking substrate-based kinase activity inference using phosphoproteomic data[J]. Bioinformatics, 2017, 33(12): 1845-1851.

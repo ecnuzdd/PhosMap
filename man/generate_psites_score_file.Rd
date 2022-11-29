@@ -4,8 +4,11 @@
 \alias{generate_psites_score_file}
 \title{Generate peptide identification files with psites scores.}
 \usage{
-generate_psites_score_file(mascot_txt_dir, firmiana_peptide_dir,
-  psites_score_dir)
+generate_psites_score_file(
+  mascot_txt_dir,
+  firmiana_peptide_dir,
+  psites_score_dir
+)
 }
 \arguments{
 \item{mascot_txt_dir}{A folder containing identification xml files with psites scores as input.}

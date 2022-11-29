@@ -4,7 +4,7 @@
 #' @param fasta_type, A string for fasta source, the options are refseq and uniprot, the default is refseq
 #'
 #' @author Dongdong Zhan and Mengsha Tong
-#'
+#' @import utils
 #' @return A data frame of background
 #' @export
 #'

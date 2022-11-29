@@ -15,6 +15,7 @@
 #' @return A scatter plot for showing differentially expressed results.
 #'
 #' @examples
+#' \dontrun{
 #' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/visualization_deps_with_scatter.RData"
 #' load_data <- load_data_with_ftp(ftp_url, 'RData')
 #' writeBin(load_data, "visualization_deps_with_scatter.RData")
@@ -24,7 +25,7 @@
 #'   minPvalue = 0.05, main = 'Differentially expressed proteins  \n with limma',
 #'   show_text = TRUE, min_up_text = 70, min_down_text = 70
 #' )
-#'
+#' }
 
 visualization_deps_with_scatter <- function(
   deps_data,

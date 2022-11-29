@@ -4,8 +4,13 @@
 \alias{analysis_deps_anova}
 \title{Differential expression analysis using ANOVA}
 \usage{
-analysis_deps_anova(expr_data_frame, group, log2_label = FALSE,
-  return_padjust = TRUE, adjust_method = "BH")
+analysis_deps_anova(
+  expr_data_frame,
+  group,
+  log2_label = FALSE,
+  return_padjust = TRUE,
+  adjust_method = "BH"
+)
 }
 \arguments{
 \item{expr_data_frame}{A data frame containing ID and quantification values.}

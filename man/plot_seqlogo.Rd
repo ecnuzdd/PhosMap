@@ -4,8 +4,11 @@
 \alias{plot_seqlogo}
 \title{Plot sequence logo based on list that consist of motifs and sequences.}
 \usage{
-plot_seqlogo(base_dir, foreground_sequences_mapped_to_motifs,
-  plot_min_seqs = 5)
+plot_seqlogo(
+  base_dir,
+  foreground_sequences_mapped_to_motifs,
+  plot_min_seqs = 5
+)
 }
 \arguments{
 \item{base_dir}{A path used for saving plots.}

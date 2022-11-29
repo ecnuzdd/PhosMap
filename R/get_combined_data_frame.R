@@ -9,7 +9,7 @@
 #' @param id_type A string, the options are 'GeneID', 'RefSeq_Protein_GI', 'RefSeq_Protein_Accession' and 'Uniprot_Protein_Accession', the default is RefSeq_Protein_GI.
 #'
 #' @author Dongdong Zhan and Mengsha Tong
-#'
+#' @import utils
 #' @return A dataframe with Sequence, GI, Modification, Gene Symbol, Area values and PSMs
 #' @export
 #'

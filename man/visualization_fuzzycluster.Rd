@@ -4,8 +4,16 @@
 \alias{visualization_fuzzycluster}
 \title{Visualize results from fuzzy clusters with line chart}
 \usage{
-visualization_fuzzycluster(input_data, group, group_levels, k_cluster,
-  iteration = 100, mfrow = c(3, 3), min_mem = 0.1, plot = TRUE)
+visualization_fuzzycluster(
+  input_data,
+  group,
+  group_levels,
+  k_cluster,
+  iteration = 100,
+  mfrow = c(3, 3),
+  min_mem = 0.1,
+  plot = TRUE
+)
 }
 \arguments{
 \item{input_data}{a data frame containing ID and expression profile.}
