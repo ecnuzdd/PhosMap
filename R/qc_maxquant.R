@@ -6,6 +6,7 @@
 #' @param min_loc_prob Threshold for MaxQuant Localization.prob. The default is 0.75.
 #' @param max_na_num Threshold for the number of missing values. The default is 2.
 #' @import utils stringr
+#' @export
 #' @return A result list. Elements are a data frame containing quality control result and a data frame containing information required for motif analysis.
 #' @examples
 #' \dontrun{
