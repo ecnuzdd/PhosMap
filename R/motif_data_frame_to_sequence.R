@@ -12,7 +12,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/motif_data_frame_to_sequence.RData"
+#' ftp_url <- "https://github.com/ecnuzdd/PhosMap_datasets/function_demo_data/motif_data_frame_to_sequence.RData"
 #' load_data <- load_data_with_ftp(ftp_url, 'RData')
 #' writeBin(load_data, "motif_data_frame_to_sequence.RData")
 #' load("motif_data_frame_to_sequence.RData")

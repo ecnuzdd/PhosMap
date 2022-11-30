@@ -15,7 +15,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' http_link <- url('https://raw.githubusercontent.com/ecnuzdd/PhosMap_datasets/master/function_demo_data/profiling_exp_design_info.txt')
+#' http_link <- url('https://github.com/ecnuzdd/PhosMap_datasets/blob/master/function_demo_data/profiling_exp_design_info.txt')
 #' data_type <- 'txt'
 #' load_data <- load_data_with_http(
 #'   http_link, data_type

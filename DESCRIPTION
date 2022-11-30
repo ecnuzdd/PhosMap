@@ -5,7 +5,7 @@ Title: A Comprehensive R Package For Analyzing Quantitative
 Version: 1.0.0
 Author: Dongdong Zhan [aut, cre], Mengsha Tong [aut, cre]
 Maintainer: Dongdong Zhan <ecnuzdd@163.com>
-Description: PhosMap is a comprehensive R package for analyzing quantitative phosphoproteomics data. Modules in PhosMap were classified into two major categories: (1) data pre-processing and (2) data analysis and presentation. An intact data pre-processing procedure of phosphoproteomics data covered three main steps: merging input files after quality control, mapping phosphorylation sites (p-sites) to the corresponding protein sequence and data normalization. PhosMap incorporated four analysis modules, including clustering and differential expression analysis, time course analysis, kinase activity prediction to find activated/deactivated kinases and motif enrichment analysis.
+Description: PhosMap is a comprehensive R package for analyzing quantitative phosphoproteomics data. Modules in PhosMap were classified into two major categories: (1) data preprocessing and (2) data analysis and presentation. For the data obtained by the two search engines, MaxQuant and Firmiana(Mascot), we perform different preprocessing on the data according to its characteristics. For MaxQuant, the complete preprocessing including quality control, filtering, and normalization is included in the R package. For Firmiana(Mascot), an intact data preprocessing procedure of phosphoproteomics data covered three main steps: merging input files after quality control, mapping phosphorylation sites (p-sites) to the corresponding protein sequence and data normalization. PhosMap incorporated six analysis modules, including dimension reduction analysis, differential expression analysis, time course analysis, kinase activity prediction to find activated/deactivated kinases, motif enrichment analysis and survival analysis.
 License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: FALSE
@@ -13,7 +13,7 @@ RoxygenNote: 7.2.0
 Date: 2022-11-29
 biocViews: Proteomics, DifferentialExpression, DataRepresentation,
         Visualization, Clustering, Normalization, QualityControl, TimeCourse
-Depends: R (>= 4.2)
+Depends: R (>= 4.0)
 Imports: graphics, grDevices, stats, utils, stringr, ggseqlogo, samr,
         limma, e1071, ClueR, Rtsne, glmnet, yaml, impute, RCurl, uwot
 Suggests: knitr, rmarkdown, pheatmap
