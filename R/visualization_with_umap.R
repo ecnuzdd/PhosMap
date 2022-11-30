@@ -5,7 +5,7 @@
 #' @param main The main title of plot.
 #' @param n_neighbors A numerical value for the size of local neighborhood, the default is 10.
 #' @import uwot graphics
-#'
+#' @export
 #' 
 #' @return A umap plot.
 

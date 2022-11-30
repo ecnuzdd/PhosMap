@@ -11,6 +11,7 @@
 #' @param impute_method Imputation method[proteinGroups.txt]. The default is 'minimum/10',the options are '0', 'minimum' and 'minimum/10'.
 #' @return A result list. Elements are a data frame containing information required for all analysis and a pre-processed proteomics data.
 #' @import utils stats
+#' @export
 #' @examples
 #' 
 #' ## Read phosphoproteomics data

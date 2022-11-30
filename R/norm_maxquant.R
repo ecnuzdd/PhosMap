@@ -6,6 +6,7 @@
 #' @param impute_method Imputation method. The default is 'minimum/10' and the options are '0', 'minimum' and 'minimum/10'.
 #' @param percent_of_kept_sites A numeric value representing a cutoff used for filter psites. The default is 3/4.
 #' @import stats
+#' @export
 #' @return A data frame containing information required for all analysis.
 #' @examples
 #' \dontrun{
