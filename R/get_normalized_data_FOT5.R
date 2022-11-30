@@ -12,8 +12,8 @@
 #' ## The process needs to load data from PhosMap datasets stored into FTP server and perform large computation.
 #' ## It may take a few minutes.
 #' if(FALSE){
-#' ftp_url1 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_normalized_data_FOT5.RData"
-#' ftp_url2 <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/profiling_exp_design_info.txt"
+#' ftp_url1 <- "https://github.com/ecnuzdd/PhosMap_datasets/function_demo_data/get_normalized_data_FOT5.RData"
+#' ftp_url2 <- "https://github.com/ecnuzdd/PhosMap_datasets/function_demo_data/profiling_exp_design_info.txt"
 
 #' load_data1 <- load_data_with_ftp(ftp_url1, 'Rdata')
 #' writeBin(load_data1, "get_normalized_data_FOT5.RData")

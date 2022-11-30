@@ -8,7 +8,7 @@
 #'
 #' @author Dongdong Zhan and Mengsha Tong
 #'
-#' @references Ritchie, M.E., Phipson, B., Wu, D., Hu, Y., Law, C.W., Shi, W., and Smyth, G.K. (2015). limma powers differential expression \
+#' @references Ritchie, M.E., Phipson, B., Wu, D., Hu, Y., Law, C.W., Shi, W., and Smyth, G.K. (2015). limma powers differential expression 
 #' analyses for RNA-sequencing and microarray studies. Nucleic Acids Research 43(7), e47.
 #'
 #' @return A list containing results from limma analysis.
@@ -18,7 +18,7 @@
 #' ## The process needs to load data from PhosMap datasets stored into FTP server and perform large computation.
 #' ## It may take a few minutes.
 #' if(FALSE){
-#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/analysis_deps_limma.RData"
+#' ftp_url <- "https://github.com/ecnuzdd/PhosMap_datasets/function_demo_data/analysis_deps_limma.RData"
 #' load_data <- load_data_with_ftp(ftp_url, 'RData')
 #' writeBin(load_data, "analysis_deps_limma.RData")
 #' load("analysis_deps_limma.RData")

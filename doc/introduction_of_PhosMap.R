@@ -185,3 +185,217 @@ expr_data_frame <- data_frame_normalization_with_control_no_pair
 index_of_cluster <- match(cluster_symbol, expr_data_frame$ID)
 cluster_df <- expr_data_frame[index_of_cluster,]
 
+## ----fig.cap = "KSEA method", fig.width = 6, fig.height = 5, fig.align = 'center'----
+# Perform KSEA
+summary_df_list_from_ksea_cluster <- get_summary_from_ksea(cluster_df, species = 'human', log2_label = FALSE, ratio_cutoff = 3)
+# Activity of regulons for regulation
+ksea_regulons_activity_df_cluster <- summary_df_list_from_ksea_cluster$ksea_regulons_activity_df
+ksea_id_cluster <- as.vector(ksea_regulons_activity_df_cluster[,1])
+ksea_value_cluster <- ksea_regulons_activity_df_cluster[,-1]
+if(FALSE){
+  # Pvalue of regulons for regulation
+  ksea_regulons_pvalue_cluster <- summary_df_list_from_ksea_cluster$ksea_regulons_pvalue_df
+  # Activity of regulons for regulation
+  ksea_regulons_activity_cluster <- summary_df_list_from_ksea_cluster$ksea_regulons_activity_df
+  # Expression ratio of regulons for regulation
+  ksea_kinase_site_substrate_original_ratio_cluster <- summary_df_list_from_ksea_cluster$ksea_kinase_site_substrate_original_ratio_df
+}
+
+
+
+# plot pheatmap
+if(TRUE){
+  # annotation setting
+  annotation_col <- data.frame(
+    group = group
+  )
+  rownames(annotation_col) <- colnames(ksea_value_cluster)
+  
+  # breaks and colors setting
+  breaks_1 <- seq(-4, -2, 0.2)
+  colors_1 <- colorRampPalette(c('#11264f', '#145b7d'))(length(breaks_1)-1)
+  
+  breaks_2 <- seq(-2, -1, 0.2)
+  colors_2 <- colorRampPalette(c('#145b7d', '#009ad6'))(length(breaks_2))
+  
+  breaks_3 <- seq(-1, 1, 0.2)
+  colors_3 <- colorRampPalette(c('#009ad6', 'white', '#FF6600'))(length(breaks_3))
+  
+  breaks_4 <- seq(1, 2, 0.2)
+  colors_4 <- colorRampPalette(c('#FF6600', 'red'))(length(breaks_4))
+  
+  breaks_5 <- seq(2, 4, 0.2)
+  colors_5 <- colorRampPalette(c('red', 'firebrick'))(length(breaks_5))
+  
+  breaks <- c(breaks_1, breaks_2, breaks_3, breaks_4, breaks_5)
+  breaks <- breaks[which(!duplicated(breaks))]
+  color <- c(colors_1, colors_2, colors_3, colors_4, colors_5)
+  color <- color[which(!duplicated(color))]
+  library(pheatmap)
+  ph <- pheatmap(
+    ksea_value_cluster, 
+    scale = 'none', 
+    annotation_col = annotation_col, 
+    clustering_distance_rows = 'euclidean',
+    fontsize_row = 5, 
+    # cutree_rows = 1, 
+    show_rownames = TRUE,
+    fontsize_col = 5,
+    # cutree_cols = 1, 
+    cluster_cols = FALSE,
+    border_color = 'black', 
+    cellwidth = 5, cellheight = 5,
+    breaks = breaks,
+    color = color,
+    legend_breaks = c(-4, -2, -1, 0, 1, 2, 4),
+    legend_labels = c(-4, -2, -1, 0, 1, 2, 4),
+    main = paste('Kinase-substrate enrichment analysis', cluster_flag, sep = ' ')
+  )
+}
+
+
+## ----eval = FALSE-------------------------------------------------------------
+#  # get kinase activity matrix with multiple linear regression (mlr) method
+#  kinase_activity_df_mlr <- get_ka_by_mean_or_mlr(cluster_df, species = 'human', log2_label = TRUE, method = 'mlr')
+
+## ----eval = FALSE-------------------------------------------------------------
+#  # get kinase activity matrix with mean value method
+#  kinase_activity_df_mean <- get_ka_by_mean_or_mlr(cluster_df, species = 'human', log2_label = TRUE, method = 'mean')
+
+## ----get_aligned_seq_for_mea--------------------------------------------------
+# *** foreground ***
+foreground_data <- phospho_data_filtering_STY_and_normalization # pre-processed data
+foreground_sequence <- as.vector(foreground_data$Sequence)
+GI <- as.vector(foreground_data$GI)
+Sequence <- as.vector(foreground_data$Sequence)
+AA_in_protein <- as.vector(foreground_data$AA_in_protein)
+
+# *** required parameters ***
+fixed_length <- 15
+species <- 'human'
+motifx_pvalue <- 0.01
+
+# get foreground data frame
+# foreground_df = get_aligned_seq_for_mea(ID, Sequence, AA_in_protein, fixed_length, species = 'human', fasta_type = 'refseq')
+
+# get background data frame
+# background_df = get_global_background_df(species = 'human', fasta_type = 'refseq')
+
+## ----mea_based_on_background--------------------------------------------------
+# construct foreground and background
+# To facilitate testing the module, select an appropriate number of items at random.
+foreground <- as.vector(foreground_df$aligned_seq)
+foreground <- foreground[sample(length(foreground), 1000)]
+background <- as.vector(background_df$Aligned_Seq)
+background <- background[sample(length(background), 10000)]
+
+
+motifs_list <- mea_based_on_background(foreground, AA_in_protein, background, motifx_pvalue)
+
+# Find sequences in foreground that are mapped to specific motif
+foreground_sequences_mapped_to_motifs <- get_foreground_seq_to_motifs(motifs_list, foreground)
+
+
+# Find data frame in foreground that are mapped to specific motif
+foreground_df_mapped_to_motifs <- get_foreground_df_to_motifs(foreground_sequences_mapped_to_motifs, foreground, foreground_df)
+
+## ----ggseqlogo, fig.cap = "Plot motif logo",  fig.width = 6, fig.height = 6, fig.align = 'center'----
+# The data can be used for ploting logo of sepcific motif: foreground_sequences_mapped_to_motifs
+# ploting logo: Q......S.......
+require(ggseqlogo)
+ggseqlogo(foreground_sequences_mapped_to_motifs[[1]])
+
+if(TRUE){
+  # batch plot and count peptides for each motif
+  foreground_sequences_mapped_to_motifs_count <- length(foreground_sequences_mapped_to_motifs)
+  motifs <- names(foreground_sequences_mapped_to_motifs)
+  peptides_count <- NULL
+  for(i in seq_len(foreground_sequences_mapped_to_motifs_count)){
+    l_i <- foreground_sequences_mapped_to_motifs[[i]]
+    peptides_count <- c(peptides_count, length(l_i))
+  }
+  motifs_peptides_count_df <- data.frame(motifs, peptides_count)
+  # quantile(peptides_count, seq(0,1,0.05))
+  if(FALSE){
+    plot_seqlogo(BASE_DIR, foreground_sequences_mapped_to_motifs, plot_min_seqs = 25)
+  }
+  
+}
+
+## ----Assign quantitative values of peptides to their motif, fig.cap = "KSEA method", fig.width = 6, fig.height = 5, fig.align = 'center'----
+# Select motifs at least having 50 peptides
+# Assign quantitative values of peptides to their motif
+foreground_value <- foreground_data[,-c(seq(1,6))]
+min_seqs <- 50
+index_of_motifs <- which(peptides_count>=min_seqs)
+motif_group_m_ratio_df <- NULL
+for(i in index_of_motifs){
+  motif <- motifs[i]
+  aligned_peptides <- foreground_sequences_mapped_to_motifs[[i]]
+  index_of_match <- match(aligned_peptides, foreground_df$aligned_seq)
+  motif_value <- foreground_value[index_of_match,]
+  motif_value_colsum <- colSums(motif_value)
+  motif_group_m <- tapply(motif_value_colsum, group, mean)
+  motif_group_m_ratio <- motif_group_m/motif_group_m[1]
+  motif_group_m_ratio_df <- rbind(motif_group_m_ratio_df, motif_group_m_ratio)
+}
+motifs_subset <- motifs[index_of_motifs]
+peptides_count_subset <- peptides_count[index_of_motifs]
+rownames(motif_group_m_ratio_df) <- paste(motifs_subset, peptides_count_subset)
+
+# The matrix is import inot pheatmap
+motif_group_m_ratio_df_mat <- as.matrix(motif_group_m_ratio_df)
+
+
+
+
+# plot pheatmap
+if(TRUE){
+  # library(pheatmap)
+  # breaks and colors setting
+  breaks_1 <- seq(0, 0.5, 0.1)
+  colors_1 <- colorRampPalette(c('green', 'blue'))(length(breaks_1)-1)
+  
+  breaks_3 <- seq(0.5, 1.5, 0.1)
+  colors_3 <- colorRampPalette(c('blue', 'white', '#FFBFBF'))(length(breaks_3))
+  
+  breaks_4 <- seq(1.5, 2, 0.1)
+  colors_4 <- colorRampPalette(c('#FFBFBF', 'red'))(length(breaks_4))
+  
+  breaks_5 <- seq(2, 4, 0.1)
+  colors_5 <- colorRampPalette(c('red','firebrick'))(length(breaks_5))
+  
+  breaks <- c(breaks_1, breaks_3, breaks_4, breaks_5)
+  breaks <- breaks[which(!duplicated(breaks))]
+  colors <- c(colors_1, colors_3, colors_4, colors_5)
+  colors <- colors[which(!duplicated(colors))]
+  
+  length(breaks)
+  length(which(!duplicated(colors)))
+  ph <- pheatmap(
+    motif_group_m_ratio_df_mat, 
+    scale = 'none', 
+    # annotation_col = annotation_col, 
+    clustering_distance_cols = 'euclidean',
+    fontsize_row = 6, cutree_rows = 1, show_rownames = TRUE, cluster_rows = TRUE,
+    fontsize_col = 6, cutree_cols = 1, show_colnames = TRUE, cluster_cols = FALSE,
+    border_color = 'black', 
+    # color = colors, 
+    cellwidth = 12, cellheight = 12,
+    breaks = breaks,
+    color = colors,
+    legend_breaks = c(0, 0.5, 1, 1.5, 2, 4),
+    legend_labels = c(0, 0.5, 1, 1.5, 2, 4),
+    main = 'Motif enrichment analysis'
+  )
+}
+
+## ----formatted_output_foreground_sequences_mapped_to_motifs-------------------
+# formatting output
+formatted_output_df <- formatted_output_mef_results(foreground_sequences_mapped_to_motifs)
+# write file
+# write.table(formatted_output_df, 'formatted_output_df.txt', row.names = FALSE, col.names = FALSE, sep = '\t')
+
+## ----session------------------------------------------------------------------
+sessionInfo()
+

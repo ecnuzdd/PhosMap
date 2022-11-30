@@ -18,7 +18,7 @@
 #' ## The process needs to load data from PhosMap datasets stored into FTP server and perform large computation.
 #' ## It may take a few minutes.
 #' if(FALSE){
-#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/seach_motif_pattern.RData"
+#' ftp_url <- "https://github.com/ecnuzdd/PhosMap_datasets/function_demo_data/seach_motif_pattern.RData"
 #' load_data <- load_data_with_ftp(ftp_url, 'RData')
 #' writeBin(load_data, "seach_motif_pattern.RData")
 #' load("seach_motif_pattern.RData")

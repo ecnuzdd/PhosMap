@@ -15,21 +15,21 @@
 #'
 #' @examples
 #' \dontrun{
-#' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/profiling_exp_design_info.txt"
+#' ftp_url <- "https://github.com/ecnuzdd/PhosMap_datasets/function_demo_data/profiling_exp_design_info.txt"
 #' load_data <- load_data_with_ftp(ftp_url, 'txt')
 #' head(load_data)
 #' }
 
 load_data_with_ftp <- function(ftp_link, data_type){
-  # ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/BRAFi.RData"
+  # ftp_url <- "https://github.com/ecnuzdd/PhosMap_datasets/BRAFi.RData"
   # load_data <- load_data_with_ftp(ftp_url, 'RData')
   # writeBin(load_data, "BRAFi.RData")
   # load("BRAFi.RData")
 
-  # ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/motif_library/refseq/mouse/STY_background_of_refseq_mouse_for_motif_enrichment.txt"
+  # ftp_url <- "https://github.com/ecnuzdd/PhosMap_datasets/motif_library/refseq/mouse/STY_background_of_refseq_mouse_for_motif_enrichment.txt"
   # bg <- load_data_with_ftp(ftp_url, 'txt')
 
-  # ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/kinase_substrate_regulation_relationship_table/human/human_ksrr.csv"
+  # ftp_url <- "https://github.com/ecnuzdd/PhosMap_datasets/kinase_substrate_regulation_relationship_table/human/human_ksrr.csv"
   # ks <- load_data_with_ftp(ftp_url, 'csv')
   requireNamespace('RCurl')
   ftp_url <- ftp_link
