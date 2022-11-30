@@ -4,8 +4,11 @@
 \alias{extract_psites_score}
 \title{Create R codes to call python for parsering mascot xml.}
 \usage{
-extract_psites_score(phosphorylation_exp_design_info_file_path, mascot_xml_dir,
-  mascot_txt_dir)
+extract_psites_score(
+  phosphorylation_exp_design_info_file_path,
+  mascot_xml_dir,
+  mascot_txt_dir
+)
 }
 \arguments{
 \item{phosphorylation_exp_design_info_file_path}{A string representing the file path of experiment code, for example: experiment_code.txt}

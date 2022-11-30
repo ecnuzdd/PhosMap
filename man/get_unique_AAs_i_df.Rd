@@ -16,6 +16,7 @@ A data frame with sites in unique protein.
 Get data frame without redundancy.
 }
 \examples{
+\dontrun{
 ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/get_unique_AAs_i_df.RData"
 load_data <- load_data_with_ftp(ftp_url, 'RData')
 writeBin(load_data, "get_unique_AAs_i_df.RData")
@@ -23,7 +24,7 @@ load("get_unique_AAs_i_df.RData")
 
 summary_df_of_unique_protein_with_sites <- get_unique_AAs_i_df(df_with_AAs_i)
 head(summary_df_of_unique_protein_with_sites)
-
+}
 }
 \author{
 Dongdong Zhan and Mengsha Tong

@@ -4,8 +4,11 @@
 \alias{get_summary_with_unique_sites}
 \title{Assign psites to protein sequence.}
 \usage{
-get_summary_with_unique_sites(combined_df_with_mapped_gene_symbol,
-  species = "human", fasta_type = "refseq")
+get_summary_with_unique_sites(
+  combined_df_with_mapped_gene_symbol,
+  species = "human",
+  fasta_type = "refseq"
+)
 }
 \arguments{
 \item{combined_df_with_mapped_gene_symbol}{A dataframe with Sequence, ID, Modification, Gene Symbol, Area and PSMs as input.}

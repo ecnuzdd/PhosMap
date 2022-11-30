@@ -4,8 +4,14 @@
 \alias{get_aligned_seq_for_mea}
 \title{Taking S/T/Y as the center, align sequence to fasta library by the specific length.}
 \usage{
-get_aligned_seq_for_mea(ID, Sequence, AA_in_protein, fixed_length,
-  species = "human", fasta_type = "refseq")
+get_aligned_seq_for_mea(
+  ID,
+  Sequence,
+  AA_in_protein,
+  fixed_length,
+  species = "human",
+  fasta_type = "refseq"
+)
 }
 \arguments{
 \item{ID}{A vector for gi number of proteins.}

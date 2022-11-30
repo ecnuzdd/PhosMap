@@ -16,6 +16,7 @@ A data frame that motifs and their corresponding aligned sequences from foregrou
 Output formatted sequences in foreground that are mapped to specific motifs.
 }
 \examples{
+\dontrun{
 ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/formatted_output_mef_results.RData"
 load_data <- load_data_with_ftp(ftp_url, 'RData')
 writeBin(load_data, "formatted_output_mef_results.RData")
@@ -25,7 +26,7 @@ formatted_output_df <- formatted_output_mef_results(
   foreground_sequences_mapped_to_motifs
 )
 head(formatted_output_df)
-
+}
 }
 \author{
 Dongdong Zhan and Mengsha Tong

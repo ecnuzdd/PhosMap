@@ -4,10 +4,14 @@
 \alias{normalize_phos_data_to_profiling}
 \title{Normalize phospho-data to profiling}
 \usage{
-normalize_phos_data_to_profiling(phospho_data_normalized,
-  profiling_data_normalized, phosphorylation_exp_design_info_file_path,
-  profiling_exp_design_info_file_path, control_label = NA,
-  pair_flag = FALSE)
+normalize_phos_data_to_profiling(
+  phospho_data_normalized,
+  profiling_data_normalized,
+  phosphorylation_exp_design_info_file_path,
+  profiling_exp_design_info_file_path,
+  control_label = NA,
+  pair_flag = FALSE
+)
 }
 \arguments{
 \item{phospho_data_normalized}{A data frame of phospho-data after normalization}

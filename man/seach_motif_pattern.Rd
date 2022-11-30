@@ -4,8 +4,14 @@
 \alias{seach_motif_pattern}
 \title{Convert data frame of motif to the sequence pattern}
 \usage{
-seach_motif_pattern(foreground_sequence, background_sequence,
-  min_sequence_count = 1, min_pvalue = 0.01, center = "S", width)
+seach_motif_pattern(
+  foreground_sequence,
+  background_sequence,
+  min_sequence_count = 1,
+  min_pvalue = 0.01,
+  center = "S",
+  width
+)
 }
 \arguments{
 \item{foreground_sequence}{A vector for AA sequences with fixed length as foreground input.}

@@ -4,8 +4,11 @@
 \alias{compute_kses}
 \title{computing kinase-substrate enrichment score}
 \usage{
-compute_kses(substate_vector, regulons_of_kinase,
-  substrates_of_kinase_in_exp_count)
+compute_kses(
+  substate_vector,
+  regulons_of_kinase,
+  substrates_of_kinase_in_exp_count
+)
 }
 \arguments{
 \item{substate_vector}{a vector for substrates with values indentified in current experiments.}

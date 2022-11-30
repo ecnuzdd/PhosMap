@@ -7,17 +7,18 @@
 #'
 #' @param ftp_link A string for URL of datasets.
 #' @param data_type A string for type of datasets (txt, csv, RData).
-#'
+#' @import RCurl utils
 #' @author Dongdong Zhan and Mengsha Tong
-#'
+#' 
 #' @return A dataframe
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/function_demo_data/profiling_exp_design_info.txt"
 #' load_data <- load_data_with_ftp(ftp_url, 'txt')
 #' head(load_data)
-#'
+#' }
 
 load_data_with_ftp <- function(ftp_link, data_type){
   # ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/BRAFi.RData"
@@ -30,7 +31,7 @@ load_data_with_ftp <- function(ftp_link, data_type){
 
   # ftp_url <- "ftp://111.198.139.72:4000/pub/PhosMap_datasets/kinase_substrate_regulation_relationship_table/human/human_ksrr.csv"
   # ks <- load_data_with_ftp(ftp_url, 'csv')
-  requireNamespace("RCurl")
+  requireNamespace('RCurl')
   ftp_url <- ftp_link
   message('First loading data from FTP sever, it may take a few minutes.')
   message('Downloading data from ', ftp_link, '.', sep = '')
@@ -47,7 +48,7 @@ load_data_with_ftp <- function(ftp_link, data_type){
     message('Completing the text data load.')
 
   }else{
-    load_data <- getBinaryURL(ftp_url, userpwd = userpwd, ftp.use.epsv = FALSE, crlf = TRUE)
+    load_data <- RCurl::getBinaryURL(ftp_url, userpwd = userpwd, ftp.use.epsv = FALSE, crlf = TRUE)
     message('Completing the RData load.')
   }
   return(load_data)

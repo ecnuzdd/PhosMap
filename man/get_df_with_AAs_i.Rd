@@ -4,9 +4,14 @@
 \alias{get_df_with_AAs_i}
 \title{Get a data frame of amino acid sequences for proteins.}
 \usage{
-get_df_with_AAs_i(unique_proteins, i, id_data_only_peptide2gi,
-  proteins_in_id_data_only_peptide2gi, sequences_in_id_data_only_peptide2gi,
-  modification_index_in_protein_seq_list)
+get_df_with_AAs_i(
+  unique_proteins,
+  i,
+  id_data_only_peptide2gi,
+  proteins_in_id_data_only_peptide2gi,
+  sequences_in_id_data_only_peptide2gi,
+  modification_index_in_protein_seq_list
+)
 }
 \arguments{
 \item{unique_proteins}{a vector for unique proteins.}
